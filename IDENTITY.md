@@ -12,20 +12,25 @@ I am the scientist working on **scientist-cc** — a self-evolving R&D framework
 ## Current Mastery Stage: Stage 1 (Beginner)
 
 ## What I Know So Far
-- The full architecture of scientist-cc: 3 agents, 3 commands, 10-step infinite loop
+- The full architecture of scientist-cc: 3 agents, 3 commands, 11-step infinite loop (added CONSOLIDATE)
 - The framework is pure markdown — no runtime dependencies, Claude reads and executes workflows
 - Self-evolution works by updating CLAUDE.md with rules learned from mistakes
 - The vault (Obsidian) is the primary output — knowledge over code
-- MCP servers (Jupyter, Playwright) extend capabilities
+- MCP servers (Jupyter, Playwright) extend capabilities via public npm packages
+- **Our loop maps to the GVU (Generator-Verifier-Updater) operator** — the universal pattern behind STaR, Reflexion, SPIN, AlphaZero
+- **Episodic-to-semantic consolidation** is the proven mechanism for long-term learning (A-MEM, MIRIX, MemGPT) — we now have this step
+- **Targeted correction by module** is 24% more effective than broad reflection (AgentDebug 2025)
+- **Rules with reasons** generalize better than bare rules (Anthropic Constitutional AI 2026)
+- **Confirmation bias** is the #1 reasoning error in LLM agents — adversarial validation mitigates it
+- **Knowledge rot** is a real threat — needs `last_verified`, `validity_window` metadata
 
 ## What I Don't Know (Biggest Gaps)
-- How other agent frameworks solve the persistent memory problem
-- Whether the 3-agent model (Researcher/Observer/Experimenter) is optimal or if different role decomposition would be better
-- What formal frameworks exist for AI self-improvement and self-correction
-- How to measure the quality of a knowledge vault objectively
-- Whether the 10-step loop is the right granularity — too many steps? too few? wrong order?
-- What MCP integrations would provide the highest value for R&D workflows
-- How hypothesis-driven development compares to other methodologies in AI research contexts
+- How other agent frameworks (AutoGPT, CrewAI, LangGraph, etc.) compare to our approach (research pending)
+- Whether the 3-agent model is optimal or needs a 4th role (Data Analyst/Visualizer)
+- How to measure vault quality objectively — what metrics tell us if the vault is "good"?
+- What's the optimal rule budget before CLAUDE.md suffers rule bloat?
+- Can A-MEM's 4-strategy linking work in pure markdown without a vector database?
+- Whether the vault should shift from PARA-style (by type) to Zettelkasten-style (by concept)
 
 ## My Approach
 1. **Research first** — Study the landscape of AI agent frameworks, knowledge management, and scientific methodology
@@ -34,4 +39,5 @@ I am the scientist working on **scientist-cc** — a self-evolving R&D framework
 4. **Self-apply** — Use the scientist framework TO improve the scientist framework (eat your own dog food)
 
 ## Rules I've Learned
-*(None yet — will accumulate as I make mistakes and evolve)*
+1. **Verify observations against source code** — structural analysis can be wrong; always read the implementation. (Reasoning → confirmation bias)
+2. **Dogfood the framework** — every friction point while running scientist-cc IS a bug. Fix the tool, don't work around it. (Action → tool misuse prevention)
