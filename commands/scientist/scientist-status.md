@@ -43,11 +43,16 @@ Output a concise status report:
 ### Hypotheses
 **Untested:** [N]  |  **Confirmed:** [N]  |  **Falsified:** [N]
 
+### Meta-Metrics (from vault-index.json)
+**Link Density:** [N] links/note
+**Principle Extraction Rate:** [N] per research note
+**Versions Deployed:** [list from state.json]
+
 ### Health
 **Self-Evolution Rules:** [count] in CLAUDE.md
 **Stale Notes:** [N] past validity window
-**Oldest Unverified:** [note name and date]
-**Skills Built:** [list]
+**Bugs Fixed:** [count from state.json]
+**Tools Verified:** Playwright [✓/✗], Jupyter [✓/✗], pdf_reader [✓/✗]
 
 ### Focus
 **Current:** [from vault Index]
