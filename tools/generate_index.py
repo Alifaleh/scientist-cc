@@ -43,6 +43,8 @@ def generate_index(vault_dir='.scientist/vault'):
 
         # Count wikilinks as a proxy for connectivity
         link_count = len(re.findall(r'\[\[.*?\]\]', content))
+        # Count typed links specifically
+        typed_links = len(re.findall(r'\[\[(supports|contradicts|extends)::', content))
 
         notes.append({
             'path': rel_path,
@@ -52,6 +54,8 @@ def generate_index(vault_dir='.scientist/vault'):
             'date': fm.get('date', None),
             'last_verified': fm.get('last_verified', None),
             'link_count': link_count,
+            'typed_links': typed_links,
+            'evolved_on': fm.get('evolved_on', None),
             'summary': summary[:150] if summary else None
         })
 
@@ -111,8 +115,12 @@ def generate_index(vault_dir='.scientist/vault'):
         print(f'  Link density: {avg_links:.1f} links/note ({total_links} total)')
         print(f'  Notes: {research} research, {observations} observations, {hypotheses} hypotheses, {principles} principles')
         print(f'  Hypotheses: {untested} untested, {implemented} implemented')
+        total_typed = sum(n['typed_links'] for n in notes)
+        evolved = sum(1 for n in notes if n.get('evolved_on'))
         if research > 0:
             print(f'  Principle extraction rate: {principles/research:.1f} principles per research note')
+        print(f'  Typed links: {total_typed} (supports/contradicts/extends)')
+        print(f'  Evolved notes: {evolved} (backward evolution applied)')
 
         index['meta_metrics'] = {
             'link_density': round(avg_links, 1),

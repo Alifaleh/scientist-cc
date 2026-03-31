@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-31T19:28:22.259717",
+  "generated": "2026-03-31T19:33:44.887457",
   "note_count": 23,
   "notes": [
     {
@@ -14,6 +14,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 8,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "Every major AI memory architecture identifies episodic-to-semantic transformation as THE mechanism for long-term learning. Agents that record experien",
       "relevance_score": 0.88
     },
@@ -29,6 +31,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 6,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "scientist-cc makes 4 novel contributions that no other framework combines: persistent vault-based memory, A-MEM linking without vector DB, weighted re",
       "relevance_score": 0.83
     },
@@ -44,6 +48,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "How an agent interfaces with its tools matters as much as the model's capability. Better interfaces to fewer tools outperforms more tools with poor in",
       "relevance_score": 0.805
     },
@@ -59,6 +65,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "Classifying errors by originating module (Memory/Reasoning/Planning/Action) and applying module-specific corrections is 24% more effective than generi",
       "relevance_score": 0.805
     },
@@ -75,6 +83,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 3,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.79
     },
@@ -90,6 +100,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "The #1 failure mode of autonomous AI agents is stopping when they shouldn't. 3 out of 5 errors in session 1 were variants of stopping (after summaries",
       "relevance_score": 0.78
     },
@@ -105,6 +117,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 2,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.765
     },
@@ -120,6 +134,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 2,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.765
     },
@@ -136,6 +152,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 2,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.765
     },
@@ -152,6 +170,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 2,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.765
     },
@@ -167,6 +187,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 3,
+      "typed_links": 1,
+      "evolved_on": null,
       "summary": "When a tool is designed to improve a process, the best test is using the tool on itself. Structural analysis and unit tests catch syntax errors; dogfo",
       "relevance_score": 0.755
     },
@@ -184,6 +206,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 7,
+      "typed_links": 3,
+      "evolved_on": null,
       "summary": "The **critical missing piece** in scientist-cc is an explicit episodic-to-semantic consolidation step. Every major AI memory paper identifies this tra",
       "relevance_score": 0.75
     },
@@ -199,6 +223,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 1,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.74
     },
@@ -215,6 +241,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.725
     },
@@ -232,6 +260,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "A-MEM does NOT use 4 independent linking strategies. It uses a **two-phase approach**: cheap filter (tags/embeddings) to find candidates, then LLM rea",
       "relevance_score": 0.7
     },
@@ -249,6 +279,8 @@
       "date": "2026-03-31",
       "last_verified": "2026-03-31",
       "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
       "summary": "MemGPT's 3-tier prompt structure (system instructions / working context / FIFO queue) maps directly to our architecture: CLAUDE.md / IDENTITY.md+Index",
       "relevance_score": 0.7
     },
@@ -267,6 +299,8 @@
       "date": null,
       "last_verified": null,
       "link_count": 4,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": null,
       "relevance_score": 0.675
     },
@@ -284,6 +318,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 3,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": "scientist-cc's vault-based persistence solves the **#1 unsolved problem** in the field: session-bounded memory. Most frameworks lose everything betwee",
       "relevance_score": 0.65
     },
@@ -300,6 +336,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 2,
+      "typed_links": 1,
+      "evolved_on": null,
       "summary": "Two of three tool integrations worked. Jupyter MCP was silently broken due to a missing `start` subcommand \u2014 a bug that would have gone unnoticed with",
       "relevance_score": 0.625
     },
@@ -317,6 +355,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 2,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": "scientist-cc's 10-step loop is an informal implementation of the **GVU (Generator-Verifier-Updater) operator** \u2014 the universal pattern behind STaR, Re",
       "relevance_score": 0.625
     },
@@ -332,6 +372,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 1,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": "The framework has 4 critical structural gaps that would block a user's first session from running smoothly. The biggest theme: **the loop promises mor",
       "relevance_score": 0.6
     },
@@ -347,6 +389,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 0,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": "scientist-cc went from v0.1.1 to v0.7.1. 102+ commits, 22+ vault notes, 7 hypotheses, 6 principles, 8 self-evolution rules. Framework is comprehensive",
       "relevance_score": 0.575
     },
@@ -362,6 +406,8 @@
       "date": "2026-03-31",
       "last_verified": null,
       "link_count": 0,
+      "typed_links": 0,
+      "evolved_on": null,
       "summary": "scientist-cc went from v0.1.1 to v0.5.1. 5 research domains, 5 hypotheses implemented, 5 principles, 6 self-evolution rules. Framework is substantiall",
       "relevance_score": 0.575
     }
