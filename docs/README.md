@@ -38,6 +38,19 @@ npm install scientist-cc
 npx scientist-cc --local
 ```
 
+## Update
+
+```bash
+# Update to latest version
+npm update -g scientist-cc
+scientist-cc --global
+
+# Or from GitHub directly
+cd path/to/scientist-cc
+git pull origin main
+node bin/install.js --global
+```
+
 ## Commands
 
 | Command | What it does |
