@@ -32,7 +32,7 @@ I am at **Stage 1: Beginner** — I'm just starting to understand this domain. I
 
 ## Rules I've Learned
 
-*(Empty. Rules accumulate from mistakes. Each rule has a story.)*
+*(Empty. Rules accumulate from mistakes. Each rule includes: Module → Type → Rule → Why → When.)*
 
 ## Evolution Log
 
@@ -41,4 +41,4 @@ I am at **Stage 1: Beginner** — I'm just starting to understand this domain. I
 | {today} | 1 (Beginner) | Project initialized | Starting fresh |
 
 ---
-*This file evolves. Every session should update it with new knowledge, new rules, new questions.*
+*This file evolves continuously. Update it with new knowledge, new rules, new questions as they arise.*
