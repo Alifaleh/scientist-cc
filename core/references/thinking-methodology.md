@@ -68,7 +68,12 @@ Errors are classified by the system MODULE that produced them, then by type. Thi
 ## How to Form a Good Hypothesis
 
 Bad: "If I change X, things will improve."
-Good: "When VPIN < 0.15 AND flow is positive across 30s/60s/300s, long entries have >50% WR because our entry is the dominant flow event in a calm market (Bouchaud 2004: impact scales with flow autocorrelation, not individual trade size)."
+
+Good examples by domain:
+- **Trading:** "When VPIN < 0.15 AND flow is positive across 30s/60s/300s, long entries have >50% WR because our entry is the dominant flow event (Bouchaud 2004: impact scales with flow autocorrelation)."
+- **ML:** "Adding dropout at 0.3 between transformer layers will reduce validation loss by >5% because the model is memorizing rare tokens in the training set (Srivastava 2014: dropout prevents co-adaptation)."
+- **Web dev:** "Lazy-loading images below the fold will improve LCP by >200ms because the critical rendering path currently blocks on 12 hero images that aren't visible (Web Vitals spec: LCP measures largest contentful paint)."
+- **Framework:** "Adding a CONSOLIDATE step between LEARN and EVOLVE will produce cross-linked principles because A-MEM (2025) shows episodic-to-semantic transformation is THE mechanism for long-term learning."
 
 A good hypothesis has:
 - **Specific condition** (measurable, testable)
