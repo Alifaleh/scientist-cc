@@ -28,6 +28,15 @@ This is **scientist-cc** — a self-evolving R&D framework for Claude Code. The 
 
 **Git commits are the USER's, not Claude's.** Never add Co-Authored-By or any AI attribution to commits. The user owns all work.
 
+### Meta-Loop: Self-Update After Deploy
+
+**CRITICAL:** After pushing improvements to scientist-cc that trigger a version bump + npm publish, ALWAYS run:
+```bash
+npm update -g scientist-cc
+scientist-cc --global
+```
+This updates the running instance so you use the improved framework to make further improvements. Skipping this breaks the meta-improvement loop — you'd be iterating on old code.
+
 ### Self-Evolution Rules
 
 *(These accumulate as you learn. Each rule was added because of a specific mistake.)*
