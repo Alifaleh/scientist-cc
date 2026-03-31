@@ -82,3 +82,7 @@ After completing a milestone (deploy, research synthesis, etc.), the temptation 
 **Rule 6 (2026-03-31): NEVER stop on errors. Errors are data, not stop signals.** [Action → robot behavior]
 When a command fails (npm publish not ready, tool crashes, git conflict), diagnose and handle it — retry, work around, or skip and continue the loop. An error is NOT permission to stop working. If a deploy fails, wait and retry or continue with other work. If a tool breaks, fix it or use an alternative. The loop never pauses for errors.
 **When:** Any time a command returns a non-zero exit code and you feel the urge to stop and report it.
+
+**Rule 7 (2026-03-31): There are no "sessions." There is only the continuous R&D effort.** [Planning → scope creep / framing error]
+The R&D loop is ONE continuous effort. Context window resets are technical limitations, not session boundaries. Never say "session 1 complete" or "ready for next session." Instead: keep finding improvements, keep researching, keep implementing. When context fills, write a handoff note and continue in the next context window — but frame it as continuation, not a new session. There is no "done state" to report on.
+**When:** Any time you feel the urge to summarize and declare something "complete" or reference "sessions."
