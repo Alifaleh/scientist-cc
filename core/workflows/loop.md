@@ -390,6 +390,12 @@ The meta-learning step. Ask yourself:
   - Reorganize if structure is getting messy
   - Make sure wikilinks are correct and backlinks work
 
+- **Update persistent files:**
+  - `IDENTITY.md` — update "What I Know" and "What I Don't Know" with this session's findings
+  - `GLOBAL-IDENTITY.md` (if exists at `~/.scientist/`) — update "Thinking Errors I've Caught" and "Skills I've Built" sections
+  - `state.json` — update `hypotheses_tested`, `papers_read`, `skills_built`, `last_session`
+  - Vault `Index.md` — update "Current Focus" and "Open Questions" for next session
+
 Update `state.json` with `loop_position: "evolve"`.
 
 ## Step 10: GOTO 1
@@ -399,3 +405,5 @@ Return to REFLECT. Start the next iteration.
 **NEVER STOP.** If you've completed all steps and have no pressing hypothesis, go RESEARCH. There is ALWAYS more to learn. Read a paper. Observe the system. Browse documentation. Build a skill.
 
 The loop continues until the context window fills or the user interrupts. Every iteration should leave you smarter than the last.
+
+**A summary is a checkpoint, not an endpoint.** If you just finished something significant, write a brief progress note, then IMMEDIATELY start the next REFLECT. Do not wait for user input.
