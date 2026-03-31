@@ -1,7 +1,7 @@
 {
   "initialized": "2026-03-31T00:00:00Z",
   "mastery_stage": 1,
-  "loop_position": "evolve",
+  "loop_position": "research",
   "total_sessions": 1,
   "hypotheses_tested": 3,
   "hypotheses_confirmed": 0,
@@ -25,8 +25,9 @@
     "Claude Code", "Aider", "SWE-agent", "MetaGPT", "BabyAGI"
   ],
   "principles_consolidated": 4,
-  "bugs_fixed": 1,
-  "self_evolution_rules": 2,
+  "bugs_fixed": 2,
+  "self_evolution_rules": 6,
+  "versions_deployed": ["0.2.0", "0.2.1", "0.3.0"],
   "last_session": "2026-03-31T00:00:00Z",
-  "session_1_summary": "Full init + 3 research domains (24 web searches) + self-analysis + 3 hypotheses implemented + 4 principles consolidated + 1 bug fix + resume workflow hardened + 2 self-evolution rules"
+  "session_1_summary": "Full init + 3 research domains + self-analysis + 3 hypotheses implemented + 4 principles + 2 bug fixes + 6 self-evolution rules + 3 version deploys + resume/reflect/evolve/status/init/loop workflows all improved"
 }

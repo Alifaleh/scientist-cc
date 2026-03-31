@@ -43,9 +43,11 @@ Also add these patterns to the project's root `.gitignore` if not already presen
 
 ## Phase 3: Copy Tools
 
-Copy from the scientist installation directory:
-- `tools/pdf_reader.py` → `.scientist/tools/pdf_reader.py`
-- `tools/repo_reader.py` → `.scientist/tools/repo_reader.py`
+Copy from `~/.claude/scientist/tools/` (the installation directory):
+- `~/.claude/scientist/tools/pdf_reader.py` → `.scientist/tools/pdf_reader.py`
+- `~/.claude/scientist/tools/repo_reader.py` → `.scientist/tools/repo_reader.py`
+
+If `~/.claude/scientist/tools/` doesn't exist (local install), try the npm package path or skip — tools can be installed later.
 
 ## Phase 4: Create Vault Index
 
@@ -111,7 +113,15 @@ Template from `core/templates/PROJECT-IDENTITY.md` — fill in with gathered inf
 - Adversarial validation mandate
 - Module-based error classification reference
 
-**Verify after creation:** Read back the CLAUDE.md to confirm the scientist section is present and complete. If it's truncated or malformed, fix it immediately.
+**Verify after creation:** Read back the CLAUDE.md and confirm ALL of these sections exist:
+- [ ] "Scientist Mode Active" header
+- [ ] "Session Startup (MANDATORY)" with the 3 files to read
+- [ ] "Core Identity" with the 5 identity rules
+- [ ] "The Infinite Loop" with all 11 steps listed
+- [ ] "Key Rules" section
+- [ ] "Self-Evolution Rules" section at the bottom
+
+If ANY section is missing or truncated, rewrite it. CLAUDE.md is the single most important file — a broken CLAUDE.md means Claude forgets who it is.
 
 ## Phase 7: Initialize Git
 
