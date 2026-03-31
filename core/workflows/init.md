@@ -13,11 +13,29 @@ If the directory is NOT empty:
 - Check for ML artifacts (models/, checkpoints/, notebooks/)
 - Check git history for recent activity
 
-### Step 2: Core Questions (ask via AskUserQuestion)
-1. **What is this project?** What does it do, what's the goal, who is it for?
-2. **What domain is this?** (e.g., trading, ML, web dev, scientific computing, game dev)
-3. **What's your ultimate goal?** What does mastery look like?
-4. **What should I focus on?** Research? Implementation? Both?
+### Step 2: Let the User Describe Their Vision (FIRST — before any structured questions)
+
+**Ask ONE open-ended question first:**
+"Tell me everything about what you want to build. Describe the project, your goals, what you're trying to achieve, any constraints, and what success looks like. Write as much as you want — I'll read everything and ask follow-up questions."
+
+**Wait for a long-form response.** Do NOT show multiple-choice options yet. Let the user write freely in their own words. This is the most important input — it tells you their mental model, priorities, and language.
+
+**Parse the response for:**
+- Project description (what it is)
+- Domain (infer from their description, don't force a category)
+- Goal (what they want to achieve)
+- Constraints (budget, timeline, data availability, tech stack)
+- Focus (research vs implementation — infer from their words)
+
+### Step 2.5: Clarifying Questions (based on what's MISSING from their description)
+
+Only ask about things their description DIDN'T cover. Use AskUserQuestion for specific clarifications:
+- If domain unclear: "What domain is this?" (trading, ML, web dev, etc.)
+- If goal vague: "What does success look like specifically?"
+- If focus unclear: "Should I focus on research, implementation, or both?"
+- If tech stack not mentioned: "What tools/languages are involved?"
+
+**Do NOT re-ask things they already answered in their description.**
 
 ### Step 3: Domain-Adaptive Deep Questions
 Based on the domain answer, ask targeted follow-ups:
