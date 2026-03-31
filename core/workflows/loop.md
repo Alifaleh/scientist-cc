@@ -311,6 +311,18 @@ Update `state.json` with `loop_position: "learn"`.
 
 The episodic-to-semantic transformation. This is THE mechanism for long-term learning (proven in A-MEM, MIRIX, MemGPT).
 
+### Consolidation Triggers (AutoDream-inspired)
+
+Run FULL consolidation when ANY of these are true:
+- **New note count:** 5+ new vault notes since last consolidation
+- **Session threshold:** 3+ sessions since last full consolidation
+- **Contradiction detected:** A new finding conflicts with an existing principle
+- **Manual:** The REFLECT step identified stale or disconnected knowledge
+
+Run LIGHT consolidation (linking only, no principle extraction) every cycle.
+
+Check `state.json` field `last_consolidation` to decide. Update it after running.
+
 Individual observations and experiments produce **episodic knowledge** (what happened). Consolidation extracts **semantic knowledge** (what it means).
 
 1. **Review recent notes:** Read all observations and experiments from the current and recent cycles.
