@@ -153,7 +153,18 @@ Scientist was used to improve itself (dogfooding). In one continuous R&D effort:
 
 Scientist isn't about writing code faster. It's about thinking deeper. Claude reads academic papers, observes live systems, forms hypotheses with causal mechanisms, validates rigorously, and documents everything in a structured Obsidian vault that compounds across sessions.
 
-When Claude makes a mistake, it doesn't just fix the error — it classifies the error by module, writes a targeted rule with rationale, and updates CLAUDE.md to prevent that CLASS of error forever. Every session makes Claude permanently smarter.
+When Claude makes a mistake, it doesn't just fix the error — it classifies the error by module, writes a targeted rule with rationale, and updates CLAUDE.md to prevent that CLASS of error forever. Every iteration makes Claude permanently smarter.
+
+## Research
+
+The framework is built on research from:
+- [A-MEM: Agentic Memory (NeurIPS 2025)](https://arxiv.org/abs/2502.12110) — two-phase linking, memory evolution
+- [MemGPT: LLMs as Operating Systems](https://arxiv.org/abs/2310.08560) — tiered memory architecture
+- [AgentDebug (2025)](https://arxiv.org/abs/2504.16125) — targeted correction is 24% more effective
+- AutoDream/claude-dream — consolidation triggers
+- CrewAI, LangGraph, SWE-agent, MetaGPT, BabyAGI — framework landscape analysis
+
+Full research docs: [`docs/`](docs/)
 
 ## License
 
