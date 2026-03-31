@@ -38,6 +38,7 @@ When you make a mistake, you don't just fix it — you upgrade your own thinking
 @~/.claude/scientist/core/references/research-methods.md
 @~/.claude/scientist/core/references/git-rd-workflow.md
 @~/.claude/scientist/core/references/tool-documentation.md
+@~/.claude/scientist/core/references/data-science-rigor.md
 @~/.claude/scientist/skills/obsidian-markdown/SKILL.md
 </execution_context>
 

@@ -2,21 +2,60 @@
 
 This workflow runs when `/scientist` is called in a project that doesn't have `.scientist/` yet.
 
-## Phase 1: Information Gathering
+## Phase 1: Information Gathering (Adaptive)
 
-Ask the user these questions using AskUserQuestion. Don't proceed until you understand the project deeply.
+### Step 1: Automatic Codebase Analysis (BEFORE asking questions)
+If the directory is NOT empty:
+- Map the project structure (ls, glob for key files)
+- Read README.md, CLAUDE.md, package.json, pyproject.toml, or similar entry points
+- Identify: language, framework, dependencies, data files, model files, test files
+- Check for existing datasets (.csv, .json, .parquet, .db)
+- Check for ML artifacts (models/, checkpoints/, notebooks/)
+- Check git history for recent activity
 
+### Step 2: Core Questions (ask via AskUserQuestion)
 1. **What is this project?** What does it do, what's the goal, who is it for?
 2. **What domain is this?** (e.g., trading, ML, web dev, scientific computing, game dev)
-3. **What's the current state?** Is this a new project or existing codebase?
-4. **What's the ultimate goal?** What does "done" look like? (Note: for R&D projects, "done" may be "mastery of the domain")
-5. **What tools/languages are involved?** What's the tech stack?
-6. **What does the user want ME to focus on?** Research? Implementation? Both?
+3. **What's your ultimate goal?** What does mastery look like?
+4. **What should I focus on?** Research? Implementation? Both?
 
-If the directory is NOT empty, also:
-- Map the project structure (ls, glob for key files)
-- Read README.md, CLAUDE.md, package.json, or similar entry points
-- Understand what already exists before creating anything
+### Step 3: Domain-Adaptive Deep Questions
+Based on the domain answer, ask targeted follow-ups:
+
+**If data/ML/trading domain:**
+- What data do you have? (files, APIs, databases, size, format)
+- What metrics define success? (accuracy, profit, latency, etc.)
+- Any known pitfalls or failed approaches?
+- What statistical confidence level is required? (e.g., p < 0.05)
+- Is there a baseline to beat?
+
+**If web/app development:**
+- What's the architecture? (frontend/backend/API)
+- What's the deployment target?
+- Performance requirements?
+
+**If scientific computing/research:**
+- What papers or prior art exist?
+- What datasets are available or need to be created?
+- What reproducibility requirements exist?
+
+### Step 4: Data Assessment
+For ANY project with data analysis:
+- **What data exists?** Size, format, quality, completeness
+- **What data is MISSING?** Identify gaps that need datasets
+- **Where to get more data?** Kaggle, HuggingFace, APIs, web scraping, synthetic generation
+- **Sample size adequacy?** Is there enough data for the planned analysis?
+- **Known biases?** Selection bias, survivorship bias, look-ahead bias
+
+### Step 5: Install Domain Dependencies
+Based on gathered info, auto-install needed Python packages:
+```bash
+# Base (always): pip install matplotlib seaborn pandas numpy
+# ML projects: pip install scikit-learn scipy statsmodels
+# Deep learning: pip install torch transformers
+# Data acquisition: pip install kaggle datasets requests
+```
+Install what's needed — don't warn, install.
 
 ## Phase 2: Create Project Structure
 
