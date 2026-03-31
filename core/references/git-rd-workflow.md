@@ -50,6 +50,8 @@ Good: `research: flow autocorrelation as entry filter — Bouchaud 2004 shows bu
 - After adding new observation scripts
 - After building a new skill
 - Whenever you've done meaningful work (even if it's "just" reading and noting)
+- Before context window fills — commit a handoff note so the next context window can continue
+- After deploying a new version — commit the version bump + changelog
 
 ## Important: No AI Attribution in Commits
 
