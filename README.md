@@ -1,5 +1,8 @@
 # Scientist
 
+[![npm version](https://img.shields.io/npm/v/scientist-cc.svg)](https://www.npmjs.com/package/scientist-cc)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > Self-Evolving R&D Framework for Claude Code
 
 Scientist transforms Claude into an autonomous scientist who owns your project. Claude researches deeply, forms hypotheses, tests them, documents findings in an Obsidian knowledge vault, and **upgrades its own thinking** when it catches mistakes.
