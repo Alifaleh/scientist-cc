@@ -280,11 +280,14 @@ Update `state.json` with `loop_position: "validate"`.
 
 Code the validated hypothesis into the project:
 
-1. Create experiment branch: `git checkout -b scientist/experiment/[name]`
-2. Make the changes with clear comments linking to hypothesis
-3. Store diagnostic data for analysis
-4. Run the experiment — use **Jupyter notebooks** for experiments involving data analysis, ML training, statistical tests, or any iterative exploration
-5. Measure results — quantitative metrics, not just "it worked"
+1. **Checkpoint before:** `git tag checkpoint/pre-[experiment-name]`
+2. **Create experiment branch:** `git checkout -b scientist/experiment/[name]`
+3. Make the changes with clear comments linking to hypothesis
+4. Store diagnostic data for analysis
+5. Run the experiment — use **Jupyter notebooks** for data analysis, ML, statistical tests
+6. Measure results — quantitative metrics, not just "it worked"
+7. **Checkpoint after:** `git tag checkpoint/post-[experiment-name]`
+8. **Compare:** `git diff checkpoint/pre-[name]..checkpoint/post-[name]`
 
 Commit with descriptive messages:
 ```
