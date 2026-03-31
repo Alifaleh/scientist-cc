@@ -15,10 +15,11 @@ tags: [index, vault]
 ## Current Focus
 *Session 1, Iteration 3. Deep-diving A-MEM paper for vault linking strategies. Framework at v0.3.1 — 4 deploys this session. Next: implement A-MEM findings, Phase 1 roadmap (weighted retrieval, checkpointing).*
 
-## Research Notes (3)
+## Research Notes (4)
 - [[Research/Knowledge Management for AI Agents]] — A-MEM, MIRIX, MemGPT; episodic-to-semantic consolidation
 - [[Research/AI Self-Improvement Frameworks]] — GVU operator, Hyperagents, 4-module error taxonomy
 - [[Research/AI Agent Frameworks Landscape]] — 10 frameworks compared; vault persistence is our edge
+- [[Research/Vault Navigation Patterns for AI Agents]] — Progressive disclosure, JSON index, frontmatter queries, context routing
 
 ## Observations (1)
 - [[Observations/Framework Self-Analysis]] — 3 critical + 6 medium gaps; promise vs. delivery pattern

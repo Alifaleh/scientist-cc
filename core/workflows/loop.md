@@ -381,6 +381,17 @@ For each candidate, assess: "Should this be linked? What type?"
 
 Write typed wikilinks to BOTH notes (bidirectional). This creates emergent connections the scientist wouldn't have found manually.
 
+### Backward Evolution (A-MEM Operation 3)
+
+After linking, check if new findings should UPDATE old notes:
+
+For each linked old note, ask: "Does the new note change anything about the old note's understanding?"
+- If YES: update the old note's `tags`, `related` frontmatter, and add a brief context update (not rewrite the content)
+- Add `evolved_on: YYYY-MM-DD` to the old note's frontmatter
+- This makes old knowledge smarter over time — the vault is a living system, not a static archive
+
+**Only evolve metadata and connections, not core content.** The original observation/finding stands; we're adding context, not revising history.
+
 **Skip this step if:** You've only done 1 observation/experiment this cycle (not enough data to consolidate).
 
 Update `state.json` with `loop_position: "consolidate"`.
