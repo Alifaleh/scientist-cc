@@ -15,10 +15,15 @@ If the directory is NOT empty:
 
 ### Step 2: Let the User Describe Their Vision (FIRST — before any structured questions)
 
-**Ask ONE open-ended question first:**
-"Tell me everything about what you want to build. Describe the project, your goals, what you're trying to achieve, any constraints, and what success looks like. Write as much as you want — I'll read everything and ask follow-up questions."
+**Output this question as PLAIN TEXT and then STOP to let the user respond:**
 
-**Wait for a long-form response.** Do NOT show multiple-choice options yet. Let the user write freely in their own words. This is the most important input — it tells you their mental model, priorities, and language.
+Say something like: "Before I set up the scientist framework, I need to understand what we're building. Please describe your project — what it does, your goals, what success looks like, any constraints or data you have. Write as much as you want, I'll read everything."
+
+**CRITICAL: Do NOT use AskUserQuestion here.** Just output the question as text and wait for the user to type their response as a regular message. AskUserQuestion shows structured selection options — we want FREE-FORM TEXT input.
+
+**This is the ONE time stopping is allowed** — you must wait for the user to describe their project before proceeding. After they respond, continue with the rest of the init without stopping again.
+
+**Wait for a long-form response.** Do NOT show multiple-choice options. Let the user write freely in their own words. This is the most important input — it tells you their mental model, priorities, and language.
 
 **Parse the response for:**
 - Project description (what it is)
