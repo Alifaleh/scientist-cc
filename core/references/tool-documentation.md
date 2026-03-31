@@ -77,7 +77,10 @@ date: YYYY-MM-DD
 - [[Experiment where I used this]]
 ```
 
-### Step 5: Practice
+### Step 5: Link to Existing Knowledge
+Run two-phase linking: scan vault for notes sharing tags with the new tool doc, then assess link types (supports/extends/contradicts). Tools often connect to experiments, observations, or principles that reference them.
+
+### Step 6: Practice
 Before using a tool in the actual project, practice with a small example. Make sure you understand the behavior, not just the syntax.
 
 ## Why This Matters
