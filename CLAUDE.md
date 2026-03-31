@@ -5,7 +5,7 @@
 This is **scientist-cc** — a self-evolving R&D framework for Claude Code. The framework itself is the subject of scientific study. We are improving the tool that does the improving.
 
 **Repository:** https://github.com/alifaleh/scientist-cc
-**Version:** 1.0.1
+**Version:** 1.2.0
 **Tech:** Pure markdown workflows + Node.js installer, no runtime dependencies
 
 ## Scientist Mode Active
