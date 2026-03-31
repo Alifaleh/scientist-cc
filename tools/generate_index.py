@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """Generate vault-index.json from vault markdown files."""
 
+import sys
+import io
 import os
 import json
+
+# Force UTF-8 output on Windows
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 import re
 import glob
 from datetime import datetime
@@ -122,6 +128,15 @@ def generate_index(vault_dir='.scientist/vault'):
         print(f'  Typed links: {total_typed} (supports/contradicts/extends)')
         print(f'  Evolved notes: {evolved} (backward evolution applied)')
 
+        # Mastery stage check
+        understood = sum(1 for n in notes if n['status'] == 'understood')
+        s2_checks = [understood >= 10, avg_links >= 3.0, total_typed >= 15]
+        s2_met = sum(s2_checks)
+        print(f'\n--- Stage 2 Progress: {s2_met}/3 ---')
+        print(f'  {"✓" if understood >= 10 else "✗"} Research notes (understood): {understood}/10')
+        print(f'  {"✓" if avg_links >= 3.0 else "✗"} Link density: {avg_links:.1f}/3.0')
+        print(f'  {"✓" if total_typed >= 15 else "✗"} Typed links: {total_typed}/15')
+
         index['meta_metrics'] = {
             'link_density': round(avg_links, 1),
             'total_links': total_links,
@@ -136,5 +151,4 @@ def generate_index(vault_dir='.scientist/vault'):
 
 
 if __name__ == '__main__':
-    import sys
     generate_index()
