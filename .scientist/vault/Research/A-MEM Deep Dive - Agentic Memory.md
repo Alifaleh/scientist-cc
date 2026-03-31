@@ -72,6 +72,20 @@ Each new experience triggers 3 sequential LLM calls:
 - **Evolution threshold:** configurable, default triggers after N memories
 - **AutoDream trigger:** 5 sessions AND 24 hours since last consolidation
 
+## Exact Prompts (from appendix, pages 18-20)
+
+### Memory Evolution Prompt (Ps3)
+The LLM receives:
+- New memory's `context`, `content`, `keywords`
+- Nearest neighbor memories
+
+And decides:
+- `should_evolve: true/false`
+- Actions: `strengthen` (add connections) or `update_neighbor` (rewrite neighbor's context+tags)
+- Returns JSON with: `suggested_connections`, `tags_to_update`, `new_context_neighborhood`, `new_tags_neighborhood`
+
+Key: the LLM rewrites BOTH the new note's tags AND the old neighbors' context+tags. This is why backward evolution works — old knowledge genuinely gets smarter.
+
 ## Cross-Links (discovered via two-phase linking)
 - [[extends::../Research/AI Self-Improvement Frameworks]] — A-MEM's Operation 3 (memory evolution) is structurally identical to our EVOLVE step: LLM decides when existing knowledge needs updating based on new evidence. Both are GVU Updater implementations.
 - [[supports::../Knowledge Base/Principle - Consolidation Is the Missing Step]] — A-MEM's consolidation mechanism confirms: periodic memory maintenance (rebuild index, resolve contradictions) is essential, not optional.
