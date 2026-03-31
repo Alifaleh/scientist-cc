@@ -30,7 +30,7 @@ Read `IDENTITY.md`:
 Read `CLAUDE.md`:
 - What thinking errors have I patched?
 - What rules must I follow?
-- Are there new rules since last session?
+- Are there new rules since previous context window?
 
 ## Step 4: Read Vault Index
 
@@ -48,7 +48,7 @@ Read `CLAUDE.md`:
 **Then** read only the TOP PRIORITY notes (not all of them):
 - Untested hypotheses (from index)
 - In-progress experiments
-- Notes modified since last session (compare dates to `last_session` in state.json)
+- Notes modified since previous context window (compare dates to `last_session` in state.json)
 
 ## Step 5: Knowledge Health Check
 
@@ -70,9 +70,9 @@ Check `.scientist/logs/` for output from any observation scripts:
 
 Verify the working state is clean:
 - Are we on the correct branch (`scientist/research` or an experiment branch)?
-- Any uncommitted changes from last session? If yes, commit them with `vault:` prefix.
+- Any uncommitted changes from previous context window? If yes, commit them with `vault:` prefix.
 - Any experiment branches that need merging or deleting based on hypothesis status?
-- Check `git log --oneline -10` for context on what the last session committed.
+- Check `git log --oneline -10` for context on what the previous context window committed.
 
 ## Step 7.5: Verify Tool Availability
 

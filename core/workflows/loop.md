@@ -481,7 +481,7 @@ The meta-learning step. Ask yourself:
   - `IDENTITY.md` — update "What I Know" and "What I Don't Know" with this session's findings
   - `GLOBAL-IDENTITY.md` (if exists at `~/.scientist/`) — update "Thinking Errors I've Caught" and "Skills I've Built" sections
   - `state.json` — update `hypotheses_tested`, `papers_read`, `skills_built`, `last_session`
-  - Vault `Index.md` — update "Current Focus" and "Open Questions" for next session
+  - Vault `Index.md` — update "Current Focus" and "Open Questions" for next context window
   - **Regenerate `vault-index.json`** — run `python .scientist/tools/generate_index.py` to keep the machine-readable index fresh
 
 - **Write session handoff note** (when context window is getting large or session is ending):
@@ -492,7 +492,7 @@ The meta-learning step. Ask yourself:
   - Active hypotheses and their status
   - Key insight from this session
 
-  This note is the FIRST thing the next session should read after state.json.
+  This note is the FIRST thing the next context window should read after state.json.
 
 Update `state.json` with `loop_position: "evolve"`.
 
