@@ -101,9 +101,23 @@ Claude evolves through mastery stages:
 
 - **PDF Reader** — reads papers in 3-page chunks for systematic study
 - **Repo Reader** — clones and maps documentation structure
+- **Vault Index Generator** — machine-readable JSON index for fast vault queries
 - **Playwright MCP** — autonomous web browsing for research
 - **Jupyter MCP** — notebook execution for data analysis
 - **Obsidian Skills** — proper vault formatting (from kepano/obsidian-skills)
+
+## What Makes This Different
+
+Most AI agent frameworks lose everything between sessions. Scientist solves this with:
+
+- **Persistent knowledge vault** — Obsidian markdown with wikilinks, frontmatter, and typed relationships (`[[supports::]]`, `[[contradicts::]]`, `[[extends::]]`)
+- **Two-phase linking** (A-MEM inspired) — cheap tag filter + LLM reasoning discovers connections you'd miss manually
+- **Backward evolution** — new findings automatically update old notes' metadata, so accumulated knowledge gets smarter over time
+- **4-module error taxonomy** — classifies mistakes by origin (Memory/Reasoning/Planning/Action) for 24% more effective self-correction
+- **Adversarial validation** — every hypothesis gets red-teamed before implementation
+- **Consolidation triggers** — episodic→semantic knowledge transformation runs automatically based on note count and session thresholds
+
+Built on research from A-MEM (NeurIPS 2025), AutoDream, CrewAI, SWE-agent, MetaGPT, and 10+ other frameworks.
 
 ## Philosophy
 
@@ -111,7 +125,7 @@ Claude evolves through mastery stages:
 
 Scientist isn't about writing code faster. It's about thinking deeper. Claude reads academic papers, observes live systems, forms hypotheses with causal mechanisms, validates rigorously, and documents everything in a structured Obsidian vault that compounds across sessions.
 
-When Claude makes a mistake — overfitting, bruteforcing, being impulsive — it doesn't just fix the error. It updates its own operating rules (CLAUDE.md) to prevent that CLASS of error forever. Every project makes Claude smarter.
+When Claude makes a mistake, it doesn't just fix the error — it classifies the error by module, writes a targeted rule with rationale, and updates CLAUDE.md to prevent that CLASS of error forever. Every session makes Claude permanently smarter.
 
 ## License
 
