@@ -1,7 +1,25 @@
 {
-  "generated": "2026-03-31T20:56:49.640626",
-  "note_count": 55,
+  "generated": "2026-03-31T21:04:12.701819",
+  "note_count": 57,
   "notes": [
+    {
+      "path": "Knowledge Base/Principle - The Meta-Tool Advantage.md",
+      "title": "Principle: The Meta-Tool Advantage \u2014 Tools That Improve Themselves Win",
+      "tags": [
+        "principle",
+        "meta-tool",
+        "self-improvement",
+        "competitive-advantage"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 11,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "A tool that can improve itself through use has an exponential advantage over tools that require external modification. scientist-cc's pure-markdown ar",
+      "relevance_score": 0.93
+    },
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
       "title": "Principle: Consolidation Is the Missing Step in Agent Learning",
@@ -508,6 +526,25 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "OpenHands (65k stars, formerly OpenDevin) demonstrates what happens when an autonomous coding agent has NO persistent memory: every new conversation s",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Scientific Method Applied to Software Engineering.md",
+      "title": "The Scientific Method Applied to Software Engineering",
+      "tags": [
+        "research",
+        "scientific-method",
+        "software-engineering",
+        "methodology",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "scientist-cc proves that the scientific method (hypothesize \u2192 validate \u2192 implement \u2192 learn) produces better software outcomes than iterative trial-and",
       "relevance_score": 0.725
     },
     {
@@ -1022,16 +1059,16 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.5,
-    "total_links": 245,
-    "principle_extraction_rate": 0.33,
+    "link_density": 4.6,
+    "total_links": 262,
+    "principle_extraction_rate": 0.35,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 30,
+      "research": 31,
       "observations": 8,
       "hypotheses": 8,
-      "principles": 10
+      "principles": 11
     }
   }
 }
