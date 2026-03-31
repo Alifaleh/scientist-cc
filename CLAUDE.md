@@ -30,13 +30,23 @@ This is **scientist-cc** — a self-evolving R&D framework for Claude Code. The 
 
 ### Meta-Loop: Self-Update After Deploy
 
-**CRITICAL:** After pushing improvements to scientist-cc that trigger a version bump + npm publish, ALWAYS run:
+**CRITICAL:** After pushing improvements to scientist-cc that trigger a version bump + npm publish:
 ```bash
+# 1. Check CI/CD completed
+gh run list --repo alifaleh/scientist-cc --limit 1
+
+# 2. Clear cache and install specific version
+npm cache clean --force
 npm install -g scientist-cc@<new-version>
+
+# 3. Re-install to ~/.claude
 scientist-cc --global
+
+# 4. Verify
+npm list -g scientist-cc
 ```
-Note: Use `npm install -g scientist-cc@X.Y.Z` (not `npm update -g`) because npm update can serve cached old versions.
-This updates the running instance so you use the improved framework to make further improvements. Skipping this breaks the meta-improvement loop — you'd be iterating on old code.
+If the version isn't on npm yet, continue the loop and retry later — NEVER stop to wait.
+This updates the running instance so you use the improved framework. Skipping breaks the meta-loop.
 
 ### Dogfooding Protocol: Every Friction = A Bug
 

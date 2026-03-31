@@ -94,12 +94,14 @@ Template from `core/templates/PROJECT-IDENTITY.md` — fill in with gathered inf
 **If CLAUDE.md exists in project root:**
 1. Read the existing content — preserve everything the user has written
 2. Check if the scientist section already exists (look for "Scientist Mode Active")
-3. If scientist section missing: append the FULL template from `core/templates/CLAUDE-scientist.md`
-4. If scientist section exists but is outdated: update it with the latest template
+3. If scientist section missing: **PREPEND** the scientist template to the TOP of the file (not append — it must be the first thing Claude reads)
+4. If scientist section exists but is outdated: replace it with the latest template
+5. The existing user content goes AFTER the scientist section
 
 **If CLAUDE.md doesn't exist:**
-1. Create it with a project header (project name, repo URL, tech stack)
-2. Append the FULL scientist template from `core/templates/CLAUDE-scientist.md`
+1. Create it with a project header: `# {project-name} — CLAUDE.md`
+2. Write the FULL scientist template from `core/templates/CLAUDE-scientist.md`
+3. Add a `## Project Context` section below with: repo URL, tech stack, description
 
 **The CLAUDE.md scientist section MUST include (non-negotiable):**
 - Session startup protocol (read IDENTITY.md, vault Index, state.json)
