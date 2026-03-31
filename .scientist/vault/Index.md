@@ -3,61 +3,47 @@ title: Knowledge Vault Index
 tags: [index, vault]
 ---
 
-# Knowledge Vault
+# Scientist-CC Knowledge Vault
 
-## Structure
-- [[Research/]] — AI agent frameworks, knowledge management, AI self-improvement
-- [[Observations/]] — Framework self-analysis, dogfooding discoveries
-- [[Hypotheses/]] — Testable predictions about framework improvements
-- [[Experiments/]] — Implementation results
-- [[Knowledge Base/]] — Consolidated principles, tools, skills
+> Self-evolving R&D framework for Claude Code. v0.5.3. Session 1 complete.
 
 ## Current Focus
-*Session 1, Iteration 3. Deep-diving A-MEM paper for vault linking strategies. Framework at v0.3.1 — 4 deploys this session. Next: implement A-MEM findings, Phase 1 roadmap (weighted retrieval, checkpointing).*
 
-## Research Notes (4)
-- [[Research/Knowledge Management for AI Agents]] — A-MEM, MIRIX, MemGPT; episodic-to-semantic consolidation
-- [[Research/AI Self-Improvement Frameworks]] — GVU operator, Hyperagents, 4-module error taxonomy
-- [[Research/AI Agent Frameworks Landscape]] — 10 frameworks compared; vault persistence is our edge
-- [[Research/Vault Navigation Patterns for AI Agents]] — Progressive disclosure, JSON index, frontmatter queries, context routing
+Session 2 priority: Verify Jupyter MCP, test on a different project, llms.txt progressive disclosure.
 
-## Observations (1)
-- [[Observations/Framework Self-Analysis]] — 3 critical + 6 medium gaps; promise vs. delivery pattern
+## Research
 
-## Hypotheses (3 — all IMPLEMENTED)
-- [[Hypotheses/Hypothesis 1 - Consolidation Step]] — IMPLEMENTED: CONSOLIDATE step in loop
-- [[Hypotheses/Hypothesis 2 - Expanded Error Taxonomy]] — IMPLEMENTED: 4 modules, 16+ types
-- [[Hypotheses/Hypothesis 3 - Adversarial Validation]] — IMPLEMENTED: mandatory red-team
+- [Knowledge Management for AI Agents](Research/Knowledge%20Management%20for%20AI%20Agents.md): A-MEM, MIRIX, MemGPT — episodic-to-semantic consolidation is THE missing piece
+- [AI Self-Improvement Frameworks](Research/AI%20Self-Improvement%20Frameworks.md): GVU operator, Hyperagents, 4-module error taxonomy, adversarial validation
+- [AI Agent Frameworks Landscape](Research/AI%20Agent%20Frameworks%20Landscape.md): 10 frameworks compared; vault-based persistence is our unique edge
+- [A-MEM Deep Dive](Research/A-MEM%20Deep%20Dive%20-%20Agentic%20Memory.md): Two-phase linking (tag filter → LLM reasoning), backward evolution, consolidation triggers
+- [Vault Navigation Patterns](Research/Vault%20Navigation%20Patterns%20for%20AI%20Agents.md): Three-tier progressive disclosure, vault-index.json, llms.txt format
 
-## Consolidated Principles (4)
-- [[Knowledge Base/Principle - Consolidation Is the Missing Step]]
-- [[Knowledge Base/Principle - Targeted Correction Beats Broad Reflection]]
-- [[Knowledge Base/Principle - Dogfooding Is Superior Testing]]
-- [[Knowledge Base/Principle - Interface Quality Over Tool Quantity]]
+## Observations
 
-## Evolution Roadmap
-- **Phase 1** — Memory: weighted retrieval, experiment checkpointing *(in progress)*
-- **Phase 2** — Knowledge Graph: semantic search, typed relationships, health monitoring *(partially done: typed wikilinks, health check in resume)*
-- **Phase 3** — Structured Pipeline: MetaGPT SOPs, auto-validation, explicit GVU
-- **Phase 4** — Metacognitive: self-modify methodology, meta-metrics
+- [Framework Self-Analysis](Observations/Framework%20Self-Analysis.md): 3 critical + 6 medium structural gaps found and fixed
+- [Tool Verification](Observations/Tool%20Verification%20-%20Session%201.md): PDF reader + Playwright working; Jupyter MCP fixed (verify next session)
+- [Session 1 Handoff](Observations/Session%201%20Handoff.md): Full context for next session resume
 
-## Framework Versions Shipped This Session
-- **v0.2.0** — CONSOLIDATE, adversarial validation, expanded taxonomy, tools bug fix
-- **v0.2.1** — Weighted reflect, error taxonomy tables, vault health, .gitignore
-- **v0.3.0** — Bulletproof CLAUDE.md template, Rule 6 (never stop on errors), prepend strategy
-- **v0.3.1** — First-run UX fixes, explicit tool paths, verification checklist
+## Hypotheses (all IMPLEMENTED)
 
-## Self-Evolution Rules (6)
-1. Verify observations against source code [Reasoning → confirmation bias]
-2. Dogfood the framework [Action → tool misuse]
-3. Never ask for user confirmation [Planning → hesitation]
-4. Use npm install @version not npm update [Action → tool misuse]
-5. Never stop after summaries [Planning → robot behavior]
-6. Never stop on errors [Action → robot behavior]
+- [H1 - Consolidation Step](Hypotheses/Hypothesis%201%20-%20Consolidation%20Step.md): CONSOLIDATE step in loop
+- [H2 - Expanded Error Taxonomy](Hypotheses/Hypothesis%202%20-%20Expanded%20Error%20Taxonomy.md): 4 modules, 16+ types
+- [H3 - Adversarial Validation](Hypotheses/Hypothesis%203%20-%20Adversarial%20Validation.md): Mandatory red-team before accepting
+- [H4 - Two-Phase Linking](Hypotheses/Hypothesis%204%20-%20Two-Phase%20Linking.md): A-MEM inspired tag+LLM linking
+- [H5 - Memory Evolution](Hypotheses/Hypothesis%205%20-%20Memory%20Evolution.md): Backward note metadata updates
+
+## Principles
+
+- [Consolidation Is the Missing Step](Knowledge%20Base/Principle%20-%20Consolidation%20Is%20the%20Missing%20Step.md): Episodic→semantic transformation
+- [Targeted Correction Beats Broad Reflection](Knowledge%20Base/Principle%20-%20Targeted%20Correction%20Beats%20Broad%20Reflection.md): 24% more effective
+- [Dogfooding Is Superior Testing](Knowledge%20Base/Principle%20-%20Dogfooding%20Is%20Superior%20Testing.md): Use the tool on itself
+- [Interface Quality Over Tool Quantity](Knowledge%20Base/Principle%20-%20Interface%20Quality%20Over%20Tool%20Quantity.md): SWE-agent ACI insight
+- [Anti-Stopping Is the Core Challenge](Knowledge%20Base/Principle%20-%20Anti-Stopping%20is%20the%20Core%20Challenge.md): 3/5 errors were stopping variants
 
 ## Open Questions
-- How to implement A-MEM's 4-strategy linking in pure markdown? *(researching)*
+
+- How to implement weighted retrieval (recency/importance) without vector DB?
 - What's the optimal rule budget before CLAUDE.md bloat?
-- Should vault shift from PARA to Zettelkasten?
-- How to implement weighted retrieval without a vector database?
-- Is 3-agent role decomposition optimal?
+- Should vault shift from PARA to Zettelkasten? (A-MEM suggests hybrid)
+- How to measure vault quality objectively?
