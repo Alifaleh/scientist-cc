@@ -15,6 +15,11 @@ Splits large PDFs into manageable chunks so Claude can read them sequentially.
 import sys
 import os
 import json
+import io
+
+# Force UTF-8 output on Windows (prevents cp1252 UnicodeEncodeError on math symbols)
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 def ensure_pymupdf():
     """Install PyMuPDF if not available."""
