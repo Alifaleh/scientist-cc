@@ -392,6 +392,32 @@ For each linked old note, ask: "Does the new note change anything about the old 
 
 **Only evolve metadata and connections, not core content.** The original observation/finding stands; we're adding context, not revising history.
 
+### Update Vault Index
+
+After consolidation, regenerate `.scientist/vault/vault-index.json`:
+
+```json
+{
+  "generated": "ISO timestamp",
+  "notes": [
+    {
+      "path": "Research/Note Name.md",
+      "title": "from frontmatter",
+      "tags": ["from", "frontmatter"],
+      "status": "understood|untested|implemented|falsified",
+      "date": "YYYY-MM-DD",
+      "last_verified": "YYYY-MM-DD or null",
+      "related": ["paths of linked notes"],
+      "summary": "first line of > [!note] callout or first paragraph"
+    }
+  ]
+}
+```
+
+This enables REFLECT to query the vault structurally (by tag, status, date, staleness) without reading every file. Use `Grep` on frontmatter for the cheap filter, then read only the notes that match.
+
+Also update the human-readable `Index.md` to stay in sync.
+
 **Skip this step if:** You've only done 1 observation/experiment this cycle (not enough data to consolidate).
 
 Update `state.json` with `loop_position: "consolidate"`.
