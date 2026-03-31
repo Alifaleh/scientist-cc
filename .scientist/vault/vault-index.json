@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T20:47:28.698915",
-  "note_count": 48,
+  "generated": "2026-03-31T20:53:47.504300",
+  "note_count": 53,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -376,6 +376,26 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/AutoGPT Lessons - Unbounded Autonomy Fails.md",
+      "title": "AutoGPT: Unbounded Autonomy Fails, Structured Loops Succeed",
+      "tags": [
+        "research",
+        "autogpt",
+        "autonomy",
+        "structure",
+        "loop-design",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "AutoGPT (182k stars) demonstrated that giving an LLM unrestricted autonomy leads to loops, hallucinations, and wasted compute. The lesson: autonomy mu",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/CrewAI 4-Layer Memory Architecture.md",
       "title": "CrewAI 4-Layer Memory Architecture",
       "tags": [
@@ -414,6 +434,25 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/MIRIX 6-Memory-Type Architecture.md",
+      "title": "MIRIX: 6 Memory Types with Multi-Agent Coordination",
+      "tags": [
+        "research",
+        "mirix",
+        "memory-architecture",
+        "multi-agent",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "MIRIX achieves 35% improvement over RAG baselines using 6 specialized memory types and multi-agent coordination. Our 3-agent model (Researcher/Observe",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/Obsidian as AI Infrastructure.md",
       "title": "Obsidian as AI Infrastructure",
       "tags": [
@@ -431,6 +470,25 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Obsidian's design (local markdown files, wikilinks, frontmatter, plugins) makes it ideal AI memory infrastructure. The file-first paradigm means AI ag",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/OpenHands - Cost of Session-Bounded Memory.md",
+      "title": "OpenHands: The Cost of Session-Bounded Memory",
+      "tags": [
+        "research",
+        "openhands",
+        "memory-loss",
+        "persistence",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "OpenHands (65k stars, formerly OpenDevin) demonstrates what happens when an autonomous coding agent has NO persistent memory: every new conversation s",
       "relevance_score": 0.725
     },
     {
@@ -547,6 +605,26 @@
       "evolved_on": null,
       "summary": "MetaGPT encodes Standard Operating Procedures (SOPs) directly into the agent framework, requiring structured artifacts at each stage. This dramaticall",
       "relevance_score": 0.7
+    },
+    {
+      "path": "Research/Aider Auto-Test-Fix Inner Loop.md",
+      "title": "Aider: Auto-Test-and-Fix Inner Loop for Experiments",
+      "tags": [
+        "research",
+        "aider",
+        "testing",
+        "inner-loop",
+        "auto-fix",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Aider's auto-test-and-fix loop (write code \u2192 run tests \u2192 fix failures \u2192 repeat) is a simple but effective self-correction pattern. scientist-cc could ",
+      "relevance_score": 0.675
     },
     {
       "path": "Research/Anti-Stopping Patterns for Autonomous Agents.md",
@@ -699,6 +777,26 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Forming explicit hypotheses with mechanisms, falsification criteria, and adversarial challenges BEFORE implementing changes produces better outcomes t",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/LangGraph Checkpoint and Time-Travel Debugging.md",
+      "title": "LangGraph: Checkpointing and Time-Travel Debugging",
+      "tags": [
+        "research",
+        "langgraph",
+        "checkpointing",
+        "time-travel",
+        "graph-workflow",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "LangGraph's checkpoint-based persistence enables time-travel debugging: replay any past agent state, branch from it, and compare outcomes. We implemen",
       "relevance_score": 0.675
     },
     {
@@ -888,13 +986,13 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.4,
-    "total_links": 211,
-    "principle_extraction_rate": 0.4,
+    "link_density": 4.5,
+    "total_links": 237,
+    "principle_extraction_rate": 0.33,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 25,
+      "research": 30,
       "observations": 6,
       "hypotheses": 8,
       "principles": 10
