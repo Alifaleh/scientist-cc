@@ -48,6 +48,10 @@ Output a concise status report:
 **Principle Extraction Rate:** [N] per research note
 **Versions Deployed:** [list from state.json]
 
+### Stage Progression
+Run `python .scientist/tools/generate_index.py --metrics` and show the Stage progress output.
+Show which criteria are met (✓) and which are pending (✗) for the next stage.
+
 ### Health
 **Self-Evolution Rules:** [count] in CLAUDE.md
 **Stale Notes:** [N] past validity window
