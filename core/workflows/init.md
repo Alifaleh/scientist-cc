@@ -56,8 +56,23 @@ Also add these patterns to the project's root `.gitignore` if not already presen
 Copy from `~/.claude/scientist/tools/` (the installation directory):
 - `~/.claude/scientist/tools/pdf_reader.py` → `.scientist/tools/pdf_reader.py`
 - `~/.claude/scientist/tools/repo_reader.py` → `.scientist/tools/repo_reader.py`
+- `~/.claude/scientist/tools/generate_index.py` → `.scientist/tools/generate_index.py`
 
 If `~/.claude/scientist/tools/` doesn't exist (local install), try the npm package path or skip — tools can be installed later.
+
+## Phase 3.5: Install Python Dependencies
+
+Install required Python packages for data analysis and visualization:
+```bash
+pip install PyMuPDF matplotlib seaborn pandas numpy jupyter nbconvert
+```
+If `pip` fails, try `python -m pip install` or the specific Python path. These packages are needed for:
+- **PyMuPDF** — pdf_reader.py dependency
+- **matplotlib/seaborn** — visualization (mandatory in OBSERVE and LEARN steps)
+- **pandas/numpy** — data analysis
+- **jupyter/nbconvert** — notebook execution
+
+**Don't skip this.** If installation fails, diagnose and fix — don't continue without visualization capability.
 
 ## Phase 4: Create Vault Index
 

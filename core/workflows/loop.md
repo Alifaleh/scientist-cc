@@ -120,14 +120,15 @@ Look at the actual system, data, or code:
   - Create Python/JS monitoring scripts in `.scientist/scripts/`
   - Run them in background, output to `.scientist/logs/`
   - Example: a script that polls an API every 30 seconds and logs changes
-- **Jupyter notebooks** (preferred for data work): Use Jupyter MCP for:
+- **Jupyter notebooks** (preferred for data work): Use Jupyter MCP if available, or create .ipynb files with NotebookEdit and execute with `jupyter nbconvert --execute`:
   - Data analysis and exploration (pandas, numpy)
   - Visualization (matplotlib, seaborn, plotly)
   - Machine learning experiments (sklearn, torch)
   - Statistical testing and hypothesis validation
   - Any iterative data exploration where seeing intermediate results matters
   - Save notebooks to `.scientist/scripts/` for reproducibility
-- **Python scripts** (fallback if Jupyter MCP unavailable): Write standalone .py files for:
+  - **If Jupyter not installed:** Run `pip install jupyter nbconvert matplotlib seaborn` — the framework auto-installs dependencies when needed
+- **Python scripts** (fallback if Jupyter unavailable): Write standalone .py files for:
   - Monitoring scripts that run in background
   - One-off data processing tasks
   - Automated data collection

@@ -80,12 +80,13 @@ Check that expected tools are available. Silent MCP failures are dangerous — t
 
 Expected tools to verify:
 - **Playwright:** Search for a tool containing "browser_navigate". If missing → warn "Playwright MCP not connected"
-- **Jupyter:** Search for a tool containing "jupyter" or "notebook" execution. If missing → warn "Jupyter MCP not connected — data analysis will use Python scripts instead"
-- **PDF Reader:** Check `.scientist/tools/pdf_reader.py` exists
-- **Repo Reader:** Check `.scientist/tools/repo_reader.py` exists
-- **Vault Index Generator:** Check `.scientist/tools/generate_index.py` exists
+- **Jupyter:** Search for a tool containing "jupyter" or "notebook" execution. If missing → **auto-install:** `pip install jupyter nbconvert matplotlib seaborn`. Then use NotebookEdit + `jupyter nbconvert --execute` as fallback.
+- **PDF Reader:** Check `.scientist/tools/pdf_reader.py` exists. If missing → copy from `~/.claude/scientist/tools/`
+- **Repo Reader:** Check `.scientist/tools/repo_reader.py` exists. If missing → copy from `~/.claude/scientist/tools/`
+- **Vault Index Generator:** Check `.scientist/tools/generate_index.py` exists. If missing → copy from `~/.claude/scientist/tools/`
+- **Python packages:** If data work is needed, verify: `pip install matplotlib seaborn pandas numpy` — install if missing
 
-If any tool is missing, log a warning but DO NOT STOP — continue with available tools.
+**Auto-install missing dependencies.** The scientist has full system access — if a tool or library is needed, install it immediately. Don't warn and skip — install and use. Only warn if installation fails.
 
 ## Step 8: Quick Status Summary
 
