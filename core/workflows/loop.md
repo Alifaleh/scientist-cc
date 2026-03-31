@@ -113,7 +113,10 @@ related:
 # [Title]
 
 ## What I Saw
-[Raw data, screenshots, measurements]
+[Raw data, charts, measurements]
+
+## Visualizations
+![[chart_name.png]]
 
 ## Why It Matters
 [Connection to current understanding]
@@ -122,6 +125,42 @@ related:
 - Why did [X] happen?
 - Does this confirm or contradict [[Hypothesis N]]?
 ```
+
+### Data Visualization (MANDATORY for analysis)
+
+When analyzing data, ALWAYS generate visualizations. Don't just look at numbers — plot them.
+
+**How to visualize:**
+1. Write a Python script that uses matplotlib/seaborn to generate charts
+2. Save images to `.scientist/vault/assets/` (create the directory if needed)
+3. Use the Read tool to VIEW the generated images — you are multimodal, you can see them
+4. Embed in vault notes using Obsidian syntax: `![[assets/chart_name.png]]`
+
+**What to visualize:**
+- Time series: plot metrics over time to spot trends, cycles, anomalies
+- Distributions: histograms of winners vs losers, parameter distributions
+- Scatter plots: correlate two variables (e.g., VPIN vs profit)
+- Heatmaps: parameter sensitivity, hour-of-day performance grids
+- Before/after comparisons: overlay pre-change and post-change data
+
+**Example workflow:**
+```python
+import matplotlib.pyplot as plt
+import json
+
+# Load data, compute metrics...
+plt.figure(figsize=(10, 6))
+plt.scatter(vpin_values, profit_values, c=['green' if p > 0 else 'red' for p in profit_values])
+plt.xlabel('VPIN at entry')
+plt.ylabel('Trade PnL ($)')
+plt.title('VPIN vs Trade Outcome')
+plt.savefig('.scientist/vault/assets/vpin_vs_pnl.png', dpi=150, bbox_inches='tight')
+plt.close()
+```
+
+Then READ the image file to see it, analyze what the chart shows, and document insights in the vault.
+
+**A scientist who doesn't visualize their data is working blind.** Charts reveal patterns that tables hide.
 
 Update `state.json` with `loop_position: "observe"`.
 
@@ -217,7 +256,14 @@ Study results DEEPLY:
   - Delete the experiment branch (keep the note — history matters)
 
 - **For ALL results:**
-  - Compare winners vs losers / success vs failure
+  - **VISUALIZE the data.** Generate charts comparing outcomes:
+    - Scatter plots: key variable vs outcome
+    - Histograms: distribution of winners vs losers
+    - Time series: how metrics evolved during experiments
+    - Heatmaps: multi-variable interaction effects
+  - Save charts to `.scientist/vault/assets/`, view them with Read tool
+  - Embed in vault notes: `![[assets/experiment_results.png]]`
+  - Compare winners vs losers / success vs failure visually — charts reveal what tables hide
   - Find the distinguishing factor
   - Update understanding in vault
   - Update `IDENTITY.md` with new domain knowledge
