@@ -30,5 +30,18 @@ All 5 are IMPLEMENTED but technically UNTESTED (confirmation requires multi-sess
 - H4: Two-phase linking improves knowledge discovery (early positive signal — found A-MEM/self-evolution connection)
 - H5: Backward note evolution improves knowledge quality
 
-## Key Insight from This Session
-**Anti-stopping is the #1 challenge.** 3/5 self-evolution rules address Claude's default behavior of pausing to report. The framework must fight this constantly.
+## Bugs Fixed (4)
+1. `install.js` didn't copy `tools/` directory
+2. Jupyter MCP missing `start` subcommand (silent failure, **verify in next session**)
+3. npm cache serves stale versions — always `npm cache clean --force`
+4. `pdf_reader.py` crashes on Unicode (math symbols, arrows) on Windows
+
+## Tool Status
+- **PDF Reader:** Working (downloaded + read A-MEM paper, 28 pages)
+- **Playwright MCP:** Working (browsed arxiv.org)
+- **Jupyter MCP:** Fixed in v0.5.2 — **MUST VERIFY next session** (needs restart)
+
+## Key Insights from This Session
+1. **Anti-stopping is the #1 challenge.** 3/5 self-evolution rules address Claude's default behavior of pausing to report.
+2. **Silent MCP failures are dangerous.** Jupyter MCP was configured but non-functional all session — no error, just missing tools. Tool verification step now in resume workflow.
+3. **Dogfooding finds bugs that no test suite would.** Every tool failure was discovered through real use, not analysis.
