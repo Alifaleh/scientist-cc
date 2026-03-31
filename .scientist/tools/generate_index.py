@@ -130,12 +130,27 @@ def generate_index(vault_dir='.scientist/vault'):
 
         # Mastery stage check
         understood = sum(1 for n in notes if n['status'] == 'understood')
-        s2_checks = [understood >= 10, avg_links >= 3.0, total_typed >= 15]
-        s2_met = sum(s2_checks)
-        print(f'\n--- Stage 2 Progress: {s2_met}/3 ---')
-        print(f'  {"✓" if understood >= 10 else "✗"} Research notes (understood): {understood}/10')
-        print(f'  {"✓" if avg_links >= 3.0 else "✗"} Link density: {avg_links:.1f}/3.0')
-        print(f'  {"✓" if total_typed >= 15 else "✗"} Typed links: {total_typed}/15')
+        s2 = [understood >= 10, avg_links >= 3.0, total_typed >= 15]
+        s3 = [understood >= 25, principles >= 10, total_typed >= 50]
+        s4 = [evolved >= 10]  # partial — Stage 4 is mostly qualitative
+
+        if all(s3):
+            stage = 3
+            print(f'\n--- Stage 3 (Expert) ACHIEVED ({sum(s3)}/3) ---')
+            print(f'  ✓ Research: {understood}/25 | ✓ Principles: {principles}/10 | ✓ Typed: {total_typed}/50')
+            print(f'  Stage 4 requires: 3+ novel contributions, 5+ confirmed hypotheses, 10+ evolved notes')
+            print(f'  Novel findings: check vault Observations for "novel-finding" tag')
+            print(f'  Evolved notes: {evolved}/10')
+        elif all(s2):
+            stage = 2
+            print(f'\n--- Stage 2 (Practitioner) — {sum(s3)}/3 toward Stage 3 ---')
+            for label, met, val, target in [('Research', s3[0], understood, 25), ('Principles', s3[1], principles, 10), ('Typed links', s3[2], total_typed, 50)]:
+                print(f'  {"✓" if met else "✗"} {label}: {val}/{target}')
+        else:
+            stage = 1
+            print(f'\n--- Stage 1 (Beginner) — {sum(s2)}/3 toward Stage 2 ---')
+            for label, met, val, target in [('Research', s2[0], understood, 10), ('Density', s2[1], avg_links, 3.0), ('Typed', s2[2], total_typed, 15)]:
+                print(f'  {"✓" if met else "✗"} {label}: {val}/{target}')
 
         index['meta_metrics'] = {
             'link_density': round(avg_links, 1),
