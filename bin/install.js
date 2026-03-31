@@ -19,6 +19,7 @@ const COMMANDS_SRC = path.join(PACKAGE_ROOT, 'commands', 'scientist');
 const AGENTS_SRC = path.join(PACKAGE_ROOT, 'agents');
 const SKILLS_SRC = path.join(PACKAGE_ROOT, 'skills');
 const CORE_SRC = path.join(PACKAGE_ROOT, 'core');
+const TOOLS_SRC = path.join(PACKAGE_ROOT, 'tools');
 const MCP_SRC = path.join(PACKAGE_ROOT, 'mcp');
 
 const MARKER = '# Scientist Configuration — managed by scientist-cc installer';
@@ -87,6 +88,12 @@ function installCore(configDir) {
   if (fs.existsSync(AGENTS_SRC)) {
     copyDir(AGENTS_SRC, path.join(scientistDir, 'agents'));
     console.log('  ✓ Agent definitions');
+  }
+
+  // Copy tools (pdf_reader, repo_reader)
+  if (fs.existsSync(TOOLS_SRC)) {
+    copyDir(TOOLS_SRC, path.join(scientistDir, 'tools'));
+    console.log('  ✓ Tools (pdf_reader, repo_reader)');
   }
 
   // Copy MCP references (optional — full repos not in npm)
