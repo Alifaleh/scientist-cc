@@ -160,6 +160,14 @@ related:
 - Does this confirm or contradict [[Hypothesis N]]?
 ```
 
+### Data Rigor (MANDATORY — see `data-science-rigor.md`)
+
+Before drawing ANY conclusion from data:
+- Run the **anti-overfitting checklist** (sample size, train/test split, cross-validation, confidence intervals)
+- Check for **biases** (survivorship, look-ahead, selection, data leakage)
+- Compare against a **baseline** (random, mean, naive model)
+- Use **HuggingFace MCP** (`hub_repo_search`) to find relevant datasets if more data is needed
+
 ### Data Visualization (MANDATORY for analysis)
 
 When analyzing data, ALWAYS generate visualizations. Don't just look at numbers — plot them.
