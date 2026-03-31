@@ -69,6 +69,8 @@ This removes commands from `~/.claude/commands/`, deletes the scientist core fro
 |---------|-------------|
 | `/scientist` | Start or resume autonomous R&D mode |
 | `/scientist:status` | Check mastery stage, active hypotheses, knowledge state |
+| `/scientist:stop` | Gracefully pause the loop — saves state, writes handoff note |
+| `/scientist:continue` | Resume after a graceful stop |
 | `/scientist:reset` | Archive vault and start fresh |
 
 ## First Run
