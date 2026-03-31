@@ -92,11 +92,41 @@ def generate_index(vault_dir='.scientist/vault'):
 
     print(f'Generated {output_path}: {len(notes)} notes indexed')
     for n in index['notes']:
-        s = n['summary'][:40] if n['summary'] else '(no summary)'
         status = n['status'] or '?'
         score = n.get('relevance_score', 0)
         print(f'  {score:.2f} [{status:>12}] {n["path"]}')
 
+    # Meta-metrics (H7)
+    if '--metrics' in sys.argv or len(notes) > 0:
+        total_links = sum(n['link_count'] for n in notes)
+        avg_links = total_links / len(notes) if notes else 0
+        principles = sum(1 for n in notes if 'principle' in str(n['tags']))
+        hypotheses = sum(1 for n in notes if 'hypothesis' in str(n['tags']))
+        research = sum(1 for n in notes if 'research' in str(n['tags']))
+        observations = sum(1 for n in notes if 'observation' in str(n['tags']))
+        untested = sum(1 for n in notes if n['status'] == 'untested')
+        implemented = sum(1 for n in notes if n['status'] == 'implemented')
+
+        print(f'\n--- Meta-Metrics ---')
+        print(f'  Link density: {avg_links:.1f} links/note ({total_links} total)')
+        print(f'  Notes: {research} research, {observations} observations, {hypotheses} hypotheses, {principles} principles')
+        print(f'  Hypotheses: {untested} untested, {implemented} implemented')
+        if research > 0:
+            print(f'  Principle extraction rate: {principles/research:.1f} principles per research note')
+
+        index['meta_metrics'] = {
+            'link_density': round(avg_links, 1),
+            'total_links': total_links,
+            'principle_extraction_rate': round(principles / research, 2) if research > 0 else 0,
+            'hypotheses_untested': untested,
+            'hypotheses_implemented': implemented,
+            'note_breakdown': {'research': research, 'observations': observations, 'hypotheses': hypotheses, 'principles': principles}
+        }
+        # Re-write with metrics
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(index, f, indent=2)
+
 
 if __name__ == '__main__':
+    import sys
     generate_index()
