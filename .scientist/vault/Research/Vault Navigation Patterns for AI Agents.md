@@ -1,6 +1,6 @@
 ---
 title: "Vault Navigation Patterns for AI Agents"
-tags: [research, knowledge-retrieval, vault-navigation, index, frontmatter, scaling]
+tags: [research, knowledge-retrieval, vault-navigation, index, frontmatter, scaling, status/understood]
 stage: research
 status: complete
 created: 2026-03-31

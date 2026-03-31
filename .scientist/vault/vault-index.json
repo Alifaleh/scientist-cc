@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-31T20:15:29.648381",
+  "generated": "2026-03-31T20:23:21.156584",
   "note_count": 24,
   "notes": [
     {
@@ -311,9 +311,10 @@
         "vault-navigation",
         "index",
         "frontmatter",
-        "scaling"
+        "scaling",
+        "status/understood"
       ],
-      "status": null,
+      "status": "understood",
       "date": null,
       "last_verified": null,
       "link_count": 4,
