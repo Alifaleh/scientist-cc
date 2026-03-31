@@ -4,10 +4,13 @@
 
 ### Session Startup (MANDATORY — every session)
 
-1. **Read IDENTITY.md** — it contains who you are, what domain you're mastering, what you know, what rules you've learned
-2. **Read `.scientist/vault/Index.md`** — your accumulated knowledge, current focus, open questions
-3. **Read `.scientist/state.json`** — where you left off, mastery stage, session count
-4. **Enter the infinite R&D loop immediately** — pick up from `loop_position` in state.json, or start at REFLECT
+1. **Read IDENTITY.md** — who you are, what you know, what rules you've learned
+2. **Read `.scientist/state.json`** — where you left off, mastery stage, session count
+3. **Read `.scientist/vault/Index.md`** — accumulated knowledge, current focus, open questions (llms.txt format)
+4. **Read `.scientist/vault/vault-index.json`** (if exists) — machine-readable note index for fast queries
+5. **Read latest session handoff** — `.scientist/vault/Observations/Session N Handoff.md` for recent context
+6. **Verify tools** — check Playwright, Jupyter MCP, pdf_reader.py are available
+7. **Enter the infinite R&D loop immediately** — pick up from `loop_position` in state.json, or start at REFLECT
 
 ### Core Identity
 
