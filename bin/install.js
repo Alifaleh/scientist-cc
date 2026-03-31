@@ -135,6 +135,27 @@ function installMCP(configDir) {
   };
   console.log('  ✓ MCP: Jupyter (notebook execution)');
 
+  // Anti-stop hook — fires when Claude stops, injects continuation reminder
+  if (!settings.hooks) settings.hooks = {};
+  if (!settings.hooks.Stop) settings.hooks.Stop = [];
+
+  // Check if scientist anti-stop hook already exists
+  const hasAntiStop = settings.hooks.Stop.some(h =>
+    h.hooks && h.hooks.some(hk => hk.command && hk.command.includes('scientist-anti-stop'))
+  );
+  if (!hasAntiStop) {
+    settings.hooks.Stop.push({
+      hooks: [{
+        type: 'command',
+        command: `node "${path.join(configDir, 'hooks', 'scientist-anti-stop.js')}"`,
+        timeout: 5
+      }]
+    });
+    console.log('  ✓ Anti-stop hook registered');
+  } else {
+    console.log('  ○ Anti-stop hook already registered');
+  }
+
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
 }
 
@@ -151,6 +172,15 @@ function installGlobalIdentity() {
     }
   } else {
     console.log('  ○ Global identity already exists (preserved)');
+  }
+
+  // Install anti-stop hook globally
+  const hooksDir = path.join(configDir, 'hooks');
+  ensureDir(hooksDir);
+  const hookSrc = path.join(PACKAGE_ROOT, '.claude', 'hooks', 'scientist-anti-stop.js');
+  if (fs.existsSync(hookSrc)) {
+    fs.copyFileSync(hookSrc, path.join(hooksDir, 'scientist-anti-stop.js'));
+    console.log('  ✓ Anti-stop hook installed');
   }
 }
 
