@@ -136,7 +136,7 @@ function installMCP(configDir) {
   if (fs.existsSync(jupyterPath)) {
     settings.mcpServers['scientist-jupyter'] = {
       command: 'uvx',
-      args: ['jupyter-mcp-server'],
+      args: ['jupyter-mcp-server', 'start'],
       description: 'Scientist: Jupyter notebook execution'
     };
     console.log('  ✓ MCP: Jupyter (notebook execution)');
