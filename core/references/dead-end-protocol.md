@@ -55,7 +55,15 @@ Write the new direction in:
 
 ## The Key Insight
 
-**Dead ends are data.** They tell you what DOESN'T work, which narrows the search space. A well-documented dead end is almost as valuable as a success because it prevents future sessions from repeating it.
+**Dead ends are data.** They tell you what DOESN'T work, which narrows the search space. A well-documented dead end is almost as valuable as a success because it prevents future iterations from repeating it.
+
+When documenting a dead end, classify what went wrong:
+- **Memory error** — was the dead end caused by stale or wrong vault knowledge?
+- **Reasoning error** — did a flawed hypothesis lead here?
+- **Planning error** — was the approach fundamentally wrong from the start?
+- **Action error** — was the right idea executed incorrectly?
+
+This classification helps write a targeted self-evolution rule that prevents the same CLASS of dead end.
 
 ## NEVER
 
