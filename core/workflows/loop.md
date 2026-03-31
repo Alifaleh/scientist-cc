@@ -269,6 +269,17 @@ Before accepting ANY hypothesis, you MUST red-team it:
 
 This step exists because confirmation bias is the #1 reasoning error in LLM agents. You will naturally find evidence that supports your hypothesis. This step forces you to look for evidence AGAINST it.
 
+### Data-Driven Hypothesis Validation (when data is involved)
+
+If the hypothesis involves data analysis or ML:
+1. **Is the sample size adequate?** (30+ for stats, 100+ for ML)
+2. **Is there a proper holdout set?** (never evaluate on training data)
+3. **Are results statistically significant?** (p < 0.05 with correction for multiple comparisons)
+4. **Does it beat a simple baseline?** (random, mean, last-value)
+5. **Any data leakage or look-ahead bias?**
+
+See `data-science-rigor.md` for the full anti-overfitting checklist.
+
 ### Acceptance Criteria
 
 Only proceed to IMPLEMENT when:
