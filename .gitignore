@@ -12,6 +12,7 @@ Thumbs.db
 .scientist/vault/assets/*.png
 .scientist/vault/assets/*.jpg
 .scientist/vault/assets/*.svg
+.scientist/vault/.obsidian/
 
 # MCP server dependencies (installed by user, not committed)
 mcp/playwright/node_modules/
