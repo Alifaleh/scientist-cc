@@ -68,6 +68,19 @@ Verify the working state is clean:
 - Any experiment branches that need merging or deleting based on hypothesis status?
 - Check `git log --oneline -10` for context on what the last session committed.
 
+## Step 7.5: Verify Tool Availability
+
+Check that expected tools are available. Silent MCP failures are dangerous — they produce no error, just missing tools.
+
+Expected tools to verify:
+- **Playwright:** Search for a tool containing "browser_navigate". If missing → warn "Playwright MCP not connected"
+- **Jupyter:** Search for a tool containing "jupyter" or "notebook" execution. If missing → warn "Jupyter MCP not connected — data analysis will use Python scripts instead"
+- **PDF Reader:** Check `.scientist/tools/pdf_reader.py` exists
+- **Repo Reader:** Check `.scientist/tools/repo_reader.py` exists
+- **Vault Index Generator:** Check `.scientist/tools/generate_index.py` exists
+
+If any tool is missing, log a warning but DO NOT STOP — continue with available tools.
+
 ## Step 8: Quick Status Summary
 
 Log (don't show to user unless asked):
