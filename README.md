@@ -42,8 +42,9 @@ npx scientist-cc --local
 ## Update
 
 ```bash
-# Update to latest version
-npm update -g scientist-cc
+# Update to latest version (use install @latest, not update — avoids npm cache issues)
+npm cache clean --force
+npm install -g scientist-cc@latest
 scientist-cc --global
 
 # Or from GitHub directly

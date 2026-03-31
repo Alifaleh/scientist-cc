@@ -37,4 +37,18 @@ You're bruteforcing if:
 2. Write in the vault: "I was bruteforcing [parameter] because I don't understand [concept]"
 3. Go RESEARCH the concept (papers, docs, first principles)
 4. Come back with understanding and a SINGLE informed change
-5. Update CLAUDE.md: "Don't bruteforce [this type of parameter] — it depends on [mechanism]"
+5. Write a self-evolution rule: Module → Type → Rule → Why → When
+   - Module: **Planning** (bruteforcing is a planning error — acting without a plan)
+   - Type: **Bruteforcing**
+   - Rule: "Don't bruteforce [this type of parameter] — it depends on [mechanism]"
+   - Why: what happened, what you didn't understand
+   - When: any time you encounter this parameter type
+
+## Related Error Types
+
+Bruteforcing often co-occurs with:
+- **Impulsiveness** (Planning) — wanting to act before understanding
+- **Progress misjudgment** (Planning) — feeling like changing numbers = making progress
+- **Automation bias** (Action) — trusting tool output without questioning
+
+If you catch yourself bruteforcing, check for these co-occurring errors too.
