@@ -1,6 +1,6 @@
 ---
-title: "Session 1 Handoff — Context for Next Session"
-tags: [observation, session-handoff, status/actionable]
+title: "Context Window 1 Handoff — Continuation Notes"
+tags: [observation, handoff, status/actionable]
 date: 2026-03-31
 ---
 
@@ -41,7 +41,27 @@ All 5 are IMPLEMENTED but technically UNTESTED (confirmation requires multi-sess
 - **Playwright MCP:** Working (browsed arxiv.org)
 - **Jupyter MCP:** Fixed in v0.5.2 — **MUST VERIFY next session** (needs restart)
 
-## Key Insights from This Session
-1. **Anti-stopping is the #1 challenge.** 3/5 self-evolution rules address Claude's default behavior of pausing to report.
-2. **Silent MCP failures are dangerous.** Jupyter MCP was configured but non-functional all session — no error, just missing tools. Tool verification step now in resume workflow.
-3. **Dogfooding finds bugs that no test suite would.** Every tool failure was discovered through real use, not analysis.
+## Key Insights
+1. **Anti-stopping is the #1 challenge.** 3/7 self-evolution rules address Claude's default pause-and-report behavior.
+2. **Silent MCP failures are dangerous.** Jupyter MCP was configured but non-functional — no error, just missing tools. Tool verification step now in resume workflow.
+3. **Dogfooding finds bugs that no test suite would.** All 4 bugs discovered through real use.
+4. **No sessions, only continuous R&D** (Rule 7). Context windows are technical limits, not boundaries.
+5. **A-MEM ablation validates our design** — linking gives 2.2x improvement, evolution adds further gains. Both implemented (H4, H5).
+6. **Weighted retrieval (H6) is a novel contribution** — A-MEM tracks but doesn't use metadata for scoring. We do.
+
+## Current State
+- **Version:** v0.6.1 on npm (11 versions published)
+- **85+ commits** on main, 55+ files changed, +4,300 lines
+- **20 vault notes** indexed with relevance scoring
+- **2 papers downloaded:** A-MEM (28pp), MemGPT (13pp) — partially read
+- **All 7 reference docs** updated with 4-module taxonomy
+- **All 3 agent definitions** updated with visualization, vault-index, two-phase linking
+- **All 3 workflows** improved (init, loop, resume)
+
+## Immediate Next Actions
+1. **Verify Jupyter MCP** — fixed in v0.5.2, needs context window restart
+2. **Deploy v0.6.1** — `npm cache clean --force && npm install -g scientist-cc@0.6.1 && scientist-cc --global`
+3. **Read more A-MEM paper** — pages 7-9 have ablation details, pages 14-28 have appendix with prompts
+4. **Read MemGPT paper** — pages 4-8 have experiments
+5. **Implement H6 weighting in REFLECT** — generate_index.py produces scores, REFLECT should use them
+6. **Test on a different project** — prove the framework works beyond self-improvement

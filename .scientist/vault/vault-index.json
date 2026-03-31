@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-31T19:01:18.019985",
+  "generated": "2026-03-31T19:04:20.094499",
   "note_count": 20,
   "notes": [
     {
@@ -306,10 +306,10 @@
     },
     {
       "path": "Observations/Session 1 Handoff.md",
-      "title": "Session 1 Handoff \u2014 Context for Next Session",
+      "title": "Context Window 1 Handoff \u2014 Continuation Notes",
       "tags": [
         "observation",
-        "session-handoff",
+        "handoff",
         "status/actionable"
       ],
       "status": "actionable",
