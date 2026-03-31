@@ -72,5 +72,9 @@ Each new experience triggers 3 sequential LLM calls:
 - **Evolution threshold:** configurable, default triggers after N memories
 - **AutoDream trigger:** 5 sessions AND 24 hours since last consolidation
 
+## Cross-Links (discovered via two-phase linking)
+- [[extends::../Research/AI Self-Improvement Frameworks]] — A-MEM's Operation 3 (memory evolution) is structurally identical to our EVOLVE step: LLM decides when existing knowledge needs updating based on new evidence. Both are GVU Updater implementations.
+- [[supports::../Knowledge Base/Principle - Consolidation Is the Missing Step]] — A-MEM's consolidation mechanism confirms: periodic memory maintenance (rebuild index, resolve contradictions) is essential, not optional.
+
 ## What This Means for scientist-cc
 The two-phase approach is the key insight: we don't need embeddings or a vector DB. Tag overlap + frontmatter matching IS the cheap filter. LLM reasoning IS the expensive filter. We already have both capabilities — we just need to wire them into the loop.
