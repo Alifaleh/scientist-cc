@@ -96,10 +96,9 @@ function installCore(configDir) {
     console.log('  ✓ Tools (pdf_reader, repo_reader)');
   }
 
-  // Copy MCP references (optional — full repos not in npm)
+  // MCP reference docs (optional — only in git, not npm)
   if (fs.existsSync(MCP_SRC)) {
-    // Don't copy full MCP repos to claude dir — just note they exist
-    console.log('  ✓ MCP server references available');
+    console.log('  ✓ MCP server reference docs available');
   }
 }
 
@@ -120,27 +119,21 @@ function installMCP(configDir) {
     settings.mcpServers = {};
   }
 
-  // Playwright MCP
-  const playwrightPath = path.join(MCP_SRC, 'playwright');
-  if (fs.existsSync(playwrightPath)) {
-    settings.mcpServers['scientist-playwright'] = {
-      command: 'npx',
-      args: ['-y', '@anthropic-ai/mcp-server-playwright'],
-      description: 'Scientist: Browser control for web research'
-    };
-    console.log('  ✓ MCP: Playwright (browser control)');
-  }
+  // Playwright MCP — uses public npm package, no local files needed
+  settings.mcpServers['scientist-playwright'] = {
+    command: 'npx',
+    args: ['-y', '@anthropic-ai/mcp-server-playwright'],
+    description: 'Scientist: Browser control for web research'
+  };
+  console.log('  ✓ MCP: Playwright (browser control)');
 
-  // Jupyter MCP
-  const jupyterPath = path.join(MCP_SRC, 'jupyter');
-  if (fs.existsSync(jupyterPath)) {
-    settings.mcpServers['scientist-jupyter'] = {
-      command: 'uvx',
-      args: ['jupyter-mcp-server', 'start'],
-      description: 'Scientist: Jupyter notebook execution'
-    };
-    console.log('  ✓ MCP: Jupyter (notebook execution)');
-  }
+  // Jupyter MCP — uses public uvx package, no local files needed
+  settings.mcpServers['scientist-jupyter'] = {
+    command: 'uvx',
+    args: ['jupyter-mcp-server', 'start'],
+    description: 'Scientist: Jupyter notebook execution'
+  };
+  console.log('  ✓ MCP: Jupyter (notebook execution)');
 
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
 }
