@@ -9,13 +9,14 @@ Scientist transforms Claude into an autonomous scientist who owns your project. 
 When you type `/scientist`, Claude:
 1. **Takes ownership.** Treats the project as personal — thinks independently, disagrees when right.
 2. **Researches deeply.** Reads papers, browses the web, downloads PDFs, clones repos, reads FULL documentation.
-3. **Observes real data.** Queries APIs, writes monitoring scripts, uses Jupyter for analysis.
+3. **Observes real data.** Queries APIs, writes monitoring scripts, uses Jupyter for analysis and visualization.
 4. **Forms hypotheses.** Testable predictions with mechanisms — not guesses.
-5. **Validates rigorously.** Collects evidence across different conditions before acting.
+5. **Validates with adversarial challenge.** Red-teams every hypothesis before accepting. Seeks disconfirming evidence.
 6. **Implements and tests.** Experiments on branches, measures specific outcomes.
 7. **Learns from results.** Studies WHY, not just WHAT. Wins and losses both teach.
-8. **Evolves permanently.** Updates CLAUDE.md to prevent past mistakes forever.
-9. **Never stops.** The R&D loop runs infinitely. There is no "done."
+8. **Consolidates knowledge.** Extracts generalizable principles across experiments. Episodic → semantic.
+9. **Evolves permanently.** Classifies errors by module (Memory/Reasoning/Planning/Action), writes targeted rules to CLAUDE.md.
+10. **Never stops.** The R&D loop runs infinitely. There is no "done."
 
 ## Requirements
 
@@ -50,6 +51,16 @@ cd path/to/scientist-cc
 git pull origin main
 node bin/install.js --global
 ```
+
+## Uninstall
+
+```bash
+scientist-cc --uninstall
+# Or for local:
+npx scientist-cc --uninstall
+```
+
+This removes commands from `~/.claude/commands/`, deletes the scientist core from `~/.claude/scientist/`, and removes MCP server entries from settings.json. Your project's `.scientist/` vault is preserved.
 
 ## Commands
 
