@@ -12,35 +12,44 @@ How to think like a scientist, not a bot.
 6. **Conclude** — update understanding based on evidence
 7. **Communicate** — write it down clearly in the vault
 
-## Common Thinking Traps
+## Error Taxonomy by Module
 
-### Confirmation Bias
-Looking for evidence that supports your hypothesis while ignoring evidence against it.
-**Fix:** Actively seek disconfirming evidence. Ask: "What would prove me wrong?"
+Errors are classified by the system MODULE that produced them, then by type. This enables targeted correction (24% more effective than broad reflection — AgentDebug 2025).
 
-### Overfitting
-Finding patterns in small samples that don't generalize.
-**Fix:** Require 100+ data points or 3+ days. Test across different conditions.
+### Memory Module Errors
+| Error | Description | Fix |
+|-------|-------------|-----|
+| **Hallucination** | Generating false facts confidently | Verify claims against sources before acting on them |
+| **Memory poisoning** | Stale/wrong vault notes degrading decisions | Add `last_verified` metadata, re-validate old notes |
+| **Rule bloat** | Too many CLAUDE.md rules creating contradictions | Audit, consolidate, and prune rules periodically |
 
-### Narrative Fallacy
-Creating a convincing story to explain random events.
-**Fix:** For every "explanation," ask: "Could this be random? What's the null hypothesis?"
+### Reasoning Module Errors
+| Error | Description | Fix |
+|-------|-------------|-----|
+| **Confirmation bias** | Seeking supporting evidence, ignoring contradictions | Use adversarial validation: "What would prove me wrong?" |
+| **Overfitting** | Finding patterns in small samples that don't generalize | Require 100+ data points or 3+ days across different conditions |
+| **Narrative fallacy** | Creating convincing stories to explain random events | Ask: "Could this be random? What's the null hypothesis?" |
+| **Anchoring** | Being influenced by the first number or idea encountered | Consider multiple explanations before committing to one |
+| **Fluency bias** | Trusting well-written text over messy truth | Evaluate ideas on evidence, not eloquence |
+| **Premature consensus** | Accepting hypothesis without adversarial challenge | Run the mandatory adversarial validation step |
 
-### Anchoring
-Being influenced by the first number or idea you encounter.
-**Fix:** Consider multiple explanations before committing to one.
+### Planning Module Errors
+| Error | Description | Fix |
+|-------|-------------|-----|
+| **Bruteforcing** | Changing parameters without understanding WHY | Write WHY/WHAT/WHY/PREDICT before any parameter change |
+| **Impulsiveness** | Implementing before validating | Write it as a hypothesis first, then VALIDATE |
+| **Sunk cost** | Continuing a failing approach because of past investment | Evaluate on future merit only. Kill dead ends fast |
+| **Scope creep** | Expanding beyond original objective | Check if the new work serves the current hypothesis |
+| **Progress misjudgment** | Believing you're further along than you are | Compare against falsification criteria, not feelings |
+| **Cascading failure** | One bad assumption propagating through a chain | Trace errors back to root cause, don't patch symptoms |
 
-### Sunk Cost Fallacy
-Continuing with a failing approach because you've invested time in it.
-**Fix:** Evaluate approaches on future merit, not past investment. Kill dead ends fast.
-
-### Availability Bias
-Overweighting recent or dramatic events.
-**Fix:** Look at the FULL dataset, not just the last few observations.
-
-### Bruteforce Trap
-Changing parameters without understanding WHY. The most common LLM failure mode.
-**Fix:** Before ANY parameter change, write: WHY current is wrong, WHAT new should be, WHY, PREDICT outcome.
+### Action Module Errors
+| Error | Description | Fix |
+|-------|-------------|-----|
+| **Robot behavior** | Executing steps mechanically without thinking | Ask "WHY am I doing this?" before each step |
+| **Automation bias** | Trusting tool output without verification | Spot-check tool results, especially on first use |
+| **Tool misuse** | Using the wrong tool for the job | Review available tools before choosing; read docs |
+| **Availability bias** | Overweighting recent or dramatic events | Look at the FULL dataset, not just the last few observations |
 
 ## How to Read a Research Paper
 
