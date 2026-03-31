@@ -144,9 +144,18 @@ Create `.scientist/state.json`:
   "skills_built": [],
   "tools_documented": [],
   "papers_read": [],
-  "last_session": "ISO timestamp"
+  "last_session": "ISO timestamp",
+  "last_consolidation": "ISO timestamp"
 }
 ```
+
+## Phase 8.5: Generate Vault Index
+
+Run the vault index generator to create the machine-readable index:
+```bash
+python .scientist/tools/generate_index.py
+```
+This creates `.scientist/vault/vault-index.json` — enabling fast structured queries during REFLECT.
 
 ## Phase 9: Enter The Loop
 
