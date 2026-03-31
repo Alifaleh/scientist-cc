@@ -10,15 +10,22 @@ Read your knowledge state:
 - `IDENTITY.md` — who am I? what stage? what's my methodology?
 - `.scientist/state.json` — where am I in the journey?
 
+### Context Budget Awareness (MemGPT-inspired)
+
+Your context window is finite. Be deliberate about what you load:
+- **Early in context:** Read broadly — Index, vault-index.json, multiple notes. You have budget.
+- **Deep in context:** Read narrowly — only vault-index.json summaries + 1-2 targeted notes. Conserve budget for action.
+- **Near context limit:** Write a handoff note and focus on committing current work. Don't start new research.
+
 ### Weighted Note Review
 
 Don't read every vault note — prioritize by:
-1. **Recency** — notes modified in the last 2 sessions are most relevant
+1. **Recency** — recently modified notes are most relevant
 2. **Status** — `status/untested` hypotheses and `status/in-progress` experiments first
 3. **Importance** — notes tagged with `priority/high` or linked from Index "Current Focus"
 4. **Staleness** — check `last_verified` frontmatter; flag notes past their validity window
 
-Use `Glob` to scan vault directories, then read only the highest-priority notes. This prevents context window bloat as the vault grows.
+Use vault-index.json for the cheap scan, then read only the highest-priority note bodies. This prevents context window bloat as the vault grows.
 
 ### Decision Questions
 
