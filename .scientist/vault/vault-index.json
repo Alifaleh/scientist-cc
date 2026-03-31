@@ -1,0 +1,227 @@
+{
+  "generated": "2026-03-31T18:18:17.516511",
+  "note_count": 16,
+  "notes": [
+    {
+      "path": "Hypotheses/Hypothesis 1 - Consolidation Step.md",
+      "title": "Hypothesis 1: Adding a CONSOLIDATE Step Improves Knowledge Quality",
+      "tags": [
+        "hypothesis",
+        "status/untested",
+        "knowledge-management"
+      ],
+      "status": "untested",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": null
+    },
+    {
+      "path": "Hypotheses/Hypothesis 2 - Expanded Error Taxonomy.md",
+      "title": "Hypothesis 2: Module-Based Error Taxonomy Improves Self-Evolution",
+      "tags": [
+        "hypothesis",
+        "status/untested",
+        "self-evolution"
+      ],
+      "status": "untested",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": null
+    },
+    {
+      "path": "Hypotheses/Hypothesis 3 - Adversarial Validation.md",
+      "title": "Hypothesis 3: Adversarial Validation Reduces False Confirmations",
+      "tags": [
+        "hypothesis",
+        "status/untested",
+        "scientific-method"
+      ],
+      "status": "untested",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": null
+    },
+    {
+      "path": "Hypotheses/Hypothesis 4 - Two-Phase Linking.md",
+      "title": "Hypothesis 4: Two-Phase Linking Improves Vault Knowledge Discovery",
+      "tags": [
+        "hypothesis",
+        "status/untested",
+        "knowledge-management",
+        "a-mem"
+      ],
+      "status": "untested",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": null
+    },
+    {
+      "path": "Hypotheses/Hypothesis 5 - Memory Evolution.md",
+      "title": "Hypothesis 5: Backward Note Evolution Improves Knowledge Quality",
+      "tags": [
+        "hypothesis",
+        "status/untested",
+        "a-mem",
+        "knowledge-management"
+      ],
+      "status": "untested",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": null
+    },
+    {
+      "path": "Knowledge Base/Principle - Anti-Stopping is the Core Challenge.md",
+      "title": "Principle: Anti-Stopping is the Core Challenge for Autonomous Agents",
+      "tags": [
+        "principle",
+        "autonomy",
+        "metacognition"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "summary": "The #1 failure mode of autonomous AI agents is stopping when they shouldn't. 3 out of 5 errors in session 1 were variants of stopping (after summaries"
+    },
+    {
+      "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
+      "title": "Principle: Consolidation Is the Missing Step in Agent Learning",
+      "tags": [
+        "principle",
+        "knowledge-management",
+        "ai-memory"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "summary": "Every major AI memory architecture identifies episodic-to-semantic transformation as THE mechanism for long-term learning. Agents that record experien"
+    },
+    {
+      "path": "Knowledge Base/Principle - Dogfooding Is Superior Testing.md",
+      "title": "Principle: Dogfooding Is Superior Testing for Meta-Tools",
+      "tags": [
+        "principle",
+        "methodology",
+        "testing"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "summary": "When a tool is designed to improve a process, the best test is using the tool on itself. Structural analysis and unit tests catch syntax errors; dogfo"
+    },
+    {
+      "path": "Knowledge Base/Principle - Interface Quality Over Tool Quantity.md",
+      "title": "Principle: Interface Quality Over Tool Quantity",
+      "tags": [
+        "principle",
+        "tool-design",
+        "architecture"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "summary": "How an agent interfaces with its tools matters as much as the model's capability. Better interfaces to fewer tools outperforms more tools with poor in"
+    },
+    {
+      "path": "Knowledge Base/Principle - Targeted Correction Beats Broad Reflection.md",
+      "title": "Principle: Targeted Correction Beats Broad Reflection",
+      "tags": [
+        "principle",
+        "self-evolution",
+        "metacognition"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "summary": "Classifying errors by originating module (Memory/Reasoning/Planning/Action) and applying module-specific corrections is 24% more effective than generi"
+    },
+    {
+      "path": "Observations/Framework Self-Analysis.md",
+      "title": "Framework Self-Analysis: Structural Gaps in scientist-cc v0.1.1",
+      "tags": [
+        "observation",
+        "framework/gaps",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": "The framework has 4 critical structural gaps that would block a user's first session from running smoothly. The biggest theme: **the loop promises mor"
+    },
+    {
+      "path": "Research/A-MEM Deep Dive - Agentic Memory.md",
+      "title": "A-MEM Deep Dive: Agentic Memory for LLM Agents",
+      "tags": [
+        "research",
+        "a-mem",
+        "memory-architecture",
+        "linking",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "summary": "A-MEM does NOT use 4 independent linking strategies. It uses a **two-phase approach**: cheap filter (tags/embeddings) to find candidates, then LLM rea"
+    },
+    {
+      "path": "Research/AI Agent Frameworks Landscape.md",
+      "title": "AI Agent Frameworks Landscape (March 2026)",
+      "tags": [
+        "research",
+        "ai-agents",
+        "frameworks",
+        "competitive-analysis",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": "scientist-cc's vault-based persistence solves the **#1 unsolved problem** in the field: session-bounded memory. Most frameworks lose everything betwee"
+    },
+    {
+      "path": "Research/AI Self-Improvement Frameworks.md",
+      "title": "AI Self-Improvement Frameworks",
+      "tags": [
+        "research",
+        "self-improvement",
+        "metacognition",
+        "error-taxonomy",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": "scientist-cc's 10-step loop is an informal implementation of the **GVU (Generator-Verifier-Updater) operator** \u2014 the universal pattern behind STaR, Re"
+    },
+    {
+      "path": "Research/Knowledge Management for AI Agents.md",
+      "title": "Knowledge Management for AI Agents",
+      "tags": [
+        "research",
+        "knowledge-management",
+        "zettelkasten",
+        "ai-memory",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "summary": "The **critical missing piece** in scientist-cc is an explicit episodic-to-semantic consolidation step. Every major AI memory paper identifies this tra"
+    },
+    {
+      "path": "Research/Vault Navigation Patterns for AI Agents.md",
+      "title": "Vault Navigation Patterns for AI Agents",
+      "tags": [
+        "research",
+        "knowledge-retrieval",
+        "vault-navigation",
+        "index",
+        "frontmatter",
+        "scaling"
+      ],
+      "status": null,
+      "date": null,
+      "last_verified": null,
+      "summary": null
+    }
+  ]
+}
