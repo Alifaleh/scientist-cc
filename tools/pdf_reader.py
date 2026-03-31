@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PDF Reader for Autopilot — reads PDFs in 3-page chunks for Claude.
+"""PDF Reader for Scientist — reads PDFs in 3-page chunks for Claude.
 
 Usage:
     python pdf_reader.py <file.pdf>                    # Read all pages (3-page chunks)

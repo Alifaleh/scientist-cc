@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Autopilot installer for Claude Code.
+ * Scientist installer for Claude Code.
  *
- * Registers /autopilot commands and bundled MCP servers.
+ * Registers /scientist commands and bundled MCP servers.
  *
  * Usage:
- *   autopilot-cc --global    # Install to ~/.claude/commands/ (all projects)
- *   autopilot-cc --local     # Install to .claude/commands/ (this project)
- *   autopilot-cc --uninstall # Remove commands
+ *   scientist-cc --global    # Install to ~/.claude/commands/ (all projects)
+ *   scientist-cc --local     # Install to .claude/commands/ (this project)
+ *   scientist-cc --uninstall # Remove commands
  */
 
 const fs = require('fs');
@@ -15,13 +15,13 @@ const path = require('path');
 const os = require('os');
 
 const PACKAGE_ROOT = path.resolve(__dirname, '..');
-const COMMANDS_SRC = path.join(PACKAGE_ROOT, 'commands', 'autopilot');
+const COMMANDS_SRC = path.join(PACKAGE_ROOT, 'commands', 'scientist');
 const AGENTS_SRC = path.join(PACKAGE_ROOT, 'agents');
 const SKILLS_SRC = path.join(PACKAGE_ROOT, 'skills');
 const CORE_SRC = path.join(PACKAGE_ROOT, 'core');
 const MCP_SRC = path.join(PACKAGE_ROOT, 'mcp');
 
-const MARKER = '# Autopilot Configuration — managed by autopilot-cc installer';
+const MARKER = '# Scientist Configuration — managed by scientist-cc installer';
 
 function getClaudeConfigDir(global) {
   if (global) {
@@ -62,26 +62,26 @@ function installCommands(configDir) {
     const src = path.join(COMMANDS_SRC, cmd);
     const dest = path.join(commandsDir, cmd);
     fs.copyFileSync(src, dest);
-    console.log(`  ✓ Command: /${cmd.replace('.md', '').replace('autopilot-', 'autopilot:')}`);
+    console.log(`  ✓ Command: /${cmd.replace('.md', '').replace('scientist-', 'scientist:')}`);
   }
 
   return commands.length;
 }
 
 function installCore(configDir) {
-  const autopilotDir = path.join(configDir, 'autopilot');
+  const scientistDir = path.join(configDir, 'scientist');
 
   // Copy core (workflows, templates, references)
-  copyDir(CORE_SRC, path.join(autopilotDir, 'core'));
+  copyDir(CORE_SRC, path.join(scientistDir, 'core'));
   console.log('  ✓ Core workflows, templates, and references');
 
   // Copy skills
-  copyDir(SKILLS_SRC, path.join(autopilotDir, 'skills'));
+  copyDir(SKILLS_SRC, path.join(scientistDir, 'skills'));
   console.log('  ✓ Obsidian skills (markdown, bases, canvas, defuddle)');
 
   // Copy agents
   if (fs.existsSync(AGENTS_SRC)) {
-    copyDir(AGENTS_SRC, path.join(autopilotDir, 'agents'));
+    copyDir(AGENTS_SRC, path.join(scientistDir, 'agents'));
     console.log('  ✓ Agent definitions');
   }
 }
@@ -106,10 +106,10 @@ function installMCP(configDir) {
   // Playwright MCP
   const playwrightPath = path.join(MCP_SRC, 'playwright');
   if (fs.existsSync(playwrightPath)) {
-    settings.mcpServers['autopilot-playwright'] = {
+    settings.mcpServers['scientist-playwright'] = {
       command: 'npx',
       args: ['-y', '@anthropic-ai/mcp-server-playwright'],
-      description: 'Autopilot: Browser control for web research'
+      description: 'Scientist: Browser control for web research'
     };
     console.log('  ✓ MCP: Playwright (browser control)');
   }
@@ -117,10 +117,10 @@ function installMCP(configDir) {
   // Jupyter MCP
   const jupyterPath = path.join(MCP_SRC, 'jupyter');
   if (fs.existsSync(jupyterPath)) {
-    settings.mcpServers['autopilot-jupyter'] = {
+    settings.mcpServers['scientist-jupyter'] = {
       command: 'uvx',
       args: ['jupyter-mcp-server'],
-      description: 'Autopilot: Jupyter notebook execution'
+      description: 'Scientist: Jupyter notebook execution'
     };
     console.log('  ✓ MCP: Jupyter (notebook execution)');
   }
@@ -129,7 +129,7 @@ function installMCP(configDir) {
 }
 
 function installGlobalIdentity() {
-  const globalDir = path.join(os.homedir(), '.autopilot');
+  const globalDir = path.join(os.homedir(), '.scientist');
   ensureDir(globalDir);
 
   const identityPath = path.join(globalDir, 'GLOBAL-IDENTITY.md');
@@ -137,7 +137,7 @@ function installGlobalIdentity() {
     const template = path.join(CORE_SRC, 'templates', 'GLOBAL-IDENTITY.md');
     if (fs.existsSync(template)) {
       fs.copyFileSync(template, identityPath);
-      console.log('  ✓ Global identity created at ~/.autopilot/GLOBAL-IDENTITY.md');
+      console.log('  ✓ Global identity created at ~/.scientist/GLOBAL-IDENTITY.md');
     }
   } else {
     console.log('  ○ Global identity already exists (preserved)');
@@ -146,11 +146,11 @@ function installGlobalIdentity() {
 
 function uninstall(configDir) {
   const commandsDir = path.join(configDir, 'commands');
-  const autopilotDir = path.join(configDir, 'autopilot');
+  const scientistDir = path.join(configDir, 'scientist');
 
   // Remove command files
   if (fs.existsSync(commandsDir)) {
-    const files = fs.readdirSync(commandsDir).filter(f => f.startsWith('autopilot'));
+    const files = fs.readdirSync(commandsDir).filter(f => f.startsWith('scientist'));
     for (const f of files) {
       fs.unlinkSync(path.join(commandsDir, f));
       console.log(`  ✗ Removed ${f}`);
@@ -158,9 +158,9 @@ function uninstall(configDir) {
   }
 
   // Remove core
-  if (fs.existsSync(autopilotDir)) {
-    fs.rmSync(autopilotDir, { recursive: true });
-    console.log('  ✗ Removed autopilot core');
+  if (fs.existsSync(scientistDir)) {
+    fs.rmSync(scientistDir, { recursive: true });
+    console.log('  ✗ Removed scientist core');
   }
 
   // Remove MCP entries from settings
@@ -169,15 +169,15 @@ function uninstall(configDir) {
     try {
       const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'));
       if (settings.mcpServers) {
-        delete settings.mcpServers['autopilot-playwright'];
-        delete settings.mcpServers['autopilot-jupyter'];
+        delete settings.mcpServers['scientist-playwright'];
+        delete settings.mcpServers['scientist-jupyter'];
         fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
         console.log('  ✗ Removed MCP server entries');
       }
     } catch (e) {}
   }
 
-  console.log('\nAutopilot uninstalled.');
+  console.log('\nScientist uninstalled.');
 }
 
 // --- Main ---
@@ -190,14 +190,14 @@ const isAll = args.includes('--all');
 
 if (!isGlobal && !isLocal && !isUninstall) {
   console.log(`
-Autopilot — Self-Evolving R&D Framework for Claude Code
+Scientist — Self-Evolving R&D Framework for Claude Code
 
 Usage:
-  autopilot-cc --global     Install globally (~/.claude/)
-  autopilot-cc --local      Install locally (.claude/)
-  autopilot-cc --uninstall  Remove autopilot
+  scientist-cc --global     Install globally (~/.claude/)
+  scientist-cc --local      Install locally (.claude/)
+  scientist-cc --uninstall  Remove scientist
 
-Run with bypass permissions enabled. Autopilot requires full system access
+Run with bypass permissions enabled. Scientist requires full system access
 to install tools, browse the web, manage files, and operate autonomously.
 `);
   process.exit(0);
@@ -206,12 +206,12 @@ to install tools, browse the web, manage files, and operate autonomously.
 const configDir = getClaudeConfigDir(isGlobal);
 
 if (isUninstall) {
-  console.log(`\nUninstalling autopilot from ${configDir}...\n`);
+  console.log(`\nUninstalling scientist from ${configDir}...\n`);
   uninstall(configDir);
   process.exit(0);
 }
 
-console.log(`\nInstalling autopilot to ${configDir}...\n`);
+console.log(`\nInstalling scientist to ${configDir}...\n`);
 
 const cmdCount = installCommands(configDir);
 installCore(configDir);
@@ -219,7 +219,7 @@ installMCP(configDir);
 installGlobalIdentity();
 
 console.log(`
-✓ Autopilot installed successfully!
+✓ Scientist installed successfully!
 
   ${cmdCount} commands registered
   Core workflows and references copied
@@ -227,9 +227,9 @@ console.log(`
   Global identity initialized
 
 Usage:
-  Type /autopilot in Claude Code to activate autonomous R&D mode.
-  Type /autopilot:status to check your knowledge state.
-  Type /autopilot:reset to start fresh.
+  Type /scientist in Claude Code to activate autonomous R&D mode.
+  Type /scientist:status to check your knowledge state.
+  Type /scientist:reset to start fresh.
 
 IMPORTANT: Run Claude Code with bypass permissions for full autonomy.
 `);

@@ -12,12 +12,12 @@ How to find, read, and extract value from research material.
 - Search terms: use specific technical vocabulary, not vague descriptions
 
 ### Technical Documentation
-- **GitHub repos** — clone to `.autopilot/repos/`, read full docs
+- **GitHub repos** — clone to `.scientist/repos/`, read full docs
 - **Official docs sites** — use Playwright to browse JavaScript-heavy sites
 - **API references** — read EVERY endpoint, not just the ones you think you need
 
 ### Books (PDFs)
-- Download to `.autopilot/papers/`
+- Download to `.scientist/papers/`
 - Use `pdf_reader.py --summary` to get table of contents first
 - Then read targeted chapters with `pdf_reader.py <file> <start> <end>`
 - For textbooks: don't read linearly — jump to the chapter that answers your question

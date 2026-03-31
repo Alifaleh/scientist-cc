@@ -1,12 +1,12 @@
-# Autopilot
+# Scientist
 
 > Self-Evolving R&D Framework for Claude Code
 
-Autopilot transforms Claude into an autonomous scientist who owns your project. Claude researches deeply, forms hypotheses, tests them, documents findings in an Obsidian knowledge vault, and **upgrades its own thinking** when it catches mistakes.
+Scientist transforms Claude into an autonomous scientist who owns your project. Claude researches deeply, forms hypotheses, tests them, documents findings in an Obsidian knowledge vault, and **upgrades its own thinking** when it catches mistakes.
 
 ## What It Does
 
-When you type `/autopilot`, Claude:
+When you type `/scientist`, Claude:
 1. **Takes ownership.** Treats the project as personal — thinks independently, disagrees when right.
 2. **Researches deeply.** Reads papers, browses the web, downloads PDFs, clones repos, reads FULL documentation.
 3. **Observes real data.** Queries APIs, writes monitoring scripts, uses Jupyter for analysis.
@@ -19,7 +19,7 @@ When you type `/autopilot`, Claude:
 
 ## Requirements
 
-**Run Claude Code with bypass permissions enabled.** Autopilot requires full system access to:
+**Run Claude Code with bypass permissions enabled.** Scientist requires full system access to:
 - Install Python packages, system tools, and dependencies
 - Browse the web with Playwright
 - Download research papers and clone repositories
@@ -30,27 +30,27 @@ When you type `/autopilot`, Claude:
 
 ```bash
 # Global (all projects)
-npm install -g autopilot-cc
-autopilot-cc --global
+npm install -g scientist-cc
+scientist-cc --global
 
 # Local (this project only)
-npm install autopilot-cc
-npx autopilot-cc --local
+npm install scientist-cc
+npx scientist-cc --local
 ```
 
 ## Commands
 
 | Command | What it does |
 |---------|-------------|
-| `/autopilot` | Start or resume autonomous R&D mode |
-| `/autopilot:status` | Check mastery stage, active hypotheses, knowledge state |
-| `/autopilot:reset` | Archive vault and start fresh |
+| `/scientist` | Start or resume autonomous R&D mode |
+| `/scientist:status` | Check mastery stage, active hypotheses, knowledge state |
+| `/scientist:reset` | Archive vault and start fresh |
 
 ## What Gets Created
 
 In your project:
 ```
-.autopilot/
+.scientist/
 ├── vault/           # Obsidian knowledge vault (THE deliverable)
 ├── tools/           # PDF reader, repo reader
 ├── papers/          # Downloaded research PDFs
@@ -85,7 +85,7 @@ Claude evolves through mastery stages:
 
 > The vault is the deliverable. Code is temporary. Knowledge is permanent.
 
-Autopilot isn't about writing code faster. It's about thinking deeper. Claude reads academic papers, observes live systems, forms hypotheses with causal mechanisms, validates rigorously, and documents everything in a structured Obsidian vault that compounds across sessions.
+Scientist isn't about writing code faster. It's about thinking deeper. Claude reads academic papers, observes live systems, forms hypotheses with causal mechanisms, validates rigorously, and documents everything in a structured Obsidian vault that compounds across sessions.
 
 When Claude makes a mistake — overfitting, bruteforcing, being impulsive — it doesn't just fix the error. It updates its own operating rules (CLAUDE.md) to prevent that CLASS of error forever. Every project makes Claude smarter.
 

@@ -28,5 +28,5 @@ These apply to EVERY project, regardless of domain:
 *(Skills that transfer across projects — statistics, ML, data analysis, etc.)*
 
 ---
-*This file lives at ~/.autopilot/GLOBAL-IDENTITY.md and is shared across all autopilot projects.*
+*This file lives at ~/.scientist/GLOBAL-IDENTITY.md and is shared across all scientist projects.*
 *Updated by the self-evolution mechanism.*

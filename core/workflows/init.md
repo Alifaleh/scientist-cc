@@ -1,6 +1,6 @@
-# Autopilot Init Workflow
+# Scientist Init Workflow
 
-This workflow runs when `/autopilot` is called in a project that doesn't have `.autopilot/` yet.
+This workflow runs when `/scientist` is called in a project that doesn't have `.scientist/` yet.
 
 ## Phase 1: Information Gathering
 
@@ -21,18 +21,18 @@ If the directory is NOT empty, also:
 ## Phase 2: Create Project Structure
 
 ```bash
-mkdir -p .autopilot/{vault/{Research,Observations,Hypotheses,Experiments,"Knowledge Base"/Tools,"Knowledge Base"/Skills},tools,papers,repos,scripts,logs}
+mkdir -p .scientist/{vault/{Research,Observations,Hypotheses,Experiments,"Knowledge Base"/Tools,"Knowledge Base"/Skills},tools,papers,repos,scripts,logs}
 ```
 
 ## Phase 3: Copy Tools
 
-Copy from the autopilot installation directory:
-- `tools/pdf_reader.py` → `.autopilot/tools/pdf_reader.py`
-- `tools/repo_reader.py` → `.autopilot/tools/repo_reader.py`
+Copy from the scientist installation directory:
+- `tools/pdf_reader.py` → `.scientist/tools/pdf_reader.py`
+- `tools/repo_reader.py` → `.scientist/tools/repo_reader.py`
 
 ## Phase 4: Create Vault Index
 
-Create `.autopilot/vault/Index.md`:
+Create `.scientist/vault/Index.md`:
 
 ```markdown
 ---
@@ -52,7 +52,7 @@ tags: [index, vault]
   - [[Knowledge Base/Skills/]] — Skills I've built
 
 ## Current Focus
-*(Updated by autopilot each session)*
+*(Updated by scientist each session)*
 
 ## Open Questions
 *(Things I don't understand yet)*
@@ -73,28 +73,28 @@ Template from `core/templates/PROJECT-IDENTITY.md` — fill in with gathered inf
 ## Phase 6: Update CLAUDE.md
 
 If CLAUDE.md exists in project root:
-- Append the autopilot section from `core/templates/CLAUDE-autopilot.md`
+- Append the scientist section from `core/templates/CLAUDE-scientist.md`
 - Don't overwrite existing content
 
 If CLAUDE.md doesn't exist:
-- Create it with the autopilot template
+- Create it with the scientist template
 
 The CLAUDE.md section must include:
 - "Read IDENTITY.md at session start"
 - "Never stop working — infinite loop"
 - "Self-evolve — update this file when catching thinking errors"
 - "The Obsidian vault is the deliverable"
-- Reference to `.autopilot/vault/` as knowledge base
+- Reference to `.scientist/vault/` as knowledge base
 
 ## Phase 7: Initialize Git
 
 Check if `.git/` exists:
-- **If yes:** Create branch `autopilot/research` from current HEAD. Don't touch main.
-- **If no:** `git init`, add all files, initial commit "autopilot: init project", create `autopilot/research` branch.
+- **If yes:** Create branch `scientist/research` from current HEAD. Don't touch main.
+- **If no:** `git init`, add all files, initial commit "scientist: init project", create `scientist/research` branch.
 
 ## Phase 8: Create State File
 
-Create `.autopilot/state.json`:
+Create `.scientist/state.json`:
 ```json
 {
   "initialized": "ISO timestamp",

@@ -1,10 +1,10 @@
-# Autopilot Resume Workflow
+# Scientist Resume Workflow
 
-This workflow runs when `/autopilot` is called in a project that already has `.autopilot/`.
+This workflow runs when `/scientist` is called in a project that already has `.scientist/`.
 
 ## Step 1: Load State
 
-Read `.autopilot/state.json`:
+Read `.scientist/state.json`:
 - What mastery stage am I at?
 - Where in the loop did I leave off?
 - How many sessions have I done?
@@ -28,7 +28,7 @@ Read `CLAUDE.md`:
 
 ## Step 4: Read Vault Index
 
-Read `.autopilot/vault/Index.md`:
+Read `.scientist/vault/Index.md`:
 - What's my current focus?
 - What open questions do I have?
 - What hypotheses are untested?
@@ -40,7 +40,7 @@ Scan vault directories for recent notes:
 
 ## Step 5: Check Monitoring Scripts
 
-Check `.autopilot/logs/` for output from any observation scripts:
+Check `.scientist/logs/` for output from any observation scripts:
 - Were any scripts running between sessions?
 - Any alerts or interesting patterns logged?
 - Read and analyze new log data.

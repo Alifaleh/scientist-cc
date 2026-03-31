@@ -1,9 +1,9 @@
 {
-  "name": "autopilot-cc",
+  "name": "scientist-cc",
   "version": "0.1.0",
   "description": "Self-evolving R&D framework for Claude Code. Claude becomes an autonomous scientist who owns the project, researches deeply, builds knowledge, and never stops learning.",
   "bin": {
-    "autopilot-cc": "bin/install.js"
+    "scientist-cc": "bin/install.js"
   },
   "keywords": [
     "claude-code",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alifaleh/autopilot-cc"
+    "url": "https://github.com/alifaleh/scientist-cc"
   },
   "engines": {
     "node": ">=18.0.0"

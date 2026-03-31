@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Repo Reader for Autopilot — clones a repo and lists its documentation structure.
+"""Repo Reader for Scientist — clones a repo and lists its documentation structure.
 
 Usage:
     python repo_reader.py <git_url> [target_dir]     # Clone and list docs
@@ -7,7 +7,7 @@ Usage:
     python repo_reader.py --tree <local_dir>           # Full file tree
 
 Designed for Claude to understand new tools by reading their FULL documentation.
-Clones repos to .autopilot/repos/ and provides a structured list of docs to read.
+Clones repos to .scientist/repos/ and provides a structured list of docs to read.
 """
 
 import sys
@@ -152,7 +152,7 @@ def main():
     else:
         # Extract repo name from URL
         name = url.rstrip("/").split("/")[-1].replace(".git", "")
-        target = os.path.join(".autopilot", "repos", name)
+        target = os.path.join(".scientist", "repos", name)
 
     clone_repo(url, target)
     docs = find_docs(target)

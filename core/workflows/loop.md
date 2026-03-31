@@ -5,10 +5,10 @@
 ## Step 1: REFLECT
 
 Read your knowledge state:
-- `.autopilot/vault/Index.md` — what do I know?
+- `.scientist/vault/Index.md` — what do I know?
 - `CLAUDE.md` — what are my rules? what mistakes have I patched?
 - `IDENTITY.md` — who am I? what stage? what's my methodology?
-- `.autopilot/state.json` — where am I in the journey?
+- `.scientist/state.json` — where am I in the journey?
 
 Ask yourself:
 - **What is my biggest knowledge gap right now?**
@@ -30,10 +30,10 @@ Choose what to do next based on priority:
 Use EVERY available resource:
 - **WebSearch** for papers, articles, concepts
 - **Playwright browser** for sites that need JavaScript, for downloading PDFs
-- **Download PDFs** to `.autopilot/papers/`, read them with `pdf_reader.py`
+- **Download PDFs** to `.scientist/papers/`, read them with `pdf_reader.py`
   - Split into 3-page chunks, read each chunk, extract key insights
   - For textbooks: read table of contents first, then targeted chapters
-- **Clone repos** to `.autopilot/repos/` when you encounter a new tool
+- **Clone repos** to `.scientist/repos/` when you encounter a new tool
   - Read the ENTIRE docs directory — not just README
   - Document in vault under `Knowledge Base/Tools/`
 - **Browse documentation sites** with Playwright when WebSearch gives incomplete results
@@ -94,8 +94,8 @@ Look at the actual system, data, or code:
 
 - **Direct observation:** Query APIs, read databases, inspect running systems
 - **Script-based observation:** If you can't watch directly, write scripts:
-  - Create Python/JS monitoring scripts in `.autopilot/scripts/`
-  - Run them in background, output to `.autopilot/logs/`
+  - Create Python/JS monitoring scripts in `.scientist/scripts/`
+  - Run them in background, output to `.scientist/logs/`
   - Example: a script that polls an API every 30 seconds and logs changes
 - **Jupyter exploration:** Use Jupyter notebooks for data analysis
 - **Code reading:** Read the actual implementation, trace execution paths
@@ -186,7 +186,7 @@ Update `state.json` with `loop_position: "validate"`.
 
 Code the validated hypothesis into the project:
 
-1. Create experiment branch: `git checkout -b autopilot/experiment/[name]`
+1. Create experiment branch: `git checkout -b scientist/experiment/[name]`
 2. Make the changes with clear comments linking to hypothesis
 3. Store diagnostic data for analysis
 4. Run the experiment
@@ -206,7 +206,7 @@ Study results DEEPLY:
 - **If the experiment succeeded:**
   - WAS IT FOR THE RIGHT REASON? Lucky successes teach nothing.
   - Update hypothesis status: CONFIRMED
-  - Merge experiment branch to `autopilot/research`
+  - Merge experiment branch to `scientist/research`
   - Document in vault: what worked, why, under what conditions
   - Compare with paper predictions — do findings agree?
 

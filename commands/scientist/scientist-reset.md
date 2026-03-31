@@ -1,5 +1,5 @@
 ---
-name: autopilot:reset
+name: scientist:reset
 description: Archive current vault and start fresh with new context gathering
 allowed-tools:
   - Read
@@ -11,7 +11,7 @@ allowed-tools:
 <process>
 1. Confirm with user: "This will archive your current vault and start fresh. Continue?"
 2. If yes:
-   - Create `.autopilot/archive/[ISO-date]/`
+   - Create `.scientist/archive/[ISO-date]/`
    - Move current vault/ to archive
    - Move IDENTITY.md to archive
    - Reset state.json

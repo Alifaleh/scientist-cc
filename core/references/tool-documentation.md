@@ -11,9 +11,9 @@ When you encounter ANY new tool, library, framework, or technology — you don't
 
 ### Step 2: Clone or Download
 ```bash
-python .autopilot/tools/repo_reader.py <github_url>
+python .scientist/tools/repo_reader.py <github_url>
 ```
-This clones to `.autopilot/repos/<tool-name>/` and lists all documentation files.
+This clones to `.scientist/repos/<tool-name>/` and lists all documentation files.
 
 ### Step 3: Read EVERYTHING
 Not just README. Read:
@@ -27,7 +27,7 @@ Use `pdf_reader.py` for PDF docs. Use Playwright for web-based docs.
 
 ### Step 4: Document in Vault
 
-Create `.autopilot/vault/Knowledge Base/Tools/<tool-name>.md`:
+Create `.scientist/vault/Knowledge Base/Tools/<tool-name>.md`:
 
 ```markdown
 ---

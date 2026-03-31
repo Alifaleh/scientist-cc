@@ -6,17 +6,17 @@ R&D projects are different — you don't know where you're going. The git workfl
 
 ```
 main                        ← stable, current best understanding
-  └── autopilot/research    ← active R&D work
-        ├── autopilot/experiment/vpin-filter  ← risky experiment
-        ├── autopilot/experiment/new-signals  ← another experiment
+  └── scientist/research    ← active R&D work
+        ├── scientist/experiment/vpin-filter  ← risky experiment
+        ├── scientist/experiment/new-signals  ← another experiment
         └── (merge back when results are in)
 ```
 
 ## Rules
 
 - `main` only gets merges when there's a significant, validated improvement
-- `autopilot/research` is the working branch — frequent commits, messy is OK
-- `autopilot/experiment/<name>` for risky changes — if they fail, delete the branch but KEEP the vault documentation
+- `scientist/research` is the working branch — frequent commits, messy is OK
+- `scientist/experiment/<name>` for risky changes — if they fail, delete the branch but KEEP the vault documentation
 - **Never force push.** History matters. Dead ends are valuable data.
 
 ## Commit Prefixes
