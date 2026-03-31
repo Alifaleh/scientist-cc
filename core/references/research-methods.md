@@ -86,3 +86,16 @@ related:
 - **Never trust:** "Strategy" posts, "how to make money" content, anything selling something
 
 The mechanism matters more than the claim. If a paper shows WHY something works (mathematical proof, controlled experiment), trust it more than a paper that shows THAT it works (correlation without causation).
+
+## Before Starting Research
+
+1. **Check vault-index.json** — has this topic been researched already? If a `status/understood` note exists, read it first and build on it instead of starting from scratch.
+2. **Check papers/ directory** — has the paper already been downloaded? Don't re-download.
+3. **Set a research question** — what specifically do you need to learn? Unfocused research produces unfocused notes.
+
+## After Completing Research
+
+1. **Run two-phase linking** — scan vault for notes sharing tags, assess link types
+2. **Check for contradictions** — does the new research contradict anything in the vault? If yes, investigate.
+3. **Update vault-index.json** — run `python .scientist/tools/generate_index.py`
+4. **Update related notes' metadata** (backward evolution) if new findings change the context of old notes
