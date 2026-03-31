@@ -1,0 +1,7 @@
+# Don't ship these to npm — they're reference docs, not runtime code
+mcp/
+.scientist/
+.playwright-mcp/
+.git/
+docs/research/
+*.pdf
