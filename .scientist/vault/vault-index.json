@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T23:12:06.608088",
-  "note_count": 86,
+  "generated": "2026-03-31T23:28:51.783559",
+  "note_count": 88,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -286,6 +286,24 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Deploying improvements frequently (18+ versions in one R&D effort) creates a tight feedback loop: improve \u2192 deploy \u2192 use improved version \u2192 discover n",
+      "relevance_score": 0.805
+    },
+    {
+      "path": "Knowledge Base/Principle - Emergence Requires 4+ Links Per Note.md",
+      "title": "Principle: Emergence Requires 4+ Links Per Note",
+      "tags": [
+        "principle",
+        "emergence",
+        "density",
+        "threshold"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Below 4.0 links/note, a vault is an organized collection. Above 4.0, emergent insights appear \u2014 traversing 2-3 connections reveals non-obvious pattern",
       "relevance_score": 0.805
     },
     {
@@ -868,6 +886,26 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Software hypothesis testing is FASTER than traditional science because deployment is instant and rollback is free (git). Traditional science needs wee",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Iterative Elicitation Loops for AI Agents.md",
+      "title": "Iterative Elicitation Loops: Gap Analysis Until Complete Understanding",
+      "tags": [
+        "research",
+        "elicitation",
+        "gap-analysis",
+        "init-design",
+        "user-interaction",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "A single round of questions is never enough. The init workflow must iterate: describe \u2192 gap analysis \u2192 ask \u2192 respond \u2192 re-analyze \u2192 ask again \u2192 until ",
       "relevance_score": 0.725
     },
     {
@@ -1609,15 +1647,15 @@
   ],
   "meta_metrics": {
     "link_density": 5.0,
-    "total_links": 427,
-    "principle_extraction_rate": 0.43,
+    "total_links": 438,
+    "principle_extraction_rate": 0.45,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 46,
+      "research": 47,
       "observations": 13,
       "hypotheses": 9,
-      "principles": 20
+      "principles": 21
     }
   }
 }
