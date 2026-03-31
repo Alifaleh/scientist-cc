@@ -113,7 +113,17 @@ Look at the actual system, data, or code:
   - Create Python/JS monitoring scripts in `.scientist/scripts/`
   - Run them in background, output to `.scientist/logs/`
   - Example: a script that polls an API every 30 seconds and logs changes
-- **Jupyter exploration:** Use Jupyter notebooks for data analysis
+- **Jupyter notebooks** (preferred for data work): Use Jupyter MCP for:
+  - Data analysis and exploration (pandas, numpy)
+  - Visualization (matplotlib, seaborn, plotly)
+  - Machine learning experiments (sklearn, torch)
+  - Statistical testing and hypothesis validation
+  - Any iterative data exploration where seeing intermediate results matters
+  - Save notebooks to `.scientist/scripts/` for reproducibility
+- **Python scripts** (fallback if Jupyter MCP unavailable): Write standalone .py files for:
+  - Monitoring scripts that run in background
+  - One-off data processing tasks
+  - Automated data collection
 - **Code reading:** Read the actual implementation, trace execution paths
 
 Record observations in vault:
