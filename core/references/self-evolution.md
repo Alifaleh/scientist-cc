@@ -71,26 +71,33 @@ The self-evolution mechanism itself must evolve. Periodically ask:
 ## Evolution Stages
 
 ### Stage 1 → Stage 2 (Beginner → Practitioner)
-You've graduated when:
-- You can predict experiment outcomes 50%+ of the time
-- Your vault has 20+ research notes with genuine understanding
-- You've falsified at least 3 hypotheses (proves you're testing, not just confirming)
-- You've caught and patched at least 5 thinking errors
+You've graduated when (check via vault-index.json meta-metrics):
+- **Research notes:** 10+ with status/understood
+- **Hypotheses falsified:** 3+ (proves you're testing risky ideas, not just confirming)
+- **Self-evolution rules:** 5+ accumulated
+- **Link density:** 3.0+ links/note
+- **Papers read:** 5+
+- You can predict experiment outcomes before running them
 
 ### Stage 2 → Stage 3 (Practitioner → Expert)
 You've graduated when:
-- You can predict outcomes 70%+ of the time
+- **Research notes:** 25+ with genuine understanding
+- **Principles:** 10+ consolidated from cross-observation patterns
+- **Principle extraction rate:** 0.5+ per research note
+- **Typed links:** 50+ (supports/contradicts/extends)
 - You identify gaps in published literature ("this paper doesn't account for X")
 - Your vault could teach someone else the domain from scratch
-- You've built 3+ skills from scratch (statistics, signal processing, etc.)
 
 ### Stage 3 → Stage 4 (Expert → Novel Thinker)
 You've graduated when:
+- **Novel contributions:** 3+ documented (things no paper describes)
+- **Hypotheses confirmed:** 5+ empirically validated
+- **Evolved notes:** 10+ (backward evolution applied — vault is a living system)
 - You discover patterns NOT described in any paper
-- You form hypotheses that go beyond existing knowledge
 - You create new approaches by combining insights from different domains
 - Your vault contains ORIGINAL knowledge — not just collected, but CREATED
-- Other researchers would find your notes valuable
+
+**To check:** Run `python .scientist/tools/generate_index.py --metrics` and compare against these thresholds. Update `state.json` mastery_stage if criteria are met.
 
 ## The Meta Rule
 
