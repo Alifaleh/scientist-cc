@@ -1,7 +1,25 @@
 {
-  "generated": "2026-03-31T22:32:11.996899",
-  "note_count": 71,
+  "generated": "2026-03-31T22:35:11.541246",
+  "note_count": 74,
   "notes": [
+    {
+      "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
+      "title": "Principle: Persistence Is the Moat \u2014 Session-Bounded Agents Can't Compete",
+      "tags": [
+        "principle",
+        "persistence",
+        "competitive-advantage",
+        "moat"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 10,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "An AI agent that accumulates knowledge across context windows will always outperform one that starts fresh. Persistent vault-based memory is the #1 co",
+      "relevance_score": 0.93
+    },
     {
       "path": "Knowledge Base/Principle - The Meta-Tool Advantage.md",
       "title": "Principle: The Meta-Tool Advantage \u2014 Tools That Improve Themselves Win",
@@ -19,6 +37,24 @@
       "evolved_on": null,
       "summary": "A tool that can improve itself through use has an exponential advantage over tools that require external modification. scientist-cc's pure-markdown ar",
       "relevance_score": 0.93
+    },
+    {
+      "path": "Knowledge Base/Principle - Adversarial Thinking Prevents Cascading Errors.md",
+      "title": "Principle: Adversarial Thinking Prevents Cascading Errors",
+      "tags": [
+        "principle",
+        "adversarial",
+        "error-prevention",
+        "validation"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 8,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "The cheapest error to fix is the one you catch before it enters the vault. Adversarial validation (writing 3 ways a hypothesis could be wrong) is the ",
+      "relevance_score": 0.88
     },
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -450,6 +486,25 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "The information gathering phase (init Phase 1) needs to be smarter \u2014 ask better questions, probe deeper. The framework needs to be a REAL scientist wi",
+      "relevance_score": 0.75
+    },
+    {
+      "path": "Research/Error Cascading in AI Agent Knowledge Bases.md",
+      "title": "Error Cascading: Why Wrong Conclusions Compound in AI Agents",
+      "tags": [
+        "research",
+        "error-cascading",
+        "knowledge-quality",
+        "anti-pattern",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 7,
+      "typed_links": 4,
+      "evolved_on": null,
+      "summary": "When an agent builds on a wrong conclusion, every subsequent finding that references it is ALSO wrong. In a densely linked vault (4.8 links/note), a s",
       "relevance_score": 0.75
     },
     {
@@ -1329,16 +1384,16 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.9,
-    "total_links": 345,
-    "principle_extraction_rate": 0.33,
+    "link_density": 5.0,
+    "total_links": 370,
+    "principle_extraction_rate": 0.37,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 40,
+      "research": 41,
       "observations": 11,
       "hypotheses": 8,
-      "principles": 13
+      "principles": 15
     }
   }
 }
