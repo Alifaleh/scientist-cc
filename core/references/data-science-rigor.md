@@ -36,6 +36,7 @@ Where to find data:
 - **APIs** — finance (yfinance), weather (openweathermap), social (Reddit, Twitter)
 - **Web scraping** — use Playwright for JS-heavy sites, requests+BeautifulSoup for static
 - **Synthetic data** — generate from known distributions for hypothesis testing
+- **HuggingFace MCP** — use `hub_repo_search` to find datasets, `hf_hub_query` for exploration (available in Claude Code)
 
 ## Building Your Own Dataset
 
