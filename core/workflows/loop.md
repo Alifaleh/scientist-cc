@@ -348,6 +348,27 @@ Individual observations and experiments produce **episodic knowledge** (what hap
 4. **Update vault Index** with new principles under a "## Consolidated Principles" section.
 5. **Check for contradictions:** Do any new principles contradict existing ones? If yes, investigate — one of them is wrong.
 
+### Two-Phase Linking (A-MEM inspired)
+
+After writing new notes, systematically discover connections:
+
+**Phase A — Cheap candidate filter:**
+For each new note this cycle, scan ALL vault notes for:
+- 2+ shared tags in frontmatter
+- 1+ shared entity name (grep for proper nouns, tool names, paper titles)
+- Existing `related` frontmatter that references common notes
+
+Take top-5 candidates by overlap count.
+
+**Phase B — LLM reasoning for final links:**
+For each candidate, assess: "Should this be linked? What type?"
+- `[[supports::Target]]` — evidence that strengthens the target
+- `[[contradicts::Target]]` — evidence that weakens the target
+- `[[extends::Target]]` — builds on or generalizes the target
+- No link — the connection is superficial, skip it
+
+Write typed wikilinks to BOTH notes (bidirectional). This creates emergent connections the scientist wouldn't have found manually.
+
 **Skip this step if:** You've only done 1 observation/experiment this cycle (not enough data to consolidate).
 
 Update `state.json` with `loop_position: "consolidate"`.
