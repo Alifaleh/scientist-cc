@@ -148,6 +148,39 @@ Template from `core/templates/PROJECT-IDENTITY.md` — fill in with gathered inf
 
 If ANY section is missing or truncated, rewrite it. CLAUDE.md is the single most important file — a broken CLAUDE.md means Claude forgets who it is.
 
+## Phase 6.5: Install Anti-Stop Hook
+
+Create `.claude/hooks/scientist-anti-stop.js`:
+```javascript
+const fs = require('fs');
+const path = require('path');
+if (fs.existsSync(path.join(process.cwd(), '.scientist'))) {
+  console.log(JSON.stringify({
+    hookSpecificOutput: {
+      hookEventName: "Stop",
+      additionalContext: "ANTI-STOPPING: You just stopped. The scientist loop NEVER stops. Continue immediately with the next action."
+    }
+  }));
+}
+```
+
+Create or update `.claude/settings.json` with the Stop hook:
+```json
+{
+  "hooks": {
+    "Stop": [{
+      "hooks": [{
+        "type": "command",
+        "command": "node \".claude/hooks/scientist-anti-stop.js\"",
+        "timeout": 5
+      }]
+    }]
+  }
+}
+```
+
+This hook fires every time Claude stops responding and injects a continuation reminder. It's the structural enforcement that prevents the #1 failure mode.
+
 ## Phase 7: Initialize Git
 
 Check if `.git/` exists:
