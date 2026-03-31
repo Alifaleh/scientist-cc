@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T21:04:12.701819",
-  "note_count": 57,
+  "generated": "2026-03-31T22:12:52.785819",
+  "note_count": 63,
   "notes": [
     {
       "path": "Knowledge Base/Principle - The Meta-Tool Advantage.md",
@@ -339,6 +339,26 @@
       "relevance_score": 0.75
     },
     {
+      "path": "Observations/User Feedback - Init Phase and Data Science Capabilities.md",
+      "title": "User Feedback: Init Phase + Data Science Capabilities Need Major Improvement",
+      "tags": [
+        "observation",
+        "user-feedback",
+        "init-phase",
+        "data-science",
+        "status/actionable",
+        "priority/high"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "link_count": 0,
+      "typed_links": 0,
+      "evolved_on": null,
+      "summary": "The information gathering phase (init Phase 1) needs to be smarter \u2014 ask better questions, probe deeper. The framework needs to be a REAL scientist wi",
+      "relevance_score": 0.75
+    },
+    {
       "path": "Research/Knowledge Management for AI Agents.md",
       "title": "Knowledge Management for AI Agents",
       "tags": [
@@ -452,6 +472,46 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/Data Science MCP Ecosystem.md",
+      "title": "Data Science MCP Ecosystem for Claude Code",
+      "tags": [
+        "research",
+        "mcp",
+        "data-science",
+        "tools",
+        "ecosystem",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Several MCP servers exist for data science work. The most immediately useful for scientist-cc: HuggingFace MCP (already available as Claude.ai integra",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Data Science Rigor for Autonomous Agents.md",
+      "title": "Data Science Rigor for Autonomous AI Agents",
+      "tags": [
+        "research",
+        "data-science",
+        "overfitting",
+        "statistics",
+        "methodology",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "An autonomous scientist without data rigor is worse than no scientist \u2014 it will confidently produce wrong conclusions and build on them. The anti-over",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/Hyperagents - Meta-Level Self-Modification.md",
       "title": "Hyperagents: Meta-Level Self-Modification (Meta, 2026)",
       "tags": [
@@ -487,6 +547,25 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "MIRIX achieves 35% improvement over RAG baselines using 6 specialized memory types and multi-agent coordination. Our 3-agent model (Researcher/Observe",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Multi-Agent Shared Memory with Role-Scoped Views.md",
+      "title": "Multi-Agent Memory: Shared Vault + Role-Scoped Views",
+      "tags": [
+        "research",
+        "multi-agent",
+        "memory",
+        "role-scoping",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "The 2026 consensus: role-specialized agents should share ONE vault but read/write through role-tagged namespaces. Our vault already does this: `Resear",
       "relevance_score": 0.725
     },
     {
@@ -545,6 +624,25 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "scientist-cc proves that the scientific method (hypothesize \u2192 validate \u2192 implement \u2192 learn) produces better software outcomes than iterative trial-and",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Spaced Repetition Adapted for AI Agents.md",
+      "title": "Spaced Repetition Adapted for AI Agent Vaults",
+      "tags": [
+        "research",
+        "spaced-repetition",
+        "knowledge-decay",
+        "validation",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Spaced repetition for AI agents isn't reviewing flashcards \u2014 it's periodically re-validating knowledge at calibrated intervals per note type. Volatile",
       "relevance_score": 0.725
     },
     {
@@ -817,6 +915,25 @@
       "relevance_score": 0.675
     },
     {
+      "path": "Research/GVU Representation Theorem.md",
+      "title": "GVU Representation Theorem: Any Self-Update Is a GVU",
+      "tags": [
+        "research",
+        "gvu",
+        "formal-proof",
+        "self-improvement",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Chojecki (2025) PROVES that any first-order, sample-based self-update can be written as a GVU operator \u2014 meaning STaR, Reflexion, SPIN, GANs, AlphaZer",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/Hypothesis-Driven Development for AI Research.md",
       "title": "Hypothesis-Driven Development for AI Research",
       "tags": [
@@ -1060,13 +1177,13 @@
   ],
   "meta_metrics": {
     "link_density": 4.6,
-    "total_links": 262,
-    "principle_extraction_rate": 0.35,
+    "total_links": 290,
+    "principle_extraction_rate": 0.31,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 31,
-      "observations": 8,
+      "research": 36,
+      "observations": 9,
       "hypotheses": 8,
       "principles": 11
     }
