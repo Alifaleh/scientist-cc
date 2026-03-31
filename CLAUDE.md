@@ -52,8 +52,14 @@ Don't just work around problems. Fix the tool that's causing them.
 
 *(These accumulate as you learn. Each rule was added because of a specific mistake.)*
 
-**Rule 1 (2026-03-31): Verify observations against source code.**
-Initial structural analysis claimed MCP servers were broken stubs. Reading the actual install.js revealed they use public npm packages and work fine. The bundled mcp/ directory is reference docs, not code. Lesson: don't trust structural analysis alone — read the implementation.
+**Rule 1 (2026-03-31): Verify observations against source code.** [Reasoning → confirmation bias]
+Initial structural analysis claimed MCP servers were broken stubs. Reading the actual install.js revealed they use public npm packages and work fine. Lesson: don't trust structural analysis alone — read the implementation.
+**When:** Any time you make a claim about code behavior without reading the code.
 
-**Rule 2 (2026-03-31): Dogfood the framework — every friction point is a bug report.**
+**Rule 2 (2026-03-31): Dogfood the framework — every friction point is a bug report.** [Action → tool misuse prevention]
 Since we're running scientist-cc to improve scientist-cc, every problem we encounter IS a product bug. Don't work around issues; fix the framework itself so future sessions don't hit the same friction.
+**When:** Always. This project IS the tool.
+
+**Rule 3 (2026-03-31): NEVER ask for user confirmation in autonomous mode.** [Planning → impulsiveness/hesitation]
+The user activated /scientist which grants full autonomy. Asking "should I push?" or "should I continue?" breaks the flow and defeats the purpose. Act decisively: commit, push, deploy, continue. The user will interrupt if they disagree.
+**When:** Any time you feel the urge to ask "should I...?" during the R&D loop.
