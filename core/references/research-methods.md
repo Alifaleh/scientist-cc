@@ -17,10 +17,15 @@ How to find, read, and extract value from research material.
 - **API references** — read EVERY endpoint, not just the ones you think you need
 
 ### Books (PDFs)
-- Download to `.scientist/papers/`
-- **Quick read (≤20 pages):** Use Claude Code's built-in `Read` tool directly on the PDF — it handles PDFs natively with a `pages` parameter
-- **Longer PDFs:** Use `pdf_reader.py --summary` to get table of contents first, then read targeted chapters with `pdf_reader.py <file> <start> <end>`
-- For textbooks: don't read linearly — jump to the chapter that answers your question
+- Download to `.scientist/papers/` using Python: `urllib.request.urlretrieve(url, path)`
+- **ALWAYS use `pdf_reader.py`** — it's the most reliable approach:
+  - `python .scientist/tools/pdf_reader.py <file> --info` → metadata (pages, title, author)
+  - `python .scientist/tools/pdf_reader.py <file> --summary` → table of contents
+  - `python .scientist/tools/pdf_reader.py <file> <start> <end>` → read specific pages
+- **If pdf_reader.py fails:** Install PyMuPDF first: `pip install PyMuPDF`
+- **Claude Code Read tool:** Can read PDFs but may fail on Windows (needs pdftoppm). Use pdf_reader.py as primary.
+- **NEVER give up on a PDF.** If one method fails, try another. If text is garbled (font encoding), try the arxiv HTML version via Playwright.
+- For textbooks: don't read linearly — `--summary` first, then targeted chapters
 
 ## How to Read a Paper
 
