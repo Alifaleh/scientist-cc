@@ -41,6 +41,9 @@ def generate_index(vault_dir='.scientist/vault'):
 
         rel_path = os.path.relpath(md_file, vault_dir).replace('\\', '/')
 
+        # Count wikilinks as a proxy for connectivity
+        link_count = len(re.findall(r'\[\[.*?\]\]', content))
+
         notes.append({
             'path': rel_path,
             'title': fm.get('title', os.path.basename(md_file).replace('.md', '')),
@@ -48,13 +51,39 @@ def generate_index(vault_dir='.scientist/vault'):
             'status': next((t.split('/')[1] for t in tags if t.startswith('status/')), None),
             'date': fm.get('date', None),
             'last_verified': fm.get('last_verified', None),
+            'link_count': link_count,
             'summary': summary[:150] if summary else None
         })
+
+    # Compute relevance scores (H6: weighted retrieval)
+    today = datetime.now().strftime('%Y-%m-%d')
+    for note in notes:
+        recency = 1.0  # default
+        if note['date']:
+            try:
+                days_old = (datetime.now() - datetime.strptime(note['date'], '%Y-%m-%d')).days
+                recency = max(0.1, 1.0 - (days_old / 90))  # decay over 90 days
+            except ValueError:
+                pass
+
+        importance = 0.5
+        if any('priority/high' in t for t in note['tags']):
+            importance = 1.0
+        elif any('principle' in t for t in note['tags']):
+            importance = 0.8
+        elif note['status'] == 'untested':
+            importance = 0.9  # untested hypotheses are high priority
+
+        connectivity = min(1.0, note['link_count'] / 10)  # normalize to 0-1
+
+        note['relevance_score'] = round(
+            recency * 0.4 + importance * 0.35 + connectivity * 0.25, 3
+        )
 
     index = {
         'generated': datetime.now().isoformat(),
         'note_count': len(notes),
-        'notes': sorted(notes, key=lambda n: n.get('date') or '', reverse=True)
+        'notes': sorted(notes, key=lambda n: n.get('relevance_score', 0), reverse=True)
     }
 
     output_path = f'{vault_dir}/vault-index.json'
@@ -63,9 +92,10 @@ def generate_index(vault_dir='.scientist/vault'):
 
     print(f'Generated {output_path}: {len(notes)} notes indexed')
     for n in index['notes']:
-        s = n['summary'][:50] if n['summary'] else '(no summary)'
+        s = n['summary'][:40] if n['summary'] else '(no summary)'
         status = n['status'] or '?'
-        print(f'  {n["path"]}: [{status}] {s}')
+        score = n.get('relevance_score', 0)
+        print(f'  {score:.2f} [{status:>12}] {n["path"]}')
 
 
 if __name__ == '__main__':
