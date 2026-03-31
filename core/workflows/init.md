@@ -37,9 +37,19 @@ scripts/
 vault/assets/*.png
 vault/assets/*.jpg
 vault/assets/*.svg
+vault/.obsidian/
 ```
 
-Also add these patterns to the project's root `.gitignore` if not already present.
+Also add these patterns to the project's root `.gitignore` if not already present:
+```gitignore
+.scientist/papers/
+.scientist/repos/
+.scientist/logs/
+.scientist/scripts/
+.scientist/vault/assets/*.png
+.scientist/vault/.obsidian/
+.playwright-mcp/
+```
 
 ## Phase 3: Copy Tools
 
