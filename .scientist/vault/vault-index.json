@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T23:10:11.389217",
-  "note_count": 85,
+  "generated": "2026-03-31T23:12:06.608088",
+  "note_count": 86,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -813,6 +813,26 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/Emergence Through Connection Density.md",
+      "title": "Emergence Through Connection Density in Knowledge Graphs",
+      "tags": [
+        "research",
+        "emergence",
+        "connection-density",
+        "zettelkasten",
+        "graph-theory",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "At 4.8 links/note and 174 typed links across 84 notes, the vault has crossed from \"organized collection\" to \"emergent knowledge system.\" New insights ",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/Hyperagents - Meta-Level Self-Modification.md",
       "title": "Hyperagents: Meta-Level Self-Modification (Meta, 2026)",
       "tags": [
@@ -1589,12 +1609,12 @@
   ],
   "meta_metrics": {
     "link_density": 5.0,
-    "total_links": 421,
-    "principle_extraction_rate": 0.44,
+    "total_links": 427,
+    "principle_extraction_rate": 0.43,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 45,
+      "research": 46,
       "observations": 13,
       "hypotheses": 9,
       "principles": 20
