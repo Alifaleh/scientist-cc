@@ -18,8 +18,8 @@ How to find, read, and extract value from research material.
 
 ### Books (PDFs)
 - Download to `.scientist/papers/`
-- Use `pdf_reader.py --summary` to get table of contents first
-- Then read targeted chapters with `pdf_reader.py <file> <start> <end>`
+- **Quick read (≤20 pages):** Use Claude Code's built-in `Read` tool directly on the PDF — it handles PDFs natively with a `pages` parameter
+- **Longer PDFs:** Use `pdf_reader.py --summary` to get table of contents first, then read targeted chapters with `pdf_reader.py <file> <start> <end>`
 - For textbooks: don't read linearly — jump to the chapter that answers your question
 
 ## How to Read a Paper
