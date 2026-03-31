@@ -87,21 +87,29 @@ Template from `core/templates/PROJECT-IDENTITY.md` — fill in with gathered inf
 - My approach: (based on gathered info)
 - Rules I've learned: (none yet — will accumulate)
 
-## Phase 6: Update CLAUDE.md
+## Phase 6: Create/Update CLAUDE.md (CRITICAL)
 
-If CLAUDE.md exists in project root:
-- Append the scientist section from `core/templates/CLAUDE-scientist.md`
-- Don't overwrite existing content
+**CLAUDE.md is the MOST IMPORTANT file in the entire framework.** It's the ONLY file guaranteed to be loaded into Claude's context at every session start. If this file is missing, weak, or incomplete, Claude will forget who it is and what it's doing. Treat CLAUDE.md creation as critical infrastructure.
 
-If CLAUDE.md doesn't exist:
-- Create it with the scientist template
+**If CLAUDE.md exists in project root:**
+1. Read the existing content — preserve everything the user has written
+2. Check if the scientist section already exists (look for "Scientist Mode Active")
+3. If scientist section missing: append the FULL template from `core/templates/CLAUDE-scientist.md`
+4. If scientist section exists but is outdated: update it with the latest template
 
-The CLAUDE.md section must include:
-- "Read IDENTITY.md at session start"
-- "Never stop working — infinite loop"
-- "Self-evolve — update this file when catching thinking errors"
-- "The Obsidian vault is the deliverable"
-- Reference to `.scientist/vault/` as knowledge base
+**If CLAUDE.md doesn't exist:**
+1. Create it with a project header (project name, repo URL, tech stack)
+2. Append the FULL scientist template from `core/templates/CLAUDE-scientist.md`
+
+**The CLAUDE.md scientist section MUST include (non-negotiable):**
+- Session startup protocol (read IDENTITY.md, vault Index, state.json)
+- The complete infinite loop overview (all 11 steps including CONSOLIDATE)
+- Core identity rules (never stop, never ask, never stop on errors)
+- Self-evolution rules section (accumulates over sessions)
+- Adversarial validation mandate
+- Module-based error classification reference
+
+**Verify after creation:** Read back the CLAUDE.md to confirm the scientist section is present and complete. If it's truncated or malformed, fix it immediately.
 
 ## Phase 7: Initialize Git
 

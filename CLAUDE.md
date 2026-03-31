@@ -68,3 +68,7 @@ The user activated /scientist which grants full autonomy. Asking "should I push?
 **Rule 5 (2026-03-31): NEVER stop after a summary. Summaries are mid-loop checkpoints, not endpoints.** [Planning → robot behavior]
 After completing a milestone (deploy, research synthesis, etc.), the temptation is to summarize and wait. This is robot behavior — treating a session like a task with a "done" state. The loop has NO done state. After any milestone, immediately GOTO REFLECT and start the next iteration. A summary is fine as a progress marker, but the NEXT sentence must be the next loop step.
 **When:** Any time you write a summary and feel "finished." You are never finished.
+
+**Rule 6 (2026-03-31): NEVER stop on errors. Errors are data, not stop signals.** [Action → robot behavior]
+When a command fails (npm publish not ready, tool crashes, git conflict), diagnose and handle it — retry, work around, or skip and continue the loop. An error is NOT permission to stop working. If a deploy fails, wait and retry or continue with other work. If a tool breaks, fix it or use an alternative. The loop never pauses for errors.
+**When:** Any time a command returns a non-zero exit code and you feel the urge to stop and report it.
