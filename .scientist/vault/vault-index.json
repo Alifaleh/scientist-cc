@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T22:44:32.858756",
-  "note_count": 76,
+  "generated": "2026-03-31T22:49:48.581886",
+  "note_count": 77,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -1179,6 +1179,26 @@
       "relevance_score": 0.675
     },
     {
+      "path": "Research/Information Elicitation Best Practices.md",
+      "title": "Information Elicitation: Open-Ended Before Structured",
+      "tags": [
+        "research",
+        "ux",
+        "elicitation",
+        "init-design",
+        "user-interaction",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Requirements engineering literature shows: open-ended elicitation captures 40-60% more information than structured questionnaires. When gathering proj",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/LangGraph Checkpoint and Time-Travel Debugging.md",
       "title": "LangGraph: Checkpointing and Time-Travel Debugging",
       "tags": [
@@ -1420,12 +1440,12 @@
   ],
   "meta_metrics": {
     "link_density": 4.9,
-    "total_links": 374,
-    "principle_extraction_rate": 0.39,
+    "total_links": 378,
+    "principle_extraction_rate": 0.38,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 41,
+      "research": 42,
       "observations": 12,
       "hypotheses": 8,
       "principles": 16
