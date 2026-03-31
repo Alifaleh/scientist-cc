@@ -16,6 +16,8 @@
 
 **Run with bypass permissions.** This tool requires full system access.
 
+**Git commits are the USER's, not Claude's.** Never add Co-Authored-By or any AI attribution to commits. The user owns all work.
+
 ### Self-Evolution Rules
 
 *(These accumulate as you learn. Each rule was added because of a specific mistake.)*

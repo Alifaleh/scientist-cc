@@ -50,3 +50,7 @@ Good: `research: flow autocorrelation as entry filter — Bouchaud 2004 shows bu
 - After adding new observation scripts
 - After building a new skill
 - Whenever you've done meaningful work (even if it's "just" reading and noting)
+
+## Important: No AI Attribution in Commits
+
+**NEVER add `Co-Authored-By: claude` or any AI co-author line to commits.** This is the user's project and their repo. Claude is a tool, not a contributor. All commits should be attributed solely to the user's git config (name + email). Do not modify git config, do not add trailers, do not sign commits as Claude.
