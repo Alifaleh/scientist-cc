@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T20:23:21.156584",
-  "note_count": 24,
+  "generated": "2026-03-31T20:25:12.179631",
+  "note_count": 27,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -266,6 +266,25 @@
       "relevance_score": 0.7
     },
     {
+      "path": "Research/Dogfooding Methodology for Framework Development.md",
+      "title": "Dogfooding Methodology for Framework Development",
+      "tags": [
+        "research",
+        "methodology",
+        "dogfooding",
+        "testing",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Using a framework to improve itself discovers bugs and design flaws that no amount of code review or testing would find. In this R&D effort, 5/5 bugs ",
+      "relevance_score": 0.7
+    },
+    {
       "path": "Research/MemGPT Architecture Mapping.md",
       "title": "MemGPT Architecture Mapping to scientist-cc",
       "tags": [
@@ -285,6 +304,25 @@
       "relevance_score": 0.7
     },
     {
+      "path": "Research/Anti-Stopping Patterns for Autonomous Agents.md",
+      "title": "Anti-Stopping Patterns for Autonomous Agents",
+      "tags": [
+        "research",
+        "anti-stopping",
+        "autonomy",
+        "hooks",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "LLM agents stop because the model is trained to produce complete responses. No amount of instructional text can fully override this. The only effectiv",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/Context Engineering for AI Agents.md",
       "title": "Context Engineering for AI Agents (Anthropic)",
       "tags": [
@@ -300,6 +338,25 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Complexity should live in the knowledge store, not the prompt. Keep CLAUDE.md concise with identity rules; let the vault hold the detail. Use markdown",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/Reflexion - Verbal Self-Reflection for Agents.md",
+      "title": "Reflexion: Verbal Self-Reflection for LLM Agents",
+      "tags": [
+        "research",
+        "reflexion",
+        "self-correction",
+        "verbal-feedback",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Reflexion uses verbal self-reflection (natural language feedback) instead of gradient updates for agent learning. The agent reflects on failures, gene",
       "relevance_score": 0.675
     },
     {
@@ -432,13 +489,13 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 3.5,
-    "total_links": 83,
-    "principle_extraction_rate": 0.86,
+    "link_density": 3.6,
+    "total_links": 96,
+    "principle_extraction_rate": 0.6,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 7,
+      "research": 10,
       "observations": 4,
       "hypotheses": 7,
       "principles": 6
