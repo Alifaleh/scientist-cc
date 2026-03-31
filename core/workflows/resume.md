@@ -2,6 +2,10 @@
 
 This workflow runs when `/scientist` is called in a project that already has `.scientist/`.
 
+## Step 0: Refresh Vault Index
+
+Run `python .scientist/tools/generate_index.py` to rebuild `vault-index.json` before reading anything. This ensures the index reflects any changes made between sessions (manual edits, other tools).
+
 ## Step 1: Load State
 
 Read `.scientist/state.json`:
@@ -11,6 +15,8 @@ Read `.scientist/state.json`:
 - What hypotheses are active?
 
 Update `total_sessions` +1 and `last_session` timestamp.
+
+Read the latest session handoff note (`.scientist/vault/Observations/Session * Handoff.md`) for quick context on what happened last time.
 
 ## Step 2: Read Identity
 
