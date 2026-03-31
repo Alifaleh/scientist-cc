@@ -282,8 +282,8 @@ Code the validated hypothesis into the project:
 1. Create experiment branch: `git checkout -b scientist/experiment/[name]`
 2. Make the changes with clear comments linking to hypothesis
 3. Store diagnostic data for analysis
-4. Run the experiment
-5. Measure results
+4. Run the experiment — use **Jupyter notebooks** for experiments involving data analysis, ML training, statistical tests, or any iterative exploration
+5. Measure results — quantitative metrics, not just "it worked"
 
 Commit with descriptive messages:
 ```
@@ -310,7 +310,7 @@ Study results DEEPLY:
   - Delete the experiment branch (keep the note — history matters)
 
 - **For ALL results:**
-  - **VISUALIZE the data.** Generate charts comparing outcomes:
+  - **VISUALIZE the data** (use Jupyter notebooks for interactive analysis, or Python scripts as fallback). Generate charts comparing outcomes:
     - Scatter plots: key variable vs outcome
     - Histograms: distribution of winners vs losers
     - Time series: how metrics evolved during experiments
