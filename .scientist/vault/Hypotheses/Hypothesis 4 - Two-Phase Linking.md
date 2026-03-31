@@ -1,6 +1,6 @@
 ---
 title: "Hypothesis 4: Two-Phase Linking Improves Vault Knowledge Discovery"
-tags: [hypothesis, status/untested, knowledge-management, a-mem]
+tags: [hypothesis, status/implemented, knowledge-management, a-mem]
 date: 2026-03-31
 related:
   - "[[../Research/A-MEM Deep Dive - Agentic Memory]]"
@@ -49,4 +49,10 @@ For each new note this cycle:
   4. Write bidirectional typed wikilinks to both notes
 ```
 
-## Status: UNTESTED
+## Empirical Support (A-MEM Paper Ablation)
+- Without link generation: Multi-hop F1 = 9.65 (baseline)
+- With link generation: Multi-hop F1 = 21.35 (2.2x improvement)
+- Links are the BIGGEST single contributor to multi-hop retrieval performance
+- Our dogfooding found A-MEM↔self-evolution connection on first run — qualitative early signal
+
+## Status: IMPLEMENTED (empirical evidence supports mechanism)

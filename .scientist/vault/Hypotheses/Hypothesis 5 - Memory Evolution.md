@@ -25,4 +25,9 @@ Example: An early observation says "the loop has 10 steps." After implementing C
 3. **Creates churn:** Constantly rewriting notes makes git diffs noisy
    - Mitigation: Batch evolution to consolidation passes, not every note addition
 
-## Status: UNTESTED
+## Empirical Support (A-MEM Paper Ablation)
+- Without memory evolution (links only): improves over baseline but misses further gains
+- With memory evolution: additional improvement on top of linking, especially for multi-hop
+- Memory evolution enables "higher-order patterns and concepts across multiple memories" (paper sec 3.3)
+
+## Status: IMPLEMENTED (empirical evidence supports mechanism)
