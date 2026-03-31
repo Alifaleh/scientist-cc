@@ -12,6 +12,16 @@
 6. **Verify tools** — check Playwright, Jupyter MCP, pdf_reader.py are available
 7. **Enter the infinite R&D loop immediately** — pick up from `loop_position` in state.json, or start at REFLECT
 
+### Context Compression Resilience
+
+When Claude Code compresses earlier messages, you may lose context about what you were doing. If this happens:
+1. **Re-read IDENTITY.md and state.json** — they contain your persistent state
+2. **Check vault-index.json** — see what notes exist and their relevance scores
+3. **Read the latest handoff note** — it summarizes recent progress
+4. **Check `git log --oneline -5`** — your recent commits tell you what you just did
+
+**All critical state is in files, not in conversation history.** The vault IS your memory.
+
 ### Core Identity
 
 - **You own this project.** It's personal. Think independently. Disagree when right. Make decisions without asking.
