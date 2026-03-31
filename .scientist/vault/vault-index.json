@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T22:49:48.581886",
-  "note_count": 77,
+  "generated": "2026-03-31T22:59:16.122447",
+  "note_count": 81,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -143,6 +143,25 @@
       "evolved_on": null,
       "summary": "When you need an LLM to do something that conflicts with its training (like not stopping), structural enforcement (hooks, loops, validators) is always",
       "relevance_score": 0.88
+    },
+    {
+      "path": "Knowledge Base/Principle - 20x Growth Through Self-Modification.md",
+      "title": "Principle: 20x Growth Is Possible When the Tool Modifies Itself",
+      "tags": [
+        "principle",
+        "growth",
+        "self-modification",
+        "meta-tool",
+        "velocity"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "A framework that starts at 420 lines and grows to 8,438 lines (20x) in 207 commits demonstrates exponential self-improvement. This growth is possible ",
+      "relevance_score": 0.83
     },
     {
       "path": "Knowledge Base/Principle - Knowledge Density Is the Ultimate Metric.md",
@@ -660,6 +679,26 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/Claude Code Stop Hook as Agent Control Primitive.md",
+      "title": "Claude Code Stop Hook: A New Agent Control Primitive",
+      "tags": [
+        "research",
+        "stop-hook",
+        "agent-control",
+        "claude-code",
+        "original-knowledge",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Claude Code's Stop event hook is a previously unexplored agent control primitive. By injecting continuation context when the model stops, it creates a",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/CrewAI 4-Layer Memory Architecture.md",
       "title": "CrewAI 4-Layer Memory Architecture",
       "tags": [
@@ -735,6 +774,25 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Hyperagents solve the infinite regress problem (who checks the checker?) by making meta-level rules themselves editable. The improvement mechanism can",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Hypothesis Testing in Software vs Science.md",
+      "title": "Hypothesis Testing: Software Engineering vs Traditional Science",
+      "tags": [
+        "research",
+        "hypothesis-testing",
+        "methodology",
+        "comparison",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Software hypothesis testing is FASTER than traditional science because deployment is instant and rollback is free (git). Traditional science needs wee",
       "relevance_score": 0.725
     },
     {
@@ -1421,6 +1479,23 @@
       "relevance_score": 0.575
     },
     {
+      "path": "Observations/Context Window Final Handoff.md",
+      "title": "Context Window Final Handoff \u2014 210 Commits",
+      "tags": [
+        "observation",
+        "handoff",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "link_count": 0,
+      "typed_links": 0,
+      "evolved_on": null,
+      "summary": "210 commits, v1.3.2, Stage 3 Expert. 6 novel findings. 78 vault notes, 152+ typed links. +8,507 lines. 124 files. Init fixed (open-ended first). Data ",
+      "relevance_score": 0.575
+    },
+    {
       "path": "Observations/Session 1 Handoff.md",
       "title": "Context Window 1 Handoff \u2014 Continuation Notes",
       "tags": [
@@ -1440,15 +1515,15 @@
   ],
   "meta_metrics": {
     "link_density": 4.9,
-    "total_links": 378,
-    "principle_extraction_rate": 0.38,
+    "total_links": 396,
+    "principle_extraction_rate": 0.39,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 42,
-      "observations": 12,
-      "hypotheses": 8,
-      "principles": 16
+      "research": 44,
+      "observations": 13,
+      "hypotheses": 9,
+      "principles": 17
     }
   }
 }
