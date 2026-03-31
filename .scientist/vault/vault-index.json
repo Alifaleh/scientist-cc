@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T22:35:11.541246",
-  "note_count": 74,
+  "generated": "2026-03-31T22:44:32.858756",
+  "note_count": 76,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -265,6 +265,24 @@
       "evolved_on": null,
       "summary": null,
       "relevance_score": 0.79
+    },
+    {
+      "path": "Knowledge Base/Principle - Listen Before Structuring.md",
+      "title": "Principle: Listen Before Structuring \u2014 Let Users Describe, Then Categorize",
+      "tags": [
+        "principle",
+        "ux",
+        "init",
+        "user-experience"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "When gathering information from users, ask an open-ended question FIRST and let them describe in their own words. Then ask structured follow-ups only ",
+      "relevance_score": 0.78
     },
     {
       "path": "Observations/Novel Finding - Self-Modifying Framework via Pure Markdown.md",
@@ -1366,6 +1384,23 @@
       "relevance_score": 0.575
     },
     {
+      "path": "Observations/Context Window 3 Handoff.md",
+      "title": "Context Window 3 Handoff",
+      "tags": [
+        "observation",
+        "handoff",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "link_count": 0,
+      "typed_links": 0,
+      "evolved_on": null,
+      "summary": "200+ commits, v1.3.0, Stage 3 Expert. 6 novel findings. 75 vault notes, 145+ typed links. Phase 1 COMPLETE. Anti-stop hook deployed. Data science rigo",
+      "relevance_score": 0.575
+    },
+    {
       "path": "Observations/Session 1 Handoff.md",
       "title": "Context Window 1 Handoff \u2014 Continuation Notes",
       "tags": [
@@ -1384,16 +1419,16 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 5.0,
-    "total_links": 370,
-    "principle_extraction_rate": 0.37,
+    "link_density": 4.9,
+    "total_links": 374,
+    "principle_extraction_rate": 0.39,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
       "research": 41,
-      "observations": 11,
+      "observations": 12,
       "hypotheses": 8,
-      "principles": 15
+      "principles": 16
     }
   }
 }
