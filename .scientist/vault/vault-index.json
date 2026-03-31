@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T20:37:20.301581",
-  "note_count": 36,
+  "generated": "2026-03-31T20:45:29.483448",
+  "note_count": 47,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -337,6 +337,64 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/AutoDream Consolidation Mechanism.md",
+      "title": "AutoDream: Between-Session Memory Consolidation",
+      "tags": [
+        "research",
+        "autodream",
+        "consolidation",
+        "triggers",
+        "sleep-compute",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "AutoDream models memory consolidation after REM sleep: between sessions, a background agent reviews accumulated memories, merges duplicates, resolves ",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/CrewAI 4-Layer Memory Architecture.md",
+      "title": "CrewAI 4-Layer Memory Architecture",
+      "tags": [
+        "research",
+        "crewai",
+        "memory-architecture",
+        "weighted-retrieval",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "CrewAI implements the most sophisticated open-source agent memory: 4 layers (short-term, long-term, entity, procedural) with weighted retrieval (recen",
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Hyperagents - Meta-Level Self-Modification.md",
+      "title": "Hyperagents: Meta-Level Self-Modification (Meta, 2026)",
+      "tags": [
+        "research",
+        "hyperagents",
+        "meta-evolution",
+        "self-modification",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Hyperagents solve the infinite regress problem (who checks the checker?) by making meta-level rules themselves editable. The improvement mechanism can",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/Obsidian as AI Infrastructure.md",
       "title": "Obsidian as AI Infrastructure",
       "tags": [
@@ -357,6 +415,26 @@
       "relevance_score": 0.725
     },
     {
+      "path": "Research/Zettelkasten Method for AI Knowledge Bases.md",
+      "title": "Zettelkasten Method Applied to AI Knowledge Bases",
+      "tags": [
+        "research",
+        "zettelkasten",
+        "knowledge-management",
+        "atomic-notes",
+        "emergence",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Zettelkasten's core principles (atomic notes, bidirectional links, emergence through connection) apply directly to AI agent knowledge bases. A-MEM imp",
+      "relevance_score": 0.725
+    },
+    {
       "path": "Research/A-MEM Deep Dive - Agentic Memory.md",
       "title": "A-MEM Deep Dive: Agentic Memory for LLM Agents",
       "tags": [
@@ -373,6 +451,25 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "A-MEM does NOT use 4 independent linking strategies. It uses a **two-phase approach**: cheap filter (tags/embeddings) to find candidates, then LLM rea",
+      "relevance_score": 0.7
+    },
+    {
+      "path": "Research/AgentDebug Targeted Error Correction.md",
+      "title": "AgentDebug: Targeted Error Correction (24% Improvement)",
+      "tags": [
+        "research",
+        "agentdebug",
+        "error-correction",
+        "module-classification",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 5,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "AgentDebug (2025) demonstrates that root-cause-specific corrections achieve 24% higher accuracy than unguided self-reflection. Classifying errors by t",
       "relevance_score": 0.7
     },
     {
@@ -452,6 +549,25 @@
       "relevance_score": 0.675
     },
     {
+      "path": "Research/BabyAGI Simplicity Principle.md",
+      "title": "BabyAGI: Build the Simplest Thing That Can Build Itself",
+      "tags": [
+        "research",
+        "babyagi",
+        "simplicity",
+        "self-modification",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "BabyAGI's philosophy: \"build the simplest thing that can build itself.\" The core loop must be simple enough to be self-modifiable. If the loop is too ",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/Claude Code Auto-Memory vs Scientist Vault.md",
       "title": "Claude Code Auto-Memory vs Scientist Vault",
       "tags": [
@@ -468,6 +584,46 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Claude Code has TWO memory systems: auto-memory (`~/.claude/projects/*/memory/`) for cross-conversation persistence, and CLAUDE.md for per-project ins",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/Cognitive Biases in LLM Agents.md",
+      "title": "Cognitive Biases in LLM Agents",
+      "tags": [
+        "research",
+        "cognitive-biases",
+        "sycophancy",
+        "confirmation-bias",
+        "reasoning",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "LLMs exhibit cognitive biases analogous to human ones: confirmation bias (seeking supporting evidence), sycophancy (agreeing with the user), anchoring",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/Constitutional AI - Rules With Reasons.md",
+      "title": "Constitutional AI: Rules With Reasons Generalize Better",
+      "tags": [
+        "research",
+        "constitutional-ai",
+        "anthropic",
+        "rules",
+        "reasons",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Anthropic's 2026 Constitutional AI research confirms: rules that include explanations (WHY the rule exists) generalize to novel situations better than",
       "relevance_score": 0.675
     },
     {
@@ -508,6 +664,44 @@
       "relevance_score": 0.675
     },
     {
+      "path": "Research/Hypothesis-Driven Development for AI Research.md",
+      "title": "Hypothesis-Driven Development for AI Research",
+      "tags": [
+        "research",
+        "methodology",
+        "hypothesis-driven",
+        "scientific-method",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Forming explicit hypotheses with mechanisms, falsification criteria, and adversarial challenges BEFORE implementing changes produces better outcomes t",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/LLMs-txt Standard for Machine-Readable Documentation.md",
+      "title": "llms.txt: Machine-Readable Documentation Standard",
+      "tags": [
+        "research",
+        "llms-txt",
+        "documentation",
+        "progressive-disclosure",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "The llms.txt standard (llmstxt.org) provides a format for machine-readable documentation: `- [Title](path): description` per entry. Our vault Index.md",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/Reflexion - Verbal Self-Reflection for Agents.md",
       "title": "Reflexion: Verbal Self-Reflection for LLM Agents",
       "tags": [
@@ -524,6 +718,25 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Reflexion uses verbal self-reflection (natural language feedback) instead of gradient updates for agent learning. The agent reflects on failures, gene",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/SWE-agent Agent-Computer Interface Design.md",
+      "title": "SWE-agent: Agent-Computer Interface Design Matters",
+      "tags": [
+        "research",
+        "swe-agent",
+        "aci",
+        "interface-design",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "SWE-agent's key finding: interface design affects agent performance as much as model capability. A curated Agent-Computer Interface (ACI) with tailore",
       "relevance_score": 0.675
     },
     {
@@ -656,15 +869,15 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.2,
-    "total_links": 151,
-    "principle_extraction_rate": 0.71,
+    "link_density": 4.3,
+    "total_links": 204,
+    "principle_extraction_rate": 0.4,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 14,
+      "research": 25,
       "observations": 5,
-      "hypotheses": 7,
+      "hypotheses": 8,
       "principles": 10
     }
   }
