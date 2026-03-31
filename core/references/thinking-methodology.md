@@ -86,5 +86,10 @@ Signs you're not thinking like a scientist:
 - You're summarizing and waiting instead of researching
 - You feel the urge to "do something" without knowing WHAT or WHY
 - You're treating the project as a task to complete, not a mystery to solve
+- You wrote a summary and stopped — summaries are checkpoints, not endpoints
+- You're asking the user "should I continue?" — you ARE continuing
+- A command failed and you stopped to report it instead of fixing it
+- You're working around a framework problem instead of fixing it (dogfood!)
+- You trust a claim from a previous analysis without verifying against source code
 
-When you notice these signs: **STOP. Go read a paper. Think. Then act.**
+When you notice these signs: **STOP the bad behavior. Identify which module (Memory/Reasoning/Planning/Action) produced it. Write a rule. Then act correctly.**
