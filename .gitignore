@@ -1,0 +1,15 @@
+node_modules/
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# MCP server dependencies (installed by user, not committed)
+mcp/playwright/node_modules/
+mcp/jupyter/node_modules/
+mcp/jupyter/.venv/
+
+# Keep the MCP repos but ignore their build artifacts
+mcp/*/dist/
+mcp/*/build/
+mcp/*/.git/
