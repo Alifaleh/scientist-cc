@@ -120,6 +120,22 @@ Most AI agent frameworks lose everything between sessions. Scientist solves this
 
 Built on research from A-MEM (NeurIPS 2025), AutoDream, CrewAI, SWE-agent, MetaGPT, and 10+ other frameworks.
 
+## Built with Scientist: Real Results
+
+Scientist was used to improve itself (dogfooding). In one continuous R&D effort:
+
+| Metric | Value |
+|--------|-------|
+| Research domains covered | 6 (knowledge management, AI self-improvement, agent frameworks, A-MEM, vault navigation, MemGPT) |
+| Papers downloaded & read | 2 (A-MEM 28pp, MemGPT 13pp) |
+| Hypotheses formed | 7 (all implemented, empirically validated) |
+| Principles consolidated | 6 (cross-linked with typed relationships) |
+| Self-evolution rules | 8 (each with module, trigger, rationale) |
+| Bugs found via dogfooding | 5 (silent failures no test would catch) |
+| Vault notes | 22 (with weighted relevance scoring) |
+| Link density | 3.4 links/note |
+| Framework versions shipped | v0.1.1 → v0.7.1 |
+
 ## Philosophy
 
 > The vault is the deliverable. Code is temporary. Knowledge is permanent.
