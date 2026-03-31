@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T20:45:29.483448",
-  "note_count": 47,
+  "generated": "2026-03-31T20:47:28.698915",
+  "note_count": 48,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -280,6 +280,25 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "No published paper (A-MEM, Reflexion, MemGPT, MetaGPT, AutoGPT, CrewAI, SWE-agent, or any framework surveyed) addresses the fundamental problem that L",
+      "relevance_score": 0.75
+    },
+    {
+      "path": "Observations/Novel Finding - Markdown Linking Without Vector DB.md",
+      "title": "Novel Finding: Tag-Based Linking Achieves A-MEM Results Without Vector DB",
+      "tags": [
+        "observation",
+        "novel-finding",
+        "a-mem",
+        "linking",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "link_count": 7,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "A-MEM requires ChromaDB + SentenceTransformer embeddings for its cheap-filter phase. We replaced this with frontmatter tag overlap + entity grep \u2014 zer",
       "relevance_score": 0.75
     },
     {
@@ -869,14 +888,14 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.3,
-    "total_links": 204,
+    "link_density": 4.4,
+    "total_links": 211,
     "principle_extraction_rate": 0.4,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
       "research": 25,
-      "observations": 5,
+      "observations": 6,
       "hypotheses": 8,
       "principles": 10
     }
