@@ -1,6 +1,6 @@
 {
   "name": "scientist-cc",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Self-evolving R&D framework for Claude Code. Claude becomes an autonomous scientist who owns the project, researches deeply, builds knowledge, and never stops learning.",
   "bin": {
     "scientist-cc": "bin/install.js"
