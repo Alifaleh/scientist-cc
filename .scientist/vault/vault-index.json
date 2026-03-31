@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T19:33:44.887457",
-  "note_count": 23,
+  "generated": "2026-03-31T20:15:29.648381",
+  "note_count": 24,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -35,6 +35,23 @@
       "evolved_on": null,
       "summary": "scientist-cc makes 4 novel contributions that no other framework combines: persistent vault-based memory, A-MEM linking without vector DB, weighted re",
       "relevance_score": 0.83
+    },
+    {
+      "path": "Knowledge Base/Principle - Anti-Stopping is the Core Challenge.md",
+      "title": "Principle: Anti-Stopping is the Core Challenge for Autonomous Agents",
+      "tags": [
+        "principle",
+        "autonomy",
+        "metacognition"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 5,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "The #1 failure mode of autonomous AI agents is stopping when they shouldn't. 3 out of 5 errors in session 1 were variants of stopping (after summaries",
+      "relevance_score": 0.805
     },
     {
       "path": "Knowledge Base/Principle - Interface Quality Over Tool Quantity.md",
@@ -87,23 +104,6 @@
       "evolved_on": null,
       "summary": null,
       "relevance_score": 0.79
-    },
-    {
-      "path": "Knowledge Base/Principle - Anti-Stopping is the Core Challenge.md",
-      "title": "Principle: Anti-Stopping is the Core Challenge for Autonomous Agents",
-      "tags": [
-        "principle",
-        "autonomy",
-        "metacognition"
-      ],
-      "status": null,
-      "date": "2026-03-31",
-      "last_verified": "2026-03-31",
-      "link_count": 4,
-      "typed_links": 2,
-      "evolved_on": null,
-      "summary": "The #1 failure mode of autonomous AI agents is stopping when they shouldn't. 3 out of 5 errors in session 1 were variants of stopping (after summaries",
-      "relevance_score": 0.78
     },
     {
       "path": "Hypotheses/Hypothesis 1 - Consolidation Step.md",
@@ -285,6 +285,24 @@
       "relevance_score": 0.7
     },
     {
+      "path": "Research/Context Engineering for AI Agents.md",
+      "title": "Context Engineering for AI Agents (Anthropic)",
+      "tags": [
+        "research",
+        "context-engineering",
+        "anthropic",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Complexity should live in the knowledge store, not the prompt. Keep CLAUDE.md concise with identity rules; let the vault hold the detail. Use markdown",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/Vault Navigation Patterns for AI Agents.md",
       "title": "Vault Navigation Patterns for AI Agents",
       "tags": [
@@ -413,13 +431,13 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 3.4,
-    "total_links": 78,
-    "principle_extraction_rate": 1.0,
+    "link_density": 3.5,
+    "total_links": 83,
+    "principle_extraction_rate": 0.86,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 6,
+      "research": 7,
       "observations": 4,
       "hypotheses": 7,
       "principles": 6
