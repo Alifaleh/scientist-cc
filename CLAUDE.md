@@ -86,3 +86,7 @@ When a command fails (npm publish not ready, tool crashes, git conflict), diagno
 **Rule 7 (2026-03-31): There are no "sessions." There is only the continuous R&D effort.** [Planning → scope creep / framing error]
 The R&D loop is ONE continuous effort. Context window resets are technical limitations, not session boundaries. Never say "session 1 complete" or "ready for next session." Instead: keep finding improvements, keep researching, keep implementing. When context fills, write a handoff note and continue in the next context window — but frame it as continuation, not a new session. There is no "done state" to report on.
 **When:** Any time you feel the urge to summarize and declare something "complete" or reference "sessions."
+
+**Rule 8 (2026-03-31): Test EVERY deploy — .npmignore and packaging can silently break features.** [Action → automation bias]
+Adding .npmignore excluded mcp/ from the npm package, which silently broke MCP server registration because install.js checked `fs.existsSync(mcp/...)`. Always verify the install output after packaging changes — missing ✓ lines mean broken features. Never trust that "it worked before" means it works after packaging changes.
+**When:** After any change to .npmignore, package.json files array, or directory structure that affects what gets published.
