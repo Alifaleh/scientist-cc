@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T20:29:39.443060",
-  "note_count": 32,
+  "generated": "2026-03-31T20:37:20.301581",
+  "note_count": 36,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -264,6 +264,25 @@
       "relevance_score": 0.755
     },
     {
+      "path": "Observations/Literature Gap - Anti-Stopping Not Addressed.md",
+      "title": "Literature Gap: Anti-Stopping for Autonomous LLM Agents",
+      "tags": [
+        "observation",
+        "literature-gap",
+        "novel-finding",
+        "anti-stopping",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "link_count": 7,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "No published paper (A-MEM, Reflexion, MemGPT, MetaGPT, AutoGPT, CrewAI, SWE-agent, or any framework surveyed) addresses the fundamental problem that L",
+      "relevance_score": 0.75
+    },
+    {
       "path": "Research/Knowledge Management for AI Agents.md",
       "title": "Knowledge Management for AI Agents",
       "tags": [
@@ -315,6 +334,26 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": null,
+      "relevance_score": 0.725
+    },
+    {
+      "path": "Research/Obsidian as AI Infrastructure.md",
+      "title": "Obsidian as AI Infrastructure",
+      "tags": [
+        "research",
+        "obsidian",
+        "infrastructure",
+        "markdown",
+        "persistence",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "Obsidian's design (local markdown files, wikilinks, frontmatter, plugins) makes it ideal AI memory infrastructure. The file-first paradigm means AI ag",
       "relevance_score": 0.725
     },
     {
@@ -375,6 +414,25 @@
       "relevance_score": 0.7
     },
     {
+      "path": "Research/MetaGPT SOPs as Code for Agent Discipline.md",
+      "title": "MetaGPT: SOPs as Code for Agent Discipline",
+      "tags": [
+        "research",
+        "metagpt",
+        "sops",
+        "structured-artifacts",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 5,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "MetaGPT encodes Standard Operating Procedures (SOPs) directly into the agent framework, requiring structured artifacts at each stage. This dramaticall",
+      "relevance_score": 0.7
+    },
+    {
       "path": "Research/Anti-Stopping Patterns for Autonomous Agents.md",
       "title": "Anti-Stopping Patterns for Autonomous Agents",
       "tags": [
@@ -428,6 +486,25 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Complexity should live in the knowledge store, not the prompt. Keep CLAUDE.md concise with identity rules; let the vault hold the detail. Use markdown",
+      "relevance_score": 0.675
+    },
+    {
+      "path": "Research/Experiment Checkpointing via Git.md",
+      "title": "Experiment Checkpointing via Git Tags and Branches",
+      "tags": [
+        "research",
+        "git",
+        "checkpointing",
+        "experiments",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Pure git provides sufficient checkpointing for R&D experiments: `git tag` marks checkpoints, `scientist/experiment/<name>` branches isolate experiment",
       "relevance_score": 0.675
     },
     {
@@ -579,14 +656,14 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.0,
-    "total_links": 129,
-    "principle_extraction_rate": 0.91,
+    "link_density": 4.2,
+    "total_links": 151,
+    "principle_extraction_rate": 0.71,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 11,
-      "observations": 4,
+      "research": 14,
+      "observations": 5,
       "hypotheses": 7,
       "principles": 10
     }
