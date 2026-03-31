@@ -72,7 +72,17 @@ Each new experience triggers 3 sequential LLM calls:
 - **Evolution threshold:** configurable, default triggers after N memories
 - **AutoDream trigger:** 5 sessions AND 24 hours since last consolidation
 
-## Exact Prompts (from appendix, pages 18-20)
+## Exact Prompts (from appendix, pages 19-20)
+
+### Note Construction Prompt (Ps1)
+Input: raw content from a conversation/observation
+Output: JSON with `keywords` (nouns/verbs/concepts, 3+ ordered by importance), `context` (1 sentence: topic + arguments + audience), `tags` (domain/format/type categories, 3+)
+
+Our equivalent: frontmatter template with `tags`, `title`, `related`, and `> [!note]` callout summary. We do this manually during note writing — could be automated.
+
+### Link Generation Prompt (Ps2)
+Same agent prompt as evolution but focused on: "Given the new note + nearest neighbors, should connections be created?"
+Our equivalent: two-phase linking in CONSOLIDATE step. Already implemented.
 
 ### Memory Evolution Prompt (Ps3)
 The LLM receives:
