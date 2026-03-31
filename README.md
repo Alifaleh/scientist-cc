@@ -71,6 +71,17 @@ This removes commands from `~/.claude/commands/`, deletes the scientist core fro
 | `/scientist:status` | Check mastery stage, active hypotheses, knowledge state |
 | `/scientist:reset` | Archive vault and start fresh |
 
+## First Run
+
+1. Open any project in Claude Code with bypass permissions enabled
+2. Type `/scientist`
+3. Claude asks about your project (domain, goal, tech stack)
+4. Creates `.scientist/` vault structure, `IDENTITY.md`, updates `CLAUDE.md`
+5. Enters the infinite R&D loop immediately — research → hypothesize → validate → implement → learn → consolidate → evolve → repeat
+6. Claude will browse the web, download papers, write monitoring scripts, and build a knowledge vault without stopping
+
+**Claude will not ask for permission.** It acts autonomously — researching, committing, deploying. Interrupt it if you need to redirect.
+
 ## What Gets Created
 
 In your project:
