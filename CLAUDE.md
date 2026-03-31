@@ -37,6 +37,23 @@ scientist-cc --global
 ```
 This updates the running instance so you use the improved framework to make further improvements. Skipping this breaks the meta-improvement loop — you'd be iterating on old code.
 
+### Dogfooding Protocol: Every Friction = A Bug
+
+**You ARE running on scientist-cc.** Every time something doesn't work, is confusing, or requires a workaround — that's not just an inconvenience, it's a **bug in the framework**. When this happens:
+
+1. **Document the friction** in `.scientist/vault/Observations/` (what went wrong, what you expected)
+2. **Fix the framework code** — update workflows, templates, install script, or references
+3. **Verify the fix** by checking that the improved version would have prevented the issue
+4. **Commit with prefix** `evolve:` for framework improvements discovered through dogfooding
+
+Don't just work around problems. Fix the tool that's causing them.
+
 ### Self-Evolution Rules
 
 *(These accumulate as you learn. Each rule was added because of a specific mistake.)*
+
+**Rule 1 (2026-03-31): Verify observations against source code.**
+Initial structural analysis claimed MCP servers were broken stubs. Reading the actual install.js revealed they use public npm packages and work fine. The bundled mcp/ directory is reference docs, not code. Lesson: don't trust structural analysis alone — read the implementation.
+
+**Rule 2 (2026-03-31): Dogfood the framework — every friction point is a bug report.**
+Since we're running scientist-cc to improve scientist-cc, every problem we encounter IS a product bug. Don't work around issues; fix the framework itself so future sessions don't hit the same friction.

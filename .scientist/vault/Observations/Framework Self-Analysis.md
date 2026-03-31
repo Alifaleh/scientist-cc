@@ -18,10 +18,11 @@ related:
 - Steps 1-4 (REFLECT, RESEARCH, BUILD SKILLS, OBSERVE) don't have explicit state save instructions
 - **Impact:** Resume workflow can't reliably pick up mid-loop
 
-### 2. Tool Source Paths Undefined in Init
-- `init.md` says "copy tools/pdf_reader.py" but doesn't define where from
-- `bin/install.js` defines COMMANDS_SRC, CORE_SRC, SKILLS_SRC but NOT TOOLS_SRC
-- **Impact:** Init workflow would fail trying to copy tools
+### 2. Tools Directory Never Installed (CONFIRMED BUG)
+- `install.js` copies commands, core, skills, agents — but NOT `tools/` directory
+- No TOOLS_SRC defined. Init workflow expects tools at `~/.claude/scientist/tools/` but they're never there
+- **Impact:** Init workflow fails when trying to copy pdf_reader.py and repo_reader.py
+- **Fix:** Add TOOLS_SRC to install.js and copy tools/ to scientistDir/tools/
 
 ### 3. Visualization Agent Gap
 - Loop steps 4 (OBSERVE) and 8 (LEARN) mandate matplotlib/seaborn visualization
@@ -29,11 +30,12 @@ related:
 - No "data-visualization" skill exists in skills/
 - **Impact:** Visualization instructions exist but tooling doesn't support them
 
-### 4. Jupyter MCP Server Incomplete
-- Full Jupyter MCP repo exists in mcp/jupyter/ but has NO package.json at root
-- Can't be built or installed via npm
-- Loop says "use Jupyter for data exploration" but server isn't functional
-- **Impact:** Core capability referenced in loop is broken
+### 4. MCP Servers Are Reference Docs, Not Code (CORRECTED)
+- install.js uses public npm packages: `npx @anthropic-ai/mcp-server-playwright` and `uvx jupyter-mcp-server`
+- The bundled mcp/ directory is documentation/reference, NOT server code
+- MCP registration in settings.json works correctly via public packages
+- **Revised severity:** LOW — MCP install actually works. The bundled repos are just reference material
+- **Note:** Uninstall flag (--uninstall) exists but is underdocumented in README
 
 ## Medium Findings
 
