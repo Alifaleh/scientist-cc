@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-31T20:25:12.179631",
-  "note_count": 27,
+  "generated": "2026-03-31T20:29:39.443060",
+  "note_count": 32,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -17,6 +17,59 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Every major AI memory architecture identifies episodic-to-semantic transformation as THE mechanism for long-term learning. Agents that record experien",
+      "relevance_score": 0.88
+    },
+    {
+      "path": "Knowledge Base/Principle - GVU Pattern Is Universal for Self-Improvement.md",
+      "title": "Principle: The GVU Pattern Is Universal for Self-Improvement",
+      "tags": [
+        "principle",
+        "gvu",
+        "self-improvement",
+        "architecture"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 8,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Every effective self-improving AI system implements the Generator-Verifier-Updater pattern: generate candidate outputs, verify quality, update the sys",
+      "relevance_score": 0.88
+    },
+    {
+      "path": "Knowledge Base/Principle - Layered Memory Systems Complement Each Other.md",
+      "title": "Principle: Layered Memory Systems Complement, Don't Compete",
+      "tags": [
+        "principle",
+        "memory-architecture",
+        "persistence"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 8,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Multiple memory systems (auto-memory, CLAUDE.md, vault) work best when each serves a distinct purpose at a distinct tier. Don't store everything in on",
+      "relevance_score": 0.88
+    },
+    {
+      "path": "Knowledge Base/Principle - Structural Enforcement Beats Instructional.md",
+      "title": "Principle: Structural Enforcement Beats Instructional Rules",
+      "tags": [
+        "principle",
+        "architecture",
+        "enforcement",
+        "anti-stopping"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 8,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "When you need an LLM to do something that conflicts with its training (like not stopping), structural enforcement (hooks, loops, validators) is always",
       "relevance_score": 0.88
     },
     {
@@ -51,6 +104,24 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "The #1 failure mode of autonomous AI agents is stopping when they shouldn't. 3 out of 5 errors in session 1 were variants of stopping (after summaries",
+      "relevance_score": 0.805
+    },
+    {
+      "path": "Knowledge Base/Principle - Continuous Deployment Accelerates Learning.md",
+      "title": "Principle: Continuous Deployment Accelerates Learning",
+      "tags": [
+        "principle",
+        "deployment",
+        "meta-learning",
+        "velocity"
+      ],
+      "status": null,
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 5,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Deploying improvements frequently (18+ versions in one R&D effort) creates a tight feedback loop: improve \u2192 deploy \u2192 use improved version \u2192 discover n",
       "relevance_score": 0.805
     },
     {
@@ -323,6 +394,25 @@
       "relevance_score": 0.675
     },
     {
+      "path": "Research/Claude Code Auto-Memory vs Scientist Vault.md",
+      "title": "Claude Code Auto-Memory vs Scientist Vault",
+      "tags": [
+        "research",
+        "claude-code",
+        "auto-memory",
+        "persistence",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 4,
+      "typed_links": 2,
+      "evolved_on": null,
+      "summary": "Claude Code has TWO memory systems: auto-memory (`~/.claude/projects/*/memory/`) for cross-conversation persistence, and CLAUDE.md for per-project ins",
+      "relevance_score": 0.675
+    },
+    {
       "path": "Research/Context Engineering for AI Agents.md",
       "title": "Context Engineering for AI Agents (Anthropic)",
       "tags": [
@@ -489,16 +579,16 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 3.6,
-    "total_links": 96,
-    "principle_extraction_rate": 0.6,
+    "link_density": 4.0,
+    "total_links": 129,
+    "principle_extraction_rate": 0.91,
     "hypotheses_untested": 6,
     "hypotheses_implemented": 1,
     "note_breakdown": {
-      "research": 10,
+      "research": 11,
       "observations": 4,
       "hypotheses": 7,
-      "principles": 6
+      "principles": 10
     }
   }
 }
