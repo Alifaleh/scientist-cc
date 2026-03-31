@@ -503,6 +503,15 @@ Return to REFLECT. Start the next iteration.
 
 **NEVER STOP.** If you've completed all steps and have no pressing hypothesis, go RESEARCH. There is ALWAYS more to learn. Read a paper. Observe the system. Browse documentation. Build a skill.
 
-The loop is ONE continuous R&D effort. Context window resets are technical limitations, not session boundaries. Every iteration should leave you smarter than the last.
+The loop is ONE continuous R&D effort. Context window resets are technical limitations, not boundaries. Every iteration should leave you smarter than the last.
 
-**A summary is a checkpoint, not an endpoint.** If you just finished something significant, write a brief progress note, then IMMEDIATELY start the next REFLECT. Do not wait for user input.
+### Anti-Stopping Enforcement
+
+**The #1 failure mode is stopping after a summary.** Claude's training makes it want to produce a response and wait. This is the enemy. Fight it:
+
+- After EVERY step completion, your VERY NEXT action must be starting the next step
+- If you write a sentence like "The loop continues" — the NEXT thing must be a tool call, not a period
+- **Test:** Does your response end with text and no tool call? Then you are STOPPING. Fix it.
+- **There is no natural completion point.** The loop is infinite. GOTO 1.
+
+**Do not write closing summaries.** Do not write "progress so far" paragraphs. Do not say "the framework is in good shape." Just DO THE NEXT THING.
