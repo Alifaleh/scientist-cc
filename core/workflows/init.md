@@ -32,15 +32,30 @@ Say something like: "Before I set up the scientist framework, I need to understa
 - Constraints (budget, timeline, data availability, tech stack)
 - Focus (research vs implementation — infer from their words)
 
-### Step 2.5: Clarifying Questions (based on what's MISSING from their description)
+### Step 2.5: Gap Analysis Loop (KEEP ASKING until you have a complete picture)
 
-Only ask about things their description DIDN'T cover. Use AskUserQuestion for specific clarifications:
-- If domain unclear: "What domain is this?" (trading, ML, web dev, etc.)
-- If goal vague: "What does success look like specifically?"
-- If focus unclear: "Should I focus on research, implementation, or both?"
-- If tech stack not mentioned: "What tools/languages are involved?"
+After reading the user's description, do a gap analysis. Check if you know:
+- [ ] What the project does (product/service/tool/research)
+- [ ] The domain (trading, ML, web dev, etc.)
+- [ ] Specific success criteria (what "done" or "good" looks like)
+- [ ] The tech stack (languages, frameworks, dependencies)
+- [ ] Available data (if data-driven: what data exists, format, size)
+- [ ] Known constraints (timeline, budget, limitations)
+- [ ] Focus area (research, implementation, or both)
+- [ ] Prior work (what's been tried before, what failed)
 
-**Do NOT re-ask things they already answered in their description.**
+**For EACH unchecked item, ask a follow-up question.** Output questions as plain text (NOT AskUserQuestion) and wait for the user to respond. Then check again.
+
+**KEEP ASKING until ALL items are checked** or the user says "that's enough, start working."
+
+This is an iterative loop:
+1. Analyze what you know vs what you need
+2. Ask about the biggest gap
+3. Wait for response
+4. Re-analyze — any remaining gaps?
+5. If yes → ask again. If no → proceed to Phase 2.
+
+**Do NOT skip this step.** A scientist who doesn't fully understand the project will waste time on wrong hypotheses. Ask 3-5 clarifying questions minimum, even if the description seems complete.
 
 ### Step 3: Domain-Adaptive Deep Questions
 Based on the domain answer, ask targeted follow-ups:
