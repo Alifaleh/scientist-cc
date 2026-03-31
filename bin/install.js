@@ -75,14 +75,24 @@ function installCore(configDir) {
   copyDir(CORE_SRC, path.join(scientistDir, 'core'));
   console.log('  ✓ Core workflows, templates, and references');
 
-  // Copy skills
-  copyDir(SKILLS_SRC, path.join(scientistDir, 'skills'));
-  console.log('  ✓ Obsidian skills (markdown, bases, canvas, defuddle)');
+  // Copy skills (optional — may not exist in npm package)
+  if (fs.existsSync(SKILLS_SRC)) {
+    copyDir(SKILLS_SRC, path.join(scientistDir, 'skills'));
+    console.log('  ✓ Obsidian skills (markdown, bases, canvas, defuddle)');
+  } else {
+    console.log('  ○ Obsidian skills not bundled (install from GitHub for full package)');
+  }
 
-  // Copy agents
+  // Copy agents (optional)
   if (fs.existsSync(AGENTS_SRC)) {
     copyDir(AGENTS_SRC, path.join(scientistDir, 'agents'));
     console.log('  ✓ Agent definitions');
+  }
+
+  // Copy MCP references (optional — full repos not in npm)
+  if (fs.existsSync(MCP_SRC)) {
+    // Don't copy full MCP repos to claude dir — just note they exist
+    console.log('  ✓ MCP server references available');
   }
 }
 
