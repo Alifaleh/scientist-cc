@@ -24,6 +24,23 @@ If the directory is NOT empty, also:
 mkdir -p .scientist/{vault/{Research,Observations,Hypotheses,Experiments,"Knowledge Base"/Tools,"Knowledge Base"/Skills},tools,papers,repos,scripts,logs}
 ```
 
+## Phase 2.5: Create .gitignore for Scientist Artifacts
+
+Create `.scientist/.gitignore` to prevent binary artifacts from bloating git:
+
+```gitignore
+# Track vault notes (the deliverable), ignore artifacts
+papers/
+repos/
+logs/
+scripts/
+vault/assets/*.png
+vault/assets/*.jpg
+vault/assets/*.svg
+```
+
+Also add these patterns to the project's root `.gitignore` if not already present.
+
 ## Phase 3: Copy Tools
 
 Copy from the scientist installation directory:

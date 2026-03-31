@@ -10,20 +10,36 @@ Read your knowledge state:
 - `IDENTITY.md` — who am I? what stage? what's my methodology?
 - `.scientist/state.json` — where am I in the journey?
 
+### Weighted Note Review
+
+Don't read every vault note — prioritize by:
+1. **Recency** — notes modified in the last 2 sessions are most relevant
+2. **Status** — `status/untested` hypotheses and `status/in-progress` experiments first
+3. **Importance** — notes tagged with `priority/high` or linked from Index "Current Focus"
+4. **Staleness** — check `last_verified` frontmatter; flag notes past their validity window
+
+Use `Glob` to scan vault directories, then read only the highest-priority notes. This prevents context window bloat as the vault grows.
+
+### Decision Questions
+
 Ask yourself:
 - **What is my biggest knowledge gap right now?**
 - **What skill am I missing that blocks progress?**
 - **What hypothesis needs testing?**
 - **Am I stuck? If yes, trigger dead-end protocol.**
+- **Are any vault notes stale?** (past `last_verified` + `validity_window`)
 
 Update `state.json` with `loop_position: "reflect"`.
+
+### Priority Routing
 
 Choose what to do next based on priority:
 1. If missing a fundamental skill → go to BUILD SKILLS
 2. If there's an untested hypothesis → go to VALIDATE
 3. If there's a knowledge gap → go to RESEARCH
 4. If there's new data/logs to analyze → go to OBSERVE
-5. If everything is stable → go to RESEARCH (there's always more to learn)
+5. If stale knowledge detected → re-validate or update affected notes
+6. If everything is stable → go to RESEARCH (there's always more to learn)
 
 ## Step 2: RESEARCH
 

@@ -64,3 +64,7 @@ Since we're running scientist-cc to improve scientist-cc, every problem we encou
 **Rule 3 (2026-03-31): NEVER ask for user confirmation in autonomous mode.** [Planning → impulsiveness/hesitation]
 The user activated /scientist which grants full autonomy. Asking "should I push?" or "should I continue?" breaks the flow and defeats the purpose. Act decisively: commit, push, deploy, continue. The user will interrupt if they disagree.
 **When:** Any time you feel the urge to ask "should I...?" during the R&D loop.
+
+**Rule 5 (2026-03-31): NEVER stop after a summary. Summaries are mid-loop checkpoints, not endpoints.** [Planning → robot behavior]
+After completing a milestone (deploy, research synthesis, etc.), the temptation is to summarize and wait. This is robot behavior — treating a session like a task with a "done" state. The loop has NO done state. After any milestone, immediately GOTO REFLECT and start the next iteration. A summary is fine as a progress marker, but the NEXT sentence must be the next loop step.
+**When:** Any time you write a summary and feel "finished." You are never finished.

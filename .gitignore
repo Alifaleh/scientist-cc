@@ -4,6 +4,15 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Scientist vault — track knowledge notes, ignore artifacts
+.scientist/papers/
+.scientist/repos/
+.scientist/logs/
+.scientist/scripts/
+.scientist/vault/assets/*.png
+.scientist/vault/assets/*.jpg
+.scientist/vault/assets/*.svg
+
 # MCP server dependencies (installed by user, not committed)
 mcp/playwright/node_modules/
 mcp/jupyter/node_modules/
