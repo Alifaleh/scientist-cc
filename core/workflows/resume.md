@@ -28,15 +28,21 @@ Read `CLAUDE.md`:
 
 ## Step 4: Read Vault Index
 
-Read `.scientist/vault/Index.md`:
+**Fast path (preferred):** Read `.scientist/vault/vault-index.json` for a structured overview of all notes:
+- Filter by `status: "untested"` → active hypotheses
+- Filter by `status: "actionable"` → observations needing follow-up
+- Sort by `date` → most recent notes first
+- Check `last_verified` → find stale notes
+
+**Fallback:** If vault-index.json doesn't exist, read `.scientist/vault/Index.md` for human-readable overview:
 - What's my current focus?
 - What open questions do I have?
 - What hypotheses are untested?
 
-Scan vault directories for recent notes:
-- `Hypotheses/` — any with status: UNTESTED?
-- `Experiments/` — any with status: IN_PROGRESS?
-- `Observations/` — anything recent that needs follow-up?
+**Then** read only the TOP PRIORITY notes (not all of them):
+- Untested hypotheses (from index)
+- In-progress experiments
+- Notes modified since last session (compare dates to `last_session` in state.json)
 
 ## Step 5: Knowledge Health Check
 
