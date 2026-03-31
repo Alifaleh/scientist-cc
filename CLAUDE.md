@@ -32,9 +32,10 @@ This is **scientist-cc** — a self-evolving R&D framework for Claude Code. The 
 
 **CRITICAL:** After pushing improvements to scientist-cc that trigger a version bump + npm publish, ALWAYS run:
 ```bash
-npm update -g scientist-cc
+npm install -g scientist-cc@<new-version>
 scientist-cc --global
 ```
+Note: Use `npm install -g scientist-cc@X.Y.Z` (not `npm update -g`) because npm update can serve cached old versions.
 This updates the running instance so you use the improved framework to make further improvements. Skipping this breaks the meta-improvement loop — you'd be iterating on old code.
 
 ### Dogfooding Protocol: Every Friction = A Bug
