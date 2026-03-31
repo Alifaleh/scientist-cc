@@ -23,6 +23,12 @@ last_verified: 2026-03-31
 - Anti-stopping should not mean ignoring errors — it means handling errors and continuing
 - Quality matters more than velocity — don't rush just to avoid "stopping"
 
+## Structural Solution: Anti-Stop Hook
+The only effective mitigation is **structural enforcement via Claude Code's Stop hook event**. Rules in CLAUDE.md are necessary but insufficient — they're instructions competing against model weights. The Stop hook fires every time Claude finishes responding and injects a continuation reminder into the context, making stopping a visible error rather than an invisible default.
+
+This is a **5th novel contribution** of scientist-cc — no other framework has structural enforcement against LLM stopping behavior.
+
 ## Connections
 - [[supports::Principle - Dogfooding Is Superior Testing]] — stopping bugs were all found through dogfooding
+- [[supports::Principle - Novel Contributions of scientist-cc]] — anti-stop hook is a novel capability
 - [[contradicts::Default Claude behavior of summarizing and waiting for input]]
