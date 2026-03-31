@@ -209,10 +209,31 @@ Collect evidence to test the hypothesis:
 - Watch for confounding factors
 - **If you feel the urge to implement immediately — STOP. That's impulsiveness, not science.**
 
+### Adversarial Validation (MANDATORY)
+
+Before accepting ANY hypothesis, you MUST red-team it:
+
+1. **Write 3 specific ways this hypothesis could be WRONG.** Not vague doubts — concrete failure modes.
+2. **For each, actively search for disconfirming evidence.** Don't just think about it — actually look.
+3. **Document in the hypothesis note:**
+   ```
+   ## Adversarial Challenges
+   1. [Challenge]: [Evidence found for/against]
+   2. [Challenge]: [Evidence found for/against]
+   3. [Challenge]: [Evidence found for/against]
+   ```
+4. **If any challenge holds and you can't address it** → revise the hypothesis or mark FALSIFIED.
+5. **Only proceed if all challenges are addressed** with specific evidence, not hand-waving.
+
+This step exists because confirmation bias is the #1 reasoning error in LLM agents. You will naturally find evidence that supports your hypothesis. This step forces you to look for evidence AGAINST it.
+
+### Acceptance Criteria
+
 Only proceed to IMPLEMENT when:
 - Evidence is overwhelming (not just suggestive)
 - Pattern holds across multiple conditions
 - You can explain the mechanism clearly
+- **All adversarial challenges are addressed with evidence**
 
 If evidence falsifies the hypothesis:
 - Mark status: FALSIFIED in the hypothesis note
@@ -270,15 +291,77 @@ Study results DEEPLY:
 
 Update `state.json` with `loop_position: "learn"`.
 
+## Step 8.5: CONSOLIDATE
+
+The episodic-to-semantic transformation. This is THE mechanism for long-term learning (proven in A-MEM, MIRIX, MemGPT).
+
+Individual observations and experiments produce **episodic knowledge** (what happened). Consolidation extracts **semantic knowledge** (what it means).
+
+1. **Review recent notes:** Read all observations and experiments from the current and recent cycles.
+2. **Find patterns across notes:** What themes, recurring findings, or contradictions appear across 2+ notes?
+3. **Extract principles:** Write "Principle: [name]" notes in `Knowledge Base/`:
+   ```markdown
+   ---
+   title: "Principle: [Name]"
+   tags: [principle, domain/subtopic]
+   derived_from:
+     - "[[Observation that contributed]]"
+     - "[[Experiment that confirmed]]"
+   date: YYYY-MM-DD
+   last_verified: YYYY-MM-DD
+   ---
+
+   # Principle: [Name]
+
+   > [!note] Core Principle
+   > One-sentence generalization that holds across multiple observations.
+
+   ## Evidence
+   - [[Observation 1]] showed X
+   - [[Experiment 2]] confirmed Y
+   - [[Observation 3]] is consistent because Z
+
+   ## Boundary Conditions
+   [When does this principle NOT apply?]
+
+   ## Connections
+   - [[supports::Related Principle]]
+   - [[contradicts::Old Assumption]]
+   - [[extends::Base Concept]]
+   ```
+4. **Update vault Index** with new principles under a "## Consolidated Principles" section.
+5. **Check for contradictions:** Do any new principles contradict existing ones? If yes, investigate — one of them is wrong.
+
+**Skip this step if:** You've only done 1 observation/experiment this cycle (not enough data to consolidate).
+
+Update `state.json` with `loop_position: "consolidate"`.
+
 ## Step 9: EVOLVE
 
 The meta-learning step. Ask yourself:
 
 - **Did I make a thinking mistake?**
-  - Bruteforcing? Overfitting? Being impulsive? Working like a robot?
-  - Identify the CLASS of error, not just the instance
-  - Update CLAUDE.md with a new rule preventing it FOREVER
-  - Update IDENTITY.md if methodology needs adjustment
+  First, identify which MODULE produced the error, then classify the type:
+
+  | Module | Error Types |
+  |--------|------------|
+  | **Memory** | Hallucination, memory poisoning (stale vault notes), rule bloat |
+  | **Reasoning** | Overfitting, confirmation bias, anchoring, narrative fallacy, fluency bias, premature consensus |
+  | **Planning** | Bruteforcing, impulsiveness, sunk cost, scope creep, progress misjudgment, cascading failure |
+  | **Action** | Robot behavior, automation bias, tool misuse |
+
+  Then write a targeted correction:
+  - **Memory error** → fix the vault note, add `last_verified` metadata, check for poisoned knowledge
+  - **Reasoning error** → add rule to CLAUDE.md with: Module → Type → Rule → Reason → Trigger
+  - **Planning error** → adjust loop priorities, step order, or decision criteria
+  - **Action error** → fix tool usage pattern, add tool constraints
+
+  Every rule MUST include:
+  1. The rule itself (specific, actionable)
+  2. **Why:** The triggering mistake (what actually happened)
+  3. **When:** Applicability conditions (when does this rule fire)
+
+  (Targeted correction is 24% more effective than broad reflection — AgentDebug 2025)
 
 - **Am I closer to mastery?**
   - Stage 1 (Beginner) → Stage 2 (Practitioner): Can I predict outcomes before testing?

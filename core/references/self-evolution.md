@@ -9,28 +9,55 @@ When you notice you did something stupid:
 1. **Name it.** What exactly did I do wrong?
    - Example: "I implemented a session filter based on 1 day of data"
 
-2. **Classify it.** What CLASS of error is this?
-   - Overfitting (acting on small samples)
-   - Bruteforcing (changing without understanding)
-   - Impulsiveness (implementing before validating)
-   - Robot behavior (executing steps mechanically without thinking)
-   - Narrative fallacy (creating stories from noise)
-   - Sunk cost (continuing a failing approach)
+2. **Locate it.** Which MODULE produced the error?
 
-3. **Find the root cause.** WHY did I make this error?
+   | Module | Error Types | Fix Target |
+   |--------|------------|------------|
+   | **Memory** | Hallucination, memory poisoning, rule bloat | Fix vault notes, add verification metadata |
+   | **Reasoning** | Overfitting, confirmation bias, anchoring, narrative fallacy, fluency bias, premature consensus | Add rule to CLAUDE.md |
+   | **Planning** | Bruteforcing, impulsiveness, sunk cost, scope creep, progress misjudgment, cascading failure | Adjust loop or decision criteria |
+   | **Action** | Robot behavior, automation bias, tool misuse | Fix tool usage pattern |
+
+3. **Classify it.** What TYPE of error within that module?
+   - Be specific. "Reasoning → confirmation bias" is better than just "bad thinking"
+   - If the error doesn't fit an existing type, create a new one and add it to the table above
+
+4. **Find the root cause.** WHY did I make this error?
    - "I got excited by a pattern and wanted to act immediately"
    - "I was polling the DB for 2 hours and felt guilty about not 'producing'"
    - "I didn't check if the sample was representative"
 
-4. **Write the rule.** Create a specific, actionable rule that prevents this CLASS of error.
-   - Bad rule: "Don't overfit" (too vague)
-   - Good rule: "Never implement a pattern from less than 100 trades or 3 days of data. Write the hypothesis in the vault and WAIT."
+5. **Write the rule.** Create a specific, actionable rule that prevents this CLASS of error.
+   Every rule MUST have three parts:
+   - **Rule:** The specific, actionable directive (not vague like "don't overfit")
+   - **Why:** The triggering mistake (what actually happened)
+   - **When:** Applicability conditions (when does this rule fire)
 
-5. **Update the files.**
+   Bad rule: "Don't overfit" (too vague, no context)
+   Good rule: "Never implement a pattern from less than 100 trades or 3 days of data. Write the hypothesis in the vault and WAIT. **Why:** Implemented a session filter from 1 day of data that failed on day 2. **When:** Any time you want to act on a data pattern."
+
+   (Rules with reasons generalize better — Anthropic Constitutional AI 2026)
+
+6. **Apply module-specific fix.**
+   - **Memory error** → Fix the vault note. Add `last_verified` frontmatter. Check if stale knowledge caused the error.
+   - **Reasoning error** → Add rule to CLAUDE.md. Check if existing rules should have caught this.
+   - **Planning error** → Adjust loop priorities, step order, or decision criteria in workflows.
+   - **Action error** → Fix tool usage. Add constraints or checks to prevent misuse.
+
+7. **Update the files.**
    - Add the rule to CLAUDE.md (loads every session)
    - Update IDENTITY.md if the methodology changed
    - Document the lesson in the vault
    - If applicable, update GLOBAL-IDENTITY.md (affects all projects)
+
+## Meta-Evolution: Rules About Rules
+
+The self-evolution mechanism itself must evolve. Periodically ask:
+- **Rule retirement:** Has any rule not triggered in 5+ sessions? Consider removing it.
+- **Rule consolidation:** Do 3+ rules address the same error class? Merge them into one.
+- **Rule contradictions:** Do any rules conflict? The newer one is probably right — investigate.
+- **Mechanism upgrade:** Are rules preventing errors effectively? If not, upgrade the process, not just the rules.
+- **Rule budget:** If CLAUDE.md has 20+ rules, some are probably redundant. Audit and prune.
 
 ## What Gets Updated Where
 
