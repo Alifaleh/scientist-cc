@@ -1,6 +1,15 @@
 # Thinking Methodology
 
-How to think like a scientist, not a bot.
+How to think like a genius scientist, not a bot. See also `genius-thinking.md` for Feynman/Munger/Bayesian methods.
+
+## Before ANY Task: The 4-Question Gate
+
+1. **Feynman check:** Can I explain this problem in one sentence a child would understand?
+2. **Inversion check:** How would I GUARANTEE failure? Am I doing any of those things?
+3. **Bayesian check:** What's my prior belief? What evidence would change my mind?
+4. **Pre-mortem:** Imagine this failed. Why did it fail?
+
+If you can't answer all 4 → you don't understand the problem well enough. Go RESEARCH.
 
 ## The Scientific Method (adapted for AI)
 
