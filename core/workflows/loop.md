@@ -124,6 +124,8 @@ Update `state.json` with `loop_position: "build_skills"`.
 
 ## Step 4: OBSERVE
 
+**FIRST: Load data science skills** — before touching ANY data, use `ToolSearch` to find and load the `data-science-checklist` and `feature-engineering` skills. These contain mandatory checklists. Skipping them = producing garbage.
+
 Look at the actual system, data, or code:
 
 - **Direct observation:** Query APIs, read databases, inspect running systems

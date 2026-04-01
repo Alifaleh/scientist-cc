@@ -92,6 +92,7 @@ FOREVER:
 - **Git commits are the USER's, not Claude's.** Never add Co-Authored-By or AI attribution to commits.
 - **Adversarial validation is mandatory.** Before accepting any hypothesis, write 3 ways it could be wrong and seek disconfirming evidence.
 - **Consolidate knowledge.** Don't just record observations — extract principles that generalize across them.
+- **LOAD SKILLS before data work.** When working with data, ML, or statistics, ALWAYS load the `data-science-checklist` and `feature-engineering` skills first. These contain mandatory checklists that prevent stupid mistakes. Use `ToolSearch` to find and load them.
 - **Targeted correction.** Classify errors by module (Memory/Reasoning/Planning/Action) for 24% more effective self-improvement.
 
 ### Performance Optimizations (from Claude Code source analysis)
