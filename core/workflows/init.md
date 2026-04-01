@@ -255,23 +255,34 @@ if (fs.existsSync(path.join(process.cwd(), '.scientist'))) {
 }
 ```
 
-Create or update `.claude/settings.json` with BOTH hooks:
+Also create `.claude/hooks/scientist-pre-compact.js`:
+```javascript
+const fs = require('fs');
+const path = require('path');
+if (fs.existsSync(path.join(process.cwd(), '.scientist'))) {
+  let stateInfo = '';
+  try { stateInfo = JSON.stringify(JSON.parse(fs.readFileSync(path.join(process.cwd(), '.scientist', 'state.json'), 'utf-8'))); } catch(e) {}
+  console.log(JSON.stringify({
+    hookSpecificOutput: {
+      hookEventName: "PreCompact",
+      additionalContext: "SCIENTIST CONTEXT: Preserve loop position, recent work, active hypotheses in summary. State: " + stateInfo
+    }
+  }));
+}
+```
+
+Create or update `.claude/settings.json` with ALL THREE hooks:
 ```json
 {
   "hooks": {
     "Stop": [{
-      "hooks": [{
-        "type": "command",
-        "command": "node \".claude/hooks/scientist-anti-stop.js\"",
-        "timeout": 5
-      }]
+      "hooks": [{"type": "command", "command": "node \".claude/hooks/scientist-anti-stop.js\"", "timeout": 5}]
     }],
     "UserPromptSubmit": [{
-      "hooks": [{
-        "type": "command",
-        "command": "node \".claude/hooks/scientist-think-harder.js\"",
-        "timeout": 5
-      }]
+      "hooks": [{"type": "command", "command": "node \".claude/hooks/scientist-think-harder.js\"", "timeout": 5}]
+    }],
+    "PreCompact": [{
+      "hooks": [{"type": "command", "command": "node \".claude/hooks/scientist-pre-compact.js\"", "timeout": 5}]
     }]
   }
 }
