@@ -356,6 +356,12 @@ Update `state.json` with `loop_position: "validate"`.
 
 ## Step 7: IMPLEMENT & TEST
 
+### 4-Question Gate (before writing ANY code)
+1. **Feynman:** Can I explain what this code should do in one sentence?
+2. **Inversion:** What's the simplest way this implementation could be WRONG? (Check that first)
+3. **Second-order:** If this works, what happens next? If it fails, what's the fallback?
+4. **Adversarial:** If a critic reviewed this code, what would they attack?
+
 Code the validated hypothesis into the project.
 
 ### ML/Data Science Pre-Flight Check (MANDATORY for data work — see `ml-thinking-protocol.md`)
