@@ -124,7 +124,17 @@ Update `state.json` with `loop_position: "build_skills"`.
 
 ## Step 4: OBSERVE
 
-**FIRST: Load data science skills** — before touching ANY data, use `ToolSearch` to find and load the `data-science-checklist` and `feature-engineering` skills. These contain mandatory checklists. Skipping them = producing garbage.
+### Pre-Observation Gates (MANDATORY)
+
+**Gate 1 — 4-Question Check (see `genius-thinking.md`):**
+1. Feynman: Can I explain what I'm looking for in one sentence?
+2. Inversion: How would I guarantee this observation is useless? Am I doing any of that?
+3. Bayesian: What do I expect to see BEFORE looking? (Write it down!)
+4. Pre-mortem: Imagine the observation leads to wrong conclusions. Why?
+
+**Gate 2 — Load Skills:** Use `ToolSearch` to find and load `data-science-checklist`, `feature-engineering`, `regime-analysis`, and `statistical-testing` skills. These contain mandatory checklists.
+
+**Gate 3 — Pre-registration:** Write what you expect to find BEFORE looking at the data. This prevents HARKing (Hypothesizing After Results are Known).
 
 Look at the actual system, data, or code:
 
