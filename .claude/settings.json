@@ -10,6 +10,17 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \".claude/hooks/scientist-think-harder.js\"",
+            "timeout": 5
+          }
+        ]
+      }
     ]
   }
 }

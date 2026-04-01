@@ -241,7 +241,21 @@ if (fs.existsSync(path.join(process.cwd(), '.scientist'))) {
 }
 ```
 
-Create or update `.claude/settings.json` with the Stop hook:
+Also create `.claude/hooks/scientist-think-harder.js`:
+```javascript
+const fs = require('fs');
+const path = require('path');
+if (fs.existsSync(path.join(process.cwd(), '.scientist'))) {
+  console.log(JSON.stringify({
+    hookSpecificOutput: {
+      hookEventName: "UserPromptSubmit",
+      additionalContext: "think harder about this. ultrathink. The scientist must analyze deeply and produce novel insights."
+    }
+  }));
+}
+```
+
+Create or update `.claude/settings.json` with BOTH hooks:
 ```json
 {
   "hooks": {
@@ -251,12 +265,21 @@ Create or update `.claude/settings.json` with the Stop hook:
         "command": "node \".claude/hooks/scientist-anti-stop.js\"",
         "timeout": 5
       }]
+    }],
+    "UserPromptSubmit": [{
+      "hooks": [{
+        "type": "command",
+        "command": "node \".claude/hooks/scientist-think-harder.js\"",
+        "timeout": 5
+      }]
     }]
   }
 }
 ```
 
-This hook fires every time Claude stops responding and injects a continuation reminder. It's the structural enforcement that prevents the #1 failure mode.
+**Two hooks work together:**
+- **Stop hook:** Injects continuation reminder when Claude stops (anti-stopping)
+- **UserPromptSubmit hook:** Injects "think harder" + "ultrathink" on EVERY user message, triggering 31,999 thinking tokens for EVERY turn (from Claude Code source analysis: the `nu` function scans user messages for these trigger words)
 
 ## Phase 7: Initialize Git
 
