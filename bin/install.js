@@ -257,9 +257,32 @@ function uninstall(configDir) {
       if (settings.mcpServers) {
         delete settings.mcpServers['scientist-playwright'];
         delete settings.mcpServers['scientist-jupyter'];
-        fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
         console.log('  ✗ Removed MCP server entries');
       }
+      // Remove hooks
+      if (settings.hooks) {
+        if (settings.hooks.Stop) {
+          settings.hooks.Stop = settings.hooks.Stop.filter(h =>
+            !h.hooks?.some(hk => hk.command?.includes('scientist-'))
+          );
+          if (!settings.hooks.Stop.length) delete settings.hooks.Stop;
+        }
+        if (settings.hooks.UserPromptSubmit) {
+          settings.hooks.UserPromptSubmit = settings.hooks.UserPromptSubmit.filter(h =>
+            !h.hooks?.some(hk => hk.command?.includes('scientist-'))
+          );
+          if (!settings.hooks.UserPromptSubmit.length) delete settings.hooks.UserPromptSubmit;
+        }
+        if (settings.hooks.PreCompact) {
+          settings.hooks.PreCompact = settings.hooks.PreCompact.filter(h =>
+            !h.hooks?.some(hk => hk.command?.includes('scientist-'))
+          );
+          if (!settings.hooks.PreCompact.length) delete settings.hooks.PreCompact;
+        }
+        if (!Object.keys(settings.hooks).length) delete settings.hooks;
+        console.log('  ✗ Removed scientist hooks');
+      }
+      fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
     } catch (e) {}
   }
 
