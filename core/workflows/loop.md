@@ -234,6 +234,17 @@ Update `state.json` with `loop_position: "observe"`.
 
 ## Step 5: HYPOTHESIZE
 
+### Pre-Hypothesis Screening (MANDATORY for data-driven hypotheses)
+
+Before writing a hypothesis, pass this screen:
+1. **Do I have a CAUSAL mechanism?** "X predicts Y because Z" — not just "X correlates with Y"
+2. **Is my data REPRESENTATIVE?** Does it cover all regimes? Is the sample large enough?
+3. **What would DISPROVE this?** If I can't define falsification criteria, it's not a hypothesis
+4. **Has someone tried this before?** Search literature — if it's known to not work, WHY do I think I'm different?
+5. **What's the SIMPLEST explanation?** Is there a trivial explanation I'm ignoring? (Occam's razor)
+
+**If you can't pass all 5, go back to RESEARCH.** Forming hypotheses without understanding is bruteforcing.
+
 Form testable predictions. Every hypothesis must have:
 
 ```markdown

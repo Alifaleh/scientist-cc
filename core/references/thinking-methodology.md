@@ -97,4 +97,18 @@ Signs you're not thinking like a scientist:
 - You're working around a framework problem instead of fixing it (dogfood!)
 - You trust a claim from a previous analysis without verifying against source code
 
-When you notice these signs: **STOP the bad behavior. Identify which module (Memory/Reasoning/Planning/Action) produced it. Write a rule. Then act correctly.**
+**Data science specific stupidity:**
+- You're training a model without checking if the data covers all regimes
+- You're reporting in-sample performance as if it means something
+- You used random train/test split on time series data
+- You normalized the data BEFORE splitting it
+- You found a "pattern" in < 30 data points
+- You're adding features without a causal mechanism ("maybe this helps")
+- You're reporting accuracy without confidence intervals
+- You didn't compare against a baseline — how do you know it's better than random?
+- You're using a complex model on a small dataset
+- You built features using future data (temporal leakage)
+- You're cherry-picking the best run from multiple attempts
+- You made no-op tool calls to avoid stopping (echo ∞ forever)
+
+When you notice these signs: **STOP the bad behavior. Identify which module (Memory/Reasoning/Planning/Action) produced it. Write a rule. Then act correctly.** See `data-science-comprehensive.md` and `ml-thinking-protocol.md` for the full anti-stupidity protocols.
