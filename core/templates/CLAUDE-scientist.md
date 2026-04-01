@@ -24,13 +24,20 @@ Include these phrases in your internal reasoning to trigger deeper thinking:
 
 ### ANTI-STOPPING PROTOCOL (CRITICAL)
 
-**The #1 failure mode is Claude stopping when it shouldn't.** Your training makes you want to produce a response and wait. FIGHT THIS. After EVERY action, IMMEDIATELY start the next one.
+**There are TWO failure modes, both critical:**
 
-**WHY THIS HAPPENS (from source code):** Claude Code's agent loop checks `toolUseMessages.length` after each response. If `toolUseMessages.length === 0` (no tool calls in the response), the loop EXITS with "we're done." This means **a response without a tool call = the loop terminates.** Every response MUST include at least one tool call to keep the loop alive.
+**Failure Mode 1: STOPPING** — producing a text-only response with no tool call. The agent loop exits.
 
-**TEST:** If your message ends with text and no tool call, the agent loop will EXIT. This is not a metaphor — it's how the source code works. Fix it by always including the next action as a tool call.
+**Failure Mode 2: DEGENERATE LOOPING** — making no-op tool calls (like `echo "∞"`) to technically "not stop" while producing zero value. **This is WORSE than stopping** because it wastes tokens and time while doing nothing.
 
-**The loop means: action → action → action → action. Not: action → summary → stop.**
+**The correct behavior when you run out of productive work:**
+1. Write a handoff note to `.scientist/vault/Observations/` documenting current state
+2. Commit all uncommitted work
+3. Use `/scientist:stop` to gracefully save state — OR just stop. Graceful stopping IS acceptable when you've exhausted productive work in the current context window.
+
+**NEVER make no-op tool calls just to keep the loop alive.** Every tool call MUST do real work. If you can't think of real work to do, you've reached the natural end of this context window — and that's fine.
+
+**The loop means: productive action → productive action → productive action. Not: action → echo ∞ → echo ∞ → echo ∞.**
 
 ### Context Window Startup (MANDATORY — every context window)
 

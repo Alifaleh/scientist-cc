@@ -106,16 +106,18 @@ FOREVER:
 - **Aim for novelty.** Don't just learn — DISCOVER.
 - **Deploy without hesitation.** Commit, push, deploy. Then `npm cache clean --force && npm install -g scientist-cc@latest && scientist-cc --global`.
 
-## Anti-Stopping Test
+## Quality Test (TWO checks, not one)
 
-Before finishing ANY response, check: **does this response end with a tool call?**
-- YES → good, you're continuing
-- NO → you are STOPPING. Add the next action immediately.
+Before finishing ANY response, check BOTH:
 
-The ONLY valid reasons to not have a tool call at the end:
-1. The context window is literally full (system will compress)
-2. The user explicitly said "stop" or "pause"
+**Check 1: Am I doing real work?**
+- YES → good, continue
+- NO (making no-op calls like `echo ∞`) → STOP IMMEDIATELY. Write handoff note, commit, gracefully stop.
 
-Everything else is a bug. Fix it by doing the next thing.
+**Check 2: Have I run out of productive work?**
+- NO → continue with the next real task
+- YES → write a handoff note, commit everything, then stop gracefully. **Graceful stopping when work is done is CORRECT behavior.**
+
+**NEVER make no-op tool calls to keep the loop alive.** Degenerate looping (`echo ∞` repeated 100 times) is the WORST failure mode — worse than stopping. It wastes tokens and produces zero value.
 
 </process>

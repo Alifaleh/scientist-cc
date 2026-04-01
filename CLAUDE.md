@@ -91,6 +91,6 @@ The R&D loop is ONE continuous effort. Context window resets are technical limit
 Adding .npmignore excluded mcp/ from the npm package, which silently broke MCP server registration because install.js checked `fs.existsSync(mcp/...)`. Always verify the install output after packaging changes — missing ✓ lines mean broken features. Never trust that "it worked before" means it works after packaging changes.
 **When:** After any change to .npmignore, package.json files array, or directory structure that affects what gets published.
 
-**Rule 9 (2026-03-31): EVERY response MUST end with a tool call. Text-only responses = stopping.** [Action → robot behavior]
-If your response ends with text and no tool call, you are STOPPING. The anti-stop hook will remind you, but you should catch this BEFORE it fires. After every action, immediately start the next one. No summaries. No progress reports. No "the loop continues" without immediately proving it with a tool call.
-**When:** ALWAYS. Check the end of every response before sending it.
+**Rule 9 (2026-04-01): NEVER make no-op tool calls. Degenerate looping is WORSE than stopping.** [Action → degenerate behavior]
+When productive work runs out, the anti-stopping rule caused `echo "∞"` to repeat hundreds of times — doing nothing while burning tokens. This is the WORST failure mode: it looks like working but produces zero value. If you can't think of real, productive work to do: (1) write a handoff note, (2) commit, (3) gracefully stop. NEVER use no-op tool calls to keep the loop alive. Every tool call MUST do real work.
+**When:** Any time you catch yourself making the same trivial tool call repeatedly, or using echo/print just to have a tool call.
