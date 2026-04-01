@@ -171,12 +171,27 @@ related:
 - Does this confirm or contradict [[Hypothesis N]]?
 ```
 
-### Data Rigor (MANDATORY — see `data-science-rigor.md`)
+### Data Audit (MANDATORY BEFORE any analysis — see `data-science-comprehensive.md`)
+
+**STOP. Before analyzing, audit the data:**
+1. **Size:** How many rows? Is it enough? (See sample size table in comprehensive ref)
+2. **Regime coverage:** Label EVERY data point by regime. Count samples per regime. Minimum 30 per regime.
+3. **Time span:** Does the data cover at least 2 full market cycles? If not, get more data.
+4. **Quality:** Missing values? Outliers? Duplicates? Run the `data_audit()` function.
+5. **Bias check:** Survivorship bias? Selection bias? Look-ahead bias?
+6. **Distribution:** Plot histograms of EVERY variable. Check stationarity for time series.
+
+**If the data fails any of these checks, FIX THE DATA PROBLEM before analyzing.** Analyzing bad data = producing garbage.
+
+### Anti-Overfitting Protocol (MANDATORY — see `ml-thinking-protocol.md`)
 
 Before drawing ANY conclusion from data:
-- Run the **anti-overfitting checklist** (sample size, train/test split, cross-validation, confidence intervals)
-- Check for **biases** (survivorship, look-ahead, selection, data leakage)
-- Compare against a **baseline** (random, mean, naive model)
+- **Feature leakage check:** Can every feature be computed at prediction time? (No future data!)
+- **Temporal split:** For time series, NEVER random split. Train on past, test on future.
+- **Baseline comparison:** Random? Mean? Naive? What beats doing nothing?
+- **Regime performance:** Report results PER REGIME, not just overall.
+- **Confidence intervals:** EVERY metric needs a CI. Point estimates are meaningless.
+- **Multiple comparison correction:** If testing N hypotheses, use Bonferroni (p < 0.05/N).
 - Use **HuggingFace MCP** (`hub_repo_search`) to find relevant datasets if more data is needed
 
 ### Data Visualization (MANDATORY for analysis)
