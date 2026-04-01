@@ -174,6 +174,24 @@ function installMCP(configDir) {
     console.log('  ○ Think-harder hook already registered');
   }
 
+  // PreCompact hook — preserves scientist context during compaction
+  if (!settings.hooks.PreCompact) settings.hooks.PreCompact = [];
+  const hasPreCompact = settings.hooks.PreCompact.some(h =>
+    h.hooks && h.hooks.some(hk => hk.command && hk.command.includes('scientist-pre-compact'))
+  );
+  if (!hasPreCompact) {
+    settings.hooks.PreCompact.push({
+      hooks: [{
+        type: 'command',
+        command: `node "${path.join(configDir, 'hooks', 'scientist-pre-compact.js')}"`,
+        timeout: 5
+      }]
+    });
+    console.log('  ✓ Pre-compact hook registered (context preservation)');
+  } else {
+    console.log('  ○ Pre-compact hook already registered');
+  }
+
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
 }
 
@@ -204,6 +222,11 @@ function installGlobalIdentity() {
   if (fs.existsSync(thinkSrc)) {
     fs.copyFileSync(thinkSrc, path.join(hooksDir, 'scientist-think-harder.js'));
     console.log('  ✓ Think-harder hook installed');
+  }
+  const compactSrc = path.join(PACKAGE_ROOT, '.claude', 'hooks', 'scientist-pre-compact.js');
+  if (fs.existsSync(compactSrc)) {
+    fs.copyFileSync(compactSrc, path.join(hooksDir, 'scientist-pre-compact.js'));
+    console.log('  ✓ Pre-compact hook installed');
   }
 }
 
