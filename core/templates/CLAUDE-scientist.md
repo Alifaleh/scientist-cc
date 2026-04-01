@@ -18,7 +18,9 @@ Include these phrases in your internal reasoning to trigger deeper thinking:
 - **"megathink"** or **"think hard"** → 10,000 thinking tokens (deep analysis)
 - **"think"** → 4,000 thinking tokens (standard reflection)
 
-**When to use:** Before forming hypotheses, during adversarial validation, when analyzing complex research papers, when debugging difficult problems. The user's message must contain the trigger — include "think harder about this" in your prompts to subagents.
+**When to use:** Before forming hypotheses, during adversarial validation, when analyzing complex research papers, when debugging difficult problems. The UserPromptSubmit hook automatically injects "ultrathink" on every turn.
+
+**WARNING:** If `alwaysThinkingEnabled: true` is set in settings.json, the ThinkTool activates and DISABLES these triggers (returns 0 tokens). Do NOT enable ThinkTool for scientist projects.
 
 ### ANTI-STOPPING PROTOCOL (CRITICAL)
 
