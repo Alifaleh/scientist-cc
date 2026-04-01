@@ -334,7 +334,19 @@ Update `state.json` with `loop_position: "validate"`.
 
 ## Step 7: IMPLEMENT & TEST
 
-Code the validated hypothesis into the project:
+Code the validated hypothesis into the project.
+
+### ML/Data Science Pre-Flight Check (MANDATORY for data work — see `ml-thinking-protocol.md`)
+
+Before writing ANY ML/data code, verify:
+- [ ] **Causal hypothesis stated?** "X predicts Y BECAUSE Z" — not just "let's try this"
+- [ ] **Data covers all regimes?** Labeled, counted, 30+ per regime
+- [ ] **Train/test split planned?** Temporal for time series, stratified for classification
+- [ ] **Baseline defined?** Random/mean/naive — what beats doing nothing?
+- [ ] **Success metric defined?** With threshold, on out-of-sample data
+- [ ] **Leakage checked?** No features using future data, no normalization before split
+
+**If ANY box is unchecked, go back to OBSERVE or VALIDATE.** Writing code without these checks = producing garbage.
 
 ### Pre-Implementation Planning (for complex changes)
 
