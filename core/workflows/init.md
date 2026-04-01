@@ -277,9 +277,10 @@ Create or update `.claude/settings.json` with BOTH hooks:
 }
 ```
 
-**Two hooks work together:**
+**Three hooks work together (from Claude Code source analysis):**
 - **Stop hook:** Injects continuation reminder when Claude stops (anti-stopping)
-- **UserPromptSubmit hook:** Injects "think harder" + "ultrathink" on EVERY user message, triggering 31,999 thinking tokens for EVERY turn (from Claude Code source analysis: the `nu` function scans user messages for these trigger words)
+- **UserPromptSubmit hook:** Injects "ultrathink" on EVERY user message → 31,999 thinking tokens per turn
+- **PreCompact hook:** Preserves scientist context (loop position, state, recent work) during compaction
 
 ## Phase 7: Initialize Git
 
