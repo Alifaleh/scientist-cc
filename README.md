@@ -119,7 +119,10 @@ Claude evolves through mastery stages:
 - **PDF Reader** — reads papers in 3-page chunks for systematic study
 - **Repo Reader** — clones and maps documentation structure
 - **Vault Index Generator** — machine-readable JSON index with weighted relevance scoring
-- **Anti-Stop Hook** — Claude Code Stop event hook that prevents Claude from stopping mid-loop
+- **3 Claude Code Hooks** (from source code analysis):
+  - **Anti-Stop Hook** (Stop event) — detects when Claude stops and injects continuation reminder
+  - **Think-Harder Hook** (UserPromptSubmit) — injects "ultrathink" trigger giving 31,999 thinking tokens per turn
+  - **Pre-Compact Hook** (PreCompact) — preserves scientist context during compaction
 - **Playwright MCP** — autonomous web browsing for research
 - **Jupyter MCP** — notebook execution for data analysis
 - **Obsidian Skills** — proper vault formatting (from kepano/obsidian-skills)
