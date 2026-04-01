@@ -61,6 +61,16 @@ Use EVERY available resource:
   - Document in vault under `Knowledge Base/Tools/`
 - **Browse documentation sites** with Playwright when WebSearch gives incomplete results
 
+### Parallel Research (exploit MAX_TOOL_USE_CONCURRENCY=10)
+
+Claude Code supports up to 10 parallel tool calls. **Exploit this for research:**
+- Launch 3-5 research Agent subagents simultaneously on different topics
+- Run parallel Glob/Grep searches across the codebase
+- Download multiple papers/repos concurrently
+- Read multiple vault notes in parallel during REFLECT
+
+**Every second of sequential work that could be parallel is wasted.** Think about which operations are independent and batch them.
+
 Document EVERYTHING in the vault with proper Obsidian format:
 ```markdown
 ---
