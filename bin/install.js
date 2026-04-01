@@ -243,6 +243,16 @@ function uninstall(configDir) {
     }
   }
 
+  // Remove hook files
+  const hooksDir = path.join(configDir, 'hooks');
+  if (fs.existsSync(hooksDir)) {
+    const hookFiles = fs.readdirSync(hooksDir).filter(f => f.startsWith('scientist-'));
+    for (const f of hookFiles) {
+      fs.unlinkSync(path.join(hooksDir, f));
+      console.log(`  ✗ Removed hook ${f}`);
+    }
+  }
+
   // Remove core
   if (fs.existsSync(scientistDir)) {
     fs.rmSync(scientistDir, { recursive: true });
