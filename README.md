@@ -156,15 +156,19 @@ Scientist was used to improve itself (dogfooding). In one continuous R&D effort:
 
 | Metric | Value |
 |--------|-------|
-| Research domains covered | 6 (knowledge management, AI self-improvement, agent frameworks, A-MEM, vault navigation, MemGPT) |
-| Papers downloaded & read | 2 (A-MEM 28pp, MemGPT 13pp) |
-| Hypotheses formed | 7 (all implemented, empirically validated) |
-| Principles consolidated | 6 (cross-linked with typed relationships) |
-| Self-evolution rules | 8 (each with module, trigger, rationale) |
-| Bugs found via dogfooding | 5 (silent failures no test would catch) |
-| Vault notes | 22 (with weighted relevance scoring) |
-| Link density | 3.4 links/note |
-| Framework versions shipped | v0.1.1 → v0.7.1 |
+| Commits | 257+ (continuous, autonomous) |
+| Research domains | 8+ (knowledge management, AI self-improvement, agent frameworks, A-MEM, vault navigation, MemGPT, context engineering, Claude Code source) |
+| Papers downloaded & read | 3 (A-MEM 28pp, MemGPT 13pp, Reflexion) |
+| Source code discoveries | 14 (Claude Code runtime reverse-engineering) |
+| Hypotheses formed | 7+ (all implemented) |
+| Principles consolidated | 22 (cross-linked with typed relationships) |
+| Self-evolution rules | 9 (each with module, trigger, rationale) |
+| Bugs found via dogfooding | 6+ (silent failures no test would catch) |
+| Vault notes | 90+ (with weighted relevance scoring) |
+| Link density | 4.8+ links/note |
+| Typed links | 170+ (supports/contradicts/extends) |
+| Framework versions shipped | v0.1.1 → v1.9.1 |
+| Lifecycle hooks | 3 (Stop, UserPromptSubmit, PreCompact) |
 
 ## Philosophy
 
