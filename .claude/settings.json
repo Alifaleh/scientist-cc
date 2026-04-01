@@ -21,6 +21,17 @@
           }
         ]
       }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \".claude/hooks/scientist-pre-compact.js\"",
+            "timeout": 5
+          }
+        ]
+      }
     ]
   }
 }
