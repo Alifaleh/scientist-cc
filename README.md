@@ -140,6 +140,16 @@ Most AI agent frameworks lose everything between sessions. Scientist solves this
 
 Built on research from A-MEM (NeurIPS 2025), AutoDream, CrewAI, SWE-agent, MetaGPT, and 10+ other frameworks.
 
+### Runtime Optimization (from Claude Code source analysis)
+
+We reverse-engineered Claude Code's source to optimize at the deepest level:
+
+- **31,999 thinking tokens per turn** — UserPromptSubmit hook injects "ultrathink" trigger word detected by `getMaxThinkingTokens()` in the runtime
+- **Default behavior overrides** — Claude Code's system prompt says "4 lines max" and "minimize tokens." We explicitly override these for research mode.
+- **Anti-stop mechanism** — Stop hook fires when Claude stops, injects continuation context. Root cause identified: `toolUseMessages.length === 0` exits the agent loop.
+- **Context preservation** — PreCompact hook ensures scientist state survives compaction
+- **Parallel exploitation** — `MAX_TOOL_USE_CONCURRENCY=10` from source, used for parallel research agents
+
 ## Built with Scientist: Real Results
 
 Scientist was used to improve itself (dogfooding). In one continuous R&D effort:
