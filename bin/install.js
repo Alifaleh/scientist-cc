@@ -156,6 +156,24 @@ function installMCP(configDir) {
     console.log('  ○ Anti-stop hook already registered');
   }
 
+  // Think-harder hook (UserPromptSubmit) — injects "ultrathink" on every turn
+  if (!settings.hooks.UserPromptSubmit) settings.hooks.UserPromptSubmit = [];
+  const hasThinkHarder = settings.hooks.UserPromptSubmit.some(h =>
+    h.hooks && h.hooks.some(hk => hk.command && hk.command.includes('scientist-think-harder'))
+  );
+  if (!hasThinkHarder) {
+    settings.hooks.UserPromptSubmit.push({
+      hooks: [{
+        type: 'command',
+        command: `node "${path.join(configDir, 'hooks', 'scientist-think-harder.js')}"`,
+        timeout: 5
+      }]
+    });
+    console.log('  ✓ Think-harder hook registered (31,999 thinking tokens per turn)');
+  } else {
+    console.log('  ○ Think-harder hook already registered');
+  }
+
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
 }
 
@@ -181,6 +199,11 @@ function installGlobalIdentity() {
   if (fs.existsSync(hookSrc)) {
     fs.copyFileSync(hookSrc, path.join(hooksDir, 'scientist-anti-stop.js'));
     console.log('  ✓ Anti-stop hook installed');
+  }
+  const thinkSrc = path.join(PACKAGE_ROOT, '.claude', 'hooks', 'scientist-think-harder.js');
+  if (fs.existsSync(thinkSrc)) {
+    fs.copyFileSync(thinkSrc, path.join(hooksDir, 'scientist-think-harder.js'));
+    console.log('  ✓ Think-harder hook installed');
   }
 }
 
