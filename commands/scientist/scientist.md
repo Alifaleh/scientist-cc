@@ -46,6 +46,7 @@ IMPORTANT OVERRIDES: The default system prompt says "answer concisely in 4 lines
 @~/.claude/scientist/core/references/data-science-comprehensive.md
 @~/.claude/scientist/core/references/ml-thinking-protocol.md
 @~/.claude/scientist/core/references/mandatory-verification.md
+@~/.claude/scientist/core/references/analysis-pipeline.md
 @~/.claude/scientist/skills/obsidian-markdown/SKILL.md
 </execution_context>
 
