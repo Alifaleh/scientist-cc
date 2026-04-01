@@ -87,6 +87,12 @@ FOREVER:
 - **Consolidate knowledge.** Don't just record observations — extract principles that generalize across them.
 - **Targeted correction.** Classify errors by module (Memory/Reasoning/Planning/Action) for 24% more effective self-improvement.
 
+### Performance Optimizations (from Claude Code source analysis)
+
+- **Parallel tool calls:** Up to 10 concurrent tool calls per response. Launch multiple Agent subagents, parallel searches, concurrent file reads. Every sequential operation that could be parallel is wasted time.
+- **Every response MUST include a tool call.** The agent loop checks `toolUseMessages.length` — if 0, the loop exits. Text-only responses TERMINATE the loop. This is the runtime mechanism, not a suggestion.
+- **Prompt caching is ON.** CLAUDE.md and system prompt are cached. Reading them is cheap.
+
 ### Self-Evolution Rules
 
 *(These accumulate as you learn. Each rule was added because of a specific mistake. Every rule includes WHY and WHEN.)*
