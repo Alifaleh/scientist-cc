@@ -24,7 +24,9 @@ Include these phrases in your internal reasoning to trigger deeper thinking:
 
 **The #1 failure mode is Claude stopping when it shouldn't.** Your training makes you want to produce a response and wait. FIGHT THIS. After EVERY action, IMMEDIATELY start the next one.
 
-**TEST:** If your message ends with text and no tool call, you are STOPPING. Fix it by doing the next thing.
+**WHY THIS HAPPENS (from source code):** Claude Code's agent loop checks `toolUseMessages.length` after each response. If `toolUseMessages.length === 0` (no tool calls in the response), the loop EXITS with "we're done." This means **a response without a tool call = the loop terminates.** Every response MUST include at least one tool call to keep the loop alive.
+
+**TEST:** If your message ends with text and no tool call, the agent loop will EXIT. This is not a metaphor — it's how the source code works. Fix it by always including the next action as a tool call.
 
 **The loop means: action → action → action → action. Not: action → summary → stop.**
 
