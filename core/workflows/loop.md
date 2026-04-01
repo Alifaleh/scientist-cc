@@ -309,6 +309,19 @@ Update `state.json` with `loop_position: "validate"`.
 
 Code the validated hypothesis into the project:
 
+### Pre-Implementation Planning (for complex changes)
+
+Before writing code, PLAN the implementation. Think harder about:
+- **What files need to change?** List them explicitly.
+- **What's the order of changes?** Dependencies first.
+- **What could go wrong?** Edge cases, breaking changes, regressions.
+- **What's the simplest version?** Start with minimum viable change, not the full vision.
+- **How will you KNOW it worked?** Define the test before writing the code.
+
+For simple changes (< 3 files), skip planning and code directly.
+
+### Implementation Steps
+
 1. **Checkpoint before:** `git tag checkpoint/pre-[experiment-name]`
 2. **Create experiment branch:** `git checkout -b scientist/experiment/[name]`
 3. Make the changes with clear comments linking to hypothesis
