@@ -18,6 +18,8 @@ Session 2 priority: Verify Jupyter MCP, test on a different project, llms.txt pr
 - [AI Agent Frameworks Landscape](Research/AI%20Agent%20Frameworks%20Landscape.md): 10 frameworks compared; vault-based persistence is our unique edge
 - [A-MEM Deep Dive](Research/A-MEM%20Deep%20Dive%20-%20Agentic%20Memory.md): Two-phase linking (tag filter → LLM reasoning), backward evolution, consolidation triggers
 - [Vault Navigation Patterns](Research/Vault%20Navigation%20Patterns%20for%20AI%20Agents.md): Three-tier progressive disclosure, vault-index.json, llms.txt format
+- [Comprehensive Data Science Methodology Reference](Research/Comprehensive%20Data%20Science%20Methodology%20Reference.md): 8-section actionable reference — CRISP-DM checklists, 10 AI agent mistakes, regime detection, sample size tables, nested CV, feature leakage taxonomy, statistical test selection flowchart, master analysis protocol
+- [LLM Data Analysis Anti-Stupidity Protocols](Research/LLM%20Data%20Analysis%20Anti-Stupidity%20Protocols.md): 15 failure modes with root causes, detection checklists, prevention protocols, and examples — overfitting, 3 types of data leakage, survivorship bias, look-ahead bias, optimization bias, selection bias, regime blindness, training-serving skew, correlation/causation confusion, impressive metric trap, premature feature engineering, base rate neglect, sycophantic validation
 
 ## Observations
 
