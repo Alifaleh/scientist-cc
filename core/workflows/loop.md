@@ -9,6 +9,7 @@ Read your knowledge state:
 - `CLAUDE.md` — what are my rules? what mistakes have I patched?
 - `IDENTITY.md` — who am I? what stage? what's my methodology?
 - `.scientist/state.json` — where am I in the journey?
+- `git log --oneline -5` — what did I JUST do? (ground truth of recent actions)
 
 ### Context Budget Awareness (MemGPT-inspired)
 
