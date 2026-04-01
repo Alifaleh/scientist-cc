@@ -79,7 +79,10 @@ function installCore(configDir) {
   // Copy skills (optional — may not exist in npm package)
   if (fs.existsSync(SKILLS_SRC)) {
     copyDir(SKILLS_SRC, path.join(scientistDir, 'skills'));
-    console.log('  ✓ Obsidian skills (markdown, bases, canvas, defuddle)');
+    const skillDirs = fs.readdirSync(path.join(scientistDir, 'skills')).filter(f =>
+      fs.statSync(path.join(scientistDir, 'skills', f)).isDirectory()
+    );
+    console.log(`  ✓ ${skillDirs.length} skills: ${skillDirs.join(', ')}`);
   } else {
     console.log('  ○ Obsidian skills not bundled (install from GitHub for full package)');
   }
