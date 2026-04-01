@@ -64,7 +64,7 @@ Use EVERY available resource:
 ### Parallel Research (exploit MAX_TOOL_USE_CONCURRENCY=10)
 
 Claude Code supports up to 10 parallel tool calls. **Exploit this for research:**
-- Launch 3-5 research Agent subagents simultaneously on different topics
+- Launch 3-5 research Agent subagents simultaneously on different topics. **Include "think harder about this" in every subagent prompt** — this triggers 31,999 thinking tokens for the subagent (from source: `getMaxThinkingTokens` checks the last user message)
 - Run parallel Glob/Grep searches across the codebase
 - Download multiple papers/repos concurrently
 - Read multiple vault notes in parallel during REFLECT
