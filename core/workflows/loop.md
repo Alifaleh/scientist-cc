@@ -246,6 +246,12 @@ Update `state.json` with `loop_position: "observe"`.
 
 ## Step 5: HYPOTHESIZE
 
+### 4-Question Gate (before forming ANY hypothesis — see `genius-thinking.md`)
+1. **Feynman:** Can I explain this hypothesis in one sentence to a non-expert?
+2. **Inversion:** What's the dumbest version of this hypothesis? Am I accidentally proposing that?
+3. **Base rates:** How often do hypotheses like this turn out to be true? (Most patterns are noise)
+4. **Pre-mortem:** Imagine I tested this and it was wrong. What was the most likely reason?
+
 ### Pre-Hypothesis Screening (MANDATORY for data-driven hypotheses)
 
 Before writing a hypothesis, pass this screen:
