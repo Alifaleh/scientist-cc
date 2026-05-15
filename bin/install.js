@@ -76,13 +76,24 @@ function installCore(configDir) {
   copyDir(CORE_SRC, path.join(scientistDir, 'core'));
   console.log('  ✓ Core workflows, templates, and references');
 
-  // Copy skills (optional — may not exist in npm package)
+  // Copy skills (optional — may not exist in npm package).
+  // Pre-v3.4.4 only copied to scientistDir/skills/, which Claude Code does
+  // NOT scan for skill discovery. The discoverable location is
+  // ~/.claude/skills/ (where graphify, gsd-*, etc. correctly live).
+  // Same bug class as the agent registration issue fixed in v3.4.3.
   if (fs.existsSync(SKILLS_SRC)) {
+    // Keep scientistDir copy for reference / uninstall tracking.
     copyDir(SKILLS_SRC, path.join(scientistDir, 'skills'));
-    const skillDirs = fs.readdirSync(path.join(scientistDir, 'skills')).filter(f =>
-      fs.statSync(path.join(scientistDir, 'skills', f)).isDirectory()
+    // ALSO copy each skill folder into the Claude Code discoverable dir.
+    const claudeSkillsDir = path.join(configDir, 'skills');
+    ensureDir(claudeSkillsDir);
+    const skillDirs = fs.readdirSync(SKILLS_SRC).filter(f =>
+      fs.statSync(path.join(SKILLS_SRC, f)).isDirectory()
     );
-    console.log(`  ✓ ${skillDirs.length} skills: ${skillDirs.join(', ')}`);
+    for (const dir of skillDirs) {
+      copyDir(path.join(SKILLS_SRC, dir), path.join(claudeSkillsDir, dir));
+    }
+    console.log(`  ✓ ${skillDirs.length} skills registered at ${claudeSkillsDir}: ${skillDirs.join(', ')}`);
   } else {
     console.log('  ○ Obsidian skills not bundled (install from GitHub for full package)');
   }
@@ -282,6 +293,23 @@ function uninstall(configDir) {
     for (const f of agentFiles) {
       fs.unlinkSync(path.join(claudeAgentsDir, f));
       console.log(`  ✗ Removed agent ${f}`);
+    }
+  }
+
+  // Remove skills installed at ~/.claude/skills/ that were shipped by us.
+  // Match by checking against what the package bundles, so we don't touch
+  // other plugins' skills sharing the parent directory.
+  const claudeSkillsDir = path.join(configDir, 'skills');
+  if (fs.existsSync(SKILLS_SRC) && fs.existsSync(claudeSkillsDir)) {
+    const ours = fs.readdirSync(SKILLS_SRC).filter(f =>
+      fs.statSync(path.join(SKILLS_SRC, f)).isDirectory()
+    );
+    for (const dir of ours) {
+      const target = path.join(claudeSkillsDir, dir);
+      if (fs.existsSync(target)) {
+        fs.rmSync(target, { recursive: true });
+        console.log(`  ✗ Removed skill ${dir}`);
+      }
     }
   }
 

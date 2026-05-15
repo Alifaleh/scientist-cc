@@ -1,5 +1,5 @@
 {
-  "ts": "2026-05-15T21:50:49.304Z",
+  "ts": "2026-05-15T21:52:38.911Z",
   "loop_position": "evolve",
   "mastery_stage": 4,
   "vault_notes": 92,
@@ -7,11 +7,11 @@
     "Read"
   ],
   "recent_commits": [
+    "dc17fd7 v3.4.3: AUDIT FIX 3 — bundled subagents were copied to wrong directory",
     "c7bb232 v3.4.2: AUDIT FIX 2 — Jupyter MCP requires uvx, detect-and-warn",
     "de4ed8d v3.4.1: AUDIT FIX — Playwright MCP package name was 404 since v0",
     "cf8ff66 state: refresh — 7/7 hypotheses confirmed, 13 rules, 28 versions deployed, mastery_stage 4",
-    "4876056 vault: H6 + H7 untested → CONFIRMED — weighted retrieval (vault_query.py) and meta-metrics (--metrics) both validated this session",
-    "643dbac docs: README modernized for v3.4.0 — honest about CLI vs Agent SDK Stop hook gap, document all 7 hooks, frame as two-layer (block + resume) defense"
+    "4876056 vault: H6 + H7 untested → CONFIRMED — weighted retrieval (vault_query.py) and meta-metrics (--metrics) both validated this session"
   ],
   "resume_hint": "Resume by reading .scientist/.last-activity.json, then loop step \"evolve\". Use `python .scientist/tools/vault_query.py --recent 1 --top 5` to see what was touched."
 }
