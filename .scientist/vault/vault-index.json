@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-15T23:22:16.462181",
-  "note_count": 110,
+  "generated": "2026-05-16T00:20:22.811880",
+  "note_count": 111,
   "notes": [
     {
       "path": "Research/LLM Data Analysis Anti-Stupidity Protocols.md",
@@ -33,7 +33,27 @@
       "typed_links": 5,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.8
+      "relevance_score": 0.796
+    },
+    {
+      "path": "Observations/Dogfood Bug - v3.2.0 Stop Hook Didn't Actually Block.md",
+      "title": "Dogfood Bug: v3.2.0 Stop Hook Did NOT Actually Block \u2014 v3.3.2 Fix",
+      "tags": [
+        "observation",
+        "dogfood",
+        "novel-finding",
+        "anti-stopping",
+        "hooks",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 7,
+      "typed_links": 4,
+      "evolved_on": null,
+      "summary": null,
+      "relevance_score": 0.75
     },
     {
       "path": "Observations/Handoff - v3.2.0 v3.3.0 Stop and Context Rot.md",
@@ -50,7 +70,7 @@
       "typed_links": 4,
       "evolved_on": null,
       "summary": "Resumed after ~6 weeks (Apr 1 \u2192 May 15) on Opus 4.7 with the user's explicit ask: fix the stopping problem, fix context rot, improve memory, and keep ",
-      "relevance_score": 0.75
+      "relevance_score": 0.746
     },
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -68,7 +88,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "An AI agent that accumulates knowledge across context windows will always outperform one that starts fresh. Persistent vault-based memory is the #1 co",
-      "relevance_score": 0.73
+      "relevance_score": 0.726
     },
     {
       "path": "Knowledge Base/Principle - The Meta-Tool Advantage.md",
@@ -86,7 +106,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "A tool that can improve itself through use has an exponential advantage over tools that require external modification. scientist-cc's pure-markdown ar",
-      "relevance_score": 0.73
+      "relevance_score": 0.726
     },
     {
       "path": "Knowledge Base/Principle - Adversarial Thinking Prevents Cascading Errors.md",
@@ -104,7 +124,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "The cheapest error to fix is the one you catch before it enters the vault. Adversarial validation (writing 3 ways a hypothesis could be wrong) is the ",
-      "relevance_score": 0.68
+      "relevance_score": 0.676
     },
     {
       "path": "Knowledge Base/Principle - Consolidation Is the Missing Step.md",
@@ -121,7 +141,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Every major AI memory architecture identifies episodic-to-semantic transformation as THE mechanism for long-term learning. Agents that record experien",
-      "relevance_score": 0.68
+      "relevance_score": 0.676
     },
     {
       "path": "Knowledge Base/Principle - GVU Pattern Is Universal for Self-Improvement.md",
@@ -139,7 +159,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Every effective self-improving AI system implements the Generator-Verifier-Updater pattern: generate candidate outputs, verify quality, update the sys",
-      "relevance_score": 0.68
+      "relevance_score": 0.676
     },
     {
       "path": "Knowledge Base/Principle - Layered Memory Systems Complement Each Other.md",
@@ -156,7 +176,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Multiple memory systems (auto-memory, CLAUDE.md, vault) work best when each serves a distinct purpose at a distinct tier. Don't store everything in on",
-      "relevance_score": 0.68
+      "relevance_score": 0.676
     },
     {
       "path": "Knowledge Base/Principle - Rigor Over Speed.md",
@@ -174,7 +194,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "A wrong conclusion that gets built on is worse than no conclusion at all. In data-driven work, always validate before acting: sample size, statistical",
-      "relevance_score": 0.68
+      "relevance_score": 0.676
     },
     {
       "path": "Knowledge Base/Principle - Structural Enforcement Beats Instructional.md",
@@ -192,7 +212,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "When you need an LLM to do something that conflicts with its training (like not stopping), structural enforcement (hooks, loops, validators) is always",
-      "relevance_score": 0.68
+      "relevance_score": 0.676
     },
     {
       "path": "Knowledge Base/Principle - Think Before You Compute.md",
@@ -211,7 +231,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Every data science failure starts with computing before thinking. Before loading data, writing code, or fitting a model: state your hypothesis with a ",
-      "relevance_score": 0.679
+      "relevance_score": 0.675
     },
     {
       "path": "Research/Vault Navigation Patterns for AI Agents.md",
@@ -251,7 +271,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "In an autonomous R&D framework, the knowledge vault is the primary deliverable \u2014 not the code. Code solves today's problem. The vault solves tomorrow'",
-      "relevance_score": 0.655
+      "relevance_score": 0.651
     },
     {
       "path": "Knowledge Base/Principle - 20x Growth Through Self-Modification.md",
@@ -270,7 +290,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "A framework that starts at 420 lines and grows to 8,438 lines (20x) in 207 commits demonstrates exponential self-improvement. This growth is possible ",
-      "relevance_score": 0.63
+      "relevance_score": 0.626
     },
     {
       "path": "Knowledge Base/Principle - Every Friction Point Is a Product Bug.md",
@@ -288,7 +308,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "When using a tool to improve itself, EVERY friction point the scientist encounters IS a product bug that must be fixed \u2014 not worked around. This R&D e",
-      "relevance_score": 0.63
+      "relevance_score": 0.626
     },
     {
       "path": "Knowledge Base/Principle - Knowledge Density Is the Ultimate Metric.md",
@@ -306,7 +326,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "The quality of an autonomous agent's work is best measured not by code output or task completion, but by the DENSITY of its knowledge base \u2014 links per",
-      "relevance_score": 0.63
+      "relevance_score": 0.626
     },
     {
       "path": "Knowledge Base/Principle - Novel Contributions of scientist-cc.md",
@@ -323,7 +343,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "scientist-cc makes 4 novel contributions that no other framework combines: persistent vault-based memory, A-MEM linking without vector DB, weighted re",
-      "relevance_score": 0.63
+      "relevance_score": 0.626
     },
     {
       "path": "Knowledge Base/Principle - Token Efficiency Determines Scalability.md",
@@ -341,7 +361,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "An agent memory system that requires reading ALL notes to find relevant ones will fail at scale. Structured indexes (vault-index.json at ~500 tokens f",
-      "relevance_score": 0.63
+      "relevance_score": 0.626
     },
     {
       "path": "Knowledge Base/Principle - Every Regime Must Be Represented.md",
@@ -360,7 +380,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "A model trained only on bull market data WILL fail in bear markets. A strategy backtested only on calm periods WILL blow up during volatility spikes. ",
-      "relevance_score": 0.629
+      "relevance_score": 0.625
     },
     {
       "path": "Research/Why Claude Makes Stupid Data Science Decisions.md",
@@ -381,7 +401,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "Claude's data science failures stem from 5 root causes: (1) training bias toward completing tasks over verifying quality, (2) no built-in statistical ",
-      "relevance_score": 0.629
+      "relevance_score": 0.625
     },
     {
       "path": "Knowledge Base/Principle - If In Doubt The Model Is Overfit.md",
@@ -400,7 +420,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "When a model shows good results, the DEFAULT assumption should be that it's overfit \u2014 until proven otherwise through out-of-sample testing, regime ana",
-      "relevance_score": 0.609
+      "relevance_score": 0.605
     },
     {
       "path": "Knowledge Base/Principle - Anti-Stopping is the Core Challenge.md",
@@ -417,7 +437,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "The #1 failure mode of autonomous AI agents is stopping when they shouldn't. 3 out of 5 errors in session 1 were variants of stopping (after summaries",
-      "relevance_score": 0.605
+      "relevance_score": 0.601
     },
     {
       "path": "Knowledge Base/Principle - Continuous Deployment Accelerates Learning.md",
@@ -435,7 +455,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Deploying improvements frequently (18+ versions in one R&D effort) creates a tight feedback loop: improve \u2192 deploy \u2192 use improved version \u2192 discover n",
-      "relevance_score": 0.605
+      "relevance_score": 0.601
     },
     {
       "path": "Knowledge Base/Principle - Emergence Requires 4+ Links Per Note.md",
@@ -453,7 +473,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Below 4.0 links/note, a vault is an organized collection. Above 4.0, emergent insights appear \u2014 traversing 2-3 connections reveals non-obvious pattern",
-      "relevance_score": 0.605
+      "relevance_score": 0.601
     },
     {
       "path": "Knowledge Base/Principle - Interface Quality Over Tool Quantity.md",
@@ -470,7 +490,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "How an agent interfaces with its tools matters as much as the model's capability. Better interfaces to fewer tools outperforms more tools with poor in",
-      "relevance_score": 0.605
+      "relevance_score": 0.601
     },
     {
       "path": "Knowledge Base/Principle - Targeted Correction Beats Broad Reflection.md",
@@ -487,7 +507,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Classifying errors by originating module (Memory/Reasoning/Planning/Action) and applying module-specific corrections is 24% more effective than generi",
-      "relevance_score": 0.605
+      "relevance_score": 0.601
     },
     {
       "path": "Hypotheses/Hypothesis 6 - Weighted Retrieval.md",
@@ -505,7 +525,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.59
+      "relevance_score": 0.586
     },
     {
       "path": "Knowledge Base/Principle - Know Your Runtime.md",
@@ -524,7 +544,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Analyzing the source code of your host runtime (Claude Code) reveals hidden capabilities that no documentation covers: thinking token triggers, defaul",
-      "relevance_score": 0.584
+      "relevance_score": 0.58
     },
     {
       "path": "Knowledge Base/Principle - Listen Before Structuring.md",
@@ -542,48 +562,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "When gathering information from users, ask an open-ended question FIRST and let them describe in their own words. Then ask structured follow-ups only ",
-      "relevance_score": 0.58
-    },
-    {
-      "path": "Research/Comprehensive Data Science Methodology Reference.md",
-      "title": "Comprehensive Data Science & Statistical Analysis Methodology Reference",
-      "tags": [
-        "research",
-        "data-science",
-        "methodology",
-        "statistics",
-        "checklist",
-        "reference",
-        "status/complete",
-        "priority/critical"
-      ],
-      "status": "complete",
-      "date": "2026-04-01",
-      "last_verified": "2026-04-01",
-      "link_count": 8,
-      "typed_links": 4,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.579
-    },
-    {
-      "path": "Observations/Novel Finding - Self-Modifying Framework via Pure Markdown.md",
-      "title": "Novel Finding: Self-Modifying Framework via Pure Markdown",
-      "tags": [
-        "observation",
-        "novel-finding",
-        "self-modification",
-        "markdown",
-        "status/actionable"
-      ],
-      "status": "actionable",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 8,
-      "typed_links": 3,
-      "evolved_on": null,
-      "summary": "scientist-cc is (to our knowledge) the only AI agent framework that is ENTIRELY self-modifiable by the agent it runs. Because the entire framework is ",
-      "relevance_score": 0.575
+      "relevance_score": 0.576
     },
     {
       "path": "References/Free DS Textbooks.md",
@@ -605,22 +584,25 @@
       "relevance_score": 0.575
     },
     {
-      "path": "Research/Cross-Domain Synthesis - Agent Memory + Scientific Method + Self-Modification.md",
-      "title": "Cross-Domain Synthesis: Agent Memory + Scientific Method + Self-Modification",
+      "path": "Research/Comprehensive Data Science Methodology Reference.md",
+      "title": "Comprehensive Data Science & Statistical Analysis Methodology Reference",
       "tags": [
         "research",
-        "cross-domain",
-        "synthesis",
-        "original-knowledge",
-        "status/understood"
+        "data-science",
+        "methodology",
+        "statistics",
+        "checklist",
+        "reference",
+        "status/complete",
+        "priority/critical"
       ],
-      "status": "understood",
-      "date": "2026-03-31",
-      "last_verified": "2026-03-31",
+      "status": "complete",
+      "date": "2026-04-01",
+      "last_verified": "2026-04-01",
       "link_count": 8,
-      "typed_links": 3,
+      "typed_links": 4,
       "evolved_on": null,
-      "summary": "No published framework combines all three: (1) persistent knowledge management (A-MEM/Zettelkasten), (2) scientific methodology (hypothesis-driven dev",
+      "summary": null,
       "relevance_score": 0.575
     },
     {
@@ -662,6 +644,44 @@
       "relevance_score": 0.575
     },
     {
+      "path": "Observations/Novel Finding - Self-Modifying Framework via Pure Markdown.md",
+      "title": "Novel Finding: Self-Modifying Framework via Pure Markdown",
+      "tags": [
+        "observation",
+        "novel-finding",
+        "self-modification",
+        "markdown",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-03-31",
+      "last_verified": null,
+      "link_count": 8,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "scientist-cc is (to our knowledge) the only AI agent framework that is ENTIRELY self-modifiable by the agent it runs. Because the entire framework is ",
+      "relevance_score": 0.571
+    },
+    {
+      "path": "Research/Cross-Domain Synthesis - Agent Memory + Scientific Method + Self-Modification.md",
+      "title": "Cross-Domain Synthesis: Agent Memory + Scientific Method + Self-Modification",
+      "tags": [
+        "research",
+        "cross-domain",
+        "synthesis",
+        "original-knowledge",
+        "status/understood"
+      ],
+      "status": "understood",
+      "date": "2026-03-31",
+      "last_verified": "2026-03-31",
+      "link_count": 8,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "No published framework combines all three: (1) persistent knowledge management (A-MEM/Zettelkasten), (2) scientific methodology (hypothesis-driven dev",
+      "relevance_score": 0.571
+    },
+    {
       "path": "Research/Meta-R&D Methodology - How This Effort Worked.md",
       "title": "Meta-R&D: How 186 Commits of Self-Improvement Actually Worked",
       "tags": [
@@ -679,7 +699,7 @@
       "typed_links": 4,
       "evolved_on": null,
       "summary": "This R&D effort produced 186 commits by following a specific pattern: parallel research agents \u2192 synthesize into vault notes \u2192 form hypotheses \u2192 imple",
-      "relevance_score": 0.575
+      "relevance_score": 0.571
     },
     {
       "path": "Hypotheses/Hypothesis 1 - Consolidation Step.md",
@@ -696,7 +716,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.565
+      "relevance_score": 0.561
     },
     {
       "path": "Hypotheses/Hypothesis 3 - Adversarial Validation.md",
@@ -713,7 +733,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.565
+      "relevance_score": 0.561
     },
     {
       "path": "Hypotheses/Hypothesis 5 - Memory Evolution.md",
@@ -731,7 +751,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.565
+      "relevance_score": 0.561
     },
     {
       "path": "Hypotheses/Hypothesis 7 - Meta-Metrics.md",
@@ -749,7 +769,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.565
+      "relevance_score": 0.561
     },
     {
       "path": "Knowledge Base/Principle - Dogfooding Is Superior Testing.md",
@@ -766,7 +786,7 @@
       "typed_links": 1,
       "evolved_on": null,
       "summary": "When a tool is designed to improve a process, the best test is using the tool on itself. Structural analysis and unit tests catch syntax errors; dogfo",
-      "relevance_score": 0.555
+      "relevance_score": 0.551
     },
     {
       "path": "Observations/Literature Gap - Anti-Stopping Not Addressed.md",
@@ -785,7 +805,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "No published paper (A-MEM, Reflexion, MemGPT, MetaGPT, AutoGPT, CrewAI, SWE-agent, or any framework surveyed) addresses the fundamental problem that L",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Observations/Novel Finding - 6 Hour R&D Sprint Proves Framework Works.md",
@@ -804,7 +824,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "scientist-cc is the first framework to demonstrate that an autonomous AI scientist can sustain 190+ commits of productive R&D in a single continuous e",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Observations/Novel Finding - Markdown Linking Without Vector DB.md",
@@ -823,7 +843,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "A-MEM requires ChromaDB + SentenceTransformer embeddings for its cheap-filter phase. We replaced this with frontmatter tag overlap + entity grep \u2014 zer",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Observations/User Feedback - Init Phase and Data Science Capabilities.md",
@@ -843,7 +863,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "The information gathering phase (init Phase 1) needs to be smarter \u2014 ask better questions, probe deeper. The framework needs to be a REAL scientist wi",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Research/Error Cascading in AI Agent Knowledge Bases.md",
@@ -862,7 +882,7 @@
       "typed_links": 4,
       "evolved_on": null,
       "summary": "When an agent builds on a wrong conclusion, every subsequent finding that references it is ALSO wrong. In a densely linked vault (4.8 links/note), a s",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Research/Knowledge Management for AI Agents.md",
@@ -881,7 +901,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "The **critical missing piece** in scientist-cc is an explicit episodic-to-semantic consolidation step. Every major AI memory paper identifies this tra",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Research/Markdown Memory Paradigm in AI 2026.md",
@@ -901,7 +921,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "2026 marks the convergence on markdown files as the standard memory primitive for AI agents. Letta (MemGPT) moved from database to MemFS (markdown). M",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Research/Pure Markdown Enables 190-Commit Velocity.md",
@@ -921,7 +941,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "The reason scientist-cc achieved 190 commits in ~6 hours is NOT faster typing or more tools \u2014 it's because the entire framework is pure markdown. Ever",
-      "relevance_score": 0.55
+      "relevance_score": 0.546
     },
     {
       "path": "Research/The 21x Growth Pattern - Self-Modifying Systems.md",
@@ -941,24 +961,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Self-modifying systems exhibit a specific growth pattern: slow start (understanding the system), acceleration (each improvement enables the next), the",
-      "relevance_score": 0.55
-    },
-    {
-      "path": "Hypotheses/Hypothesis 2 - Expanded Error Taxonomy.md",
-      "title": "Hypothesis 2: Module-Based Error Taxonomy Improves Self-Evolution",
-      "tags": [
-        "hypothesis",
-        "status/untested",
-        "self-evolution"
-      ],
-      "status": "untested",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 1,
-      "typed_links": 0,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.54
+      "relevance_score": 0.546
     },
     {
       "path": "Research/Advanced Data Analysis Planning Frameworks.md",
@@ -985,7 +988,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.529
+      "relevance_score": 0.525
     },
     {
       "path": "Research/Claude Code Source Analysis - Exploitable Patterns.md",
@@ -1005,7 +1008,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Claude Code has a hidden thinking token budget system triggered by magic words in user messages. \"ultrathink\" gives 31,999 tokens, \"megathink\" gives 1",
-      "relevance_score": 0.529
+      "relevance_score": 0.525
     },
     {
       "path": "Research/Training Period Selection - Why Short Periods Kill.md",
@@ -1025,7 +1028,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "A model trained on 3 months of data captures 3 months of market personality \u2014 not \"how markets work.\" When that personality changes (and it always doe",
-      "relevance_score": 0.529
+      "relevance_score": 0.525
     },
     {
       "path": "Hypotheses/Hypothesis 4 - Two-Phase Linking.md",
@@ -1043,7 +1046,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/AutoDream Consolidation Mechanism.md",
@@ -1063,7 +1066,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "AutoDream models memory consolidation after REM sleep: between sessions, a background agent reviews accumulated memories, merges duplicates, resolves ",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/AutoGPT Lessons - Unbounded Autonomy Fails.md",
@@ -1083,7 +1086,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "AutoGPT (182k stars) demonstrated that giving an LLM unrestricted autonomy leads to loops, hallucinations, and wasted compute. The lesson: autonomy mu",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Claude Code Stop Hook as Agent Control Primitive.md",
@@ -1103,7 +1106,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Claude Code's Stop event hook is a previously unexplored agent control primitive. By injecting continuation context when the model stops, it creates a",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/CrewAI 4-Layer Memory Architecture.md",
@@ -1122,7 +1125,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "CrewAI implements the most sophisticated open-source agent memory: 4 layers (short-term, long-term, entity, procedural) with weighted retrieval (recen",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Data Science MCP Ecosystem.md",
@@ -1142,7 +1145,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Several MCP servers exist for data science work. The most immediately useful for scientist-cc: HuggingFace MCP (already available as Claude.ai integra",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Data Science Rigor for Autonomous Agents.md",
@@ -1162,7 +1165,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "An autonomous scientist without data rigor is worse than no scientist \u2014 it will confidently produce wrong conclusions and build on them. The anti-over",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Emergence Through Connection Density.md",
@@ -1182,7 +1185,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "At 4.8 links/note and 174 typed links across 84 notes, the vault has crossed from \"organized collection\" to \"emergent knowledge system.\" New insights ",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Hyperagents - Meta-Level Self-Modification.md",
@@ -1201,7 +1204,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Hyperagents solve the infinite regress problem (who checks the checker?) by making meta-level rules themselves editable. The improvement mechanism can",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Hypothesis Testing in Software vs Science.md",
@@ -1220,7 +1223,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Software hypothesis testing is FASTER than traditional science because deployment is instant and rollback is free (git). Traditional science needs wee",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Iterative Elicitation Loops for AI Agents.md",
@@ -1240,7 +1243,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "A single round of questions is never enough. The init workflow must iterate: describe \u2192 gap analysis \u2192 ask \u2192 respond \u2192 re-analyze \u2192 ask again \u2192 until ",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/MIRIX 6-Memory-Type Architecture.md",
@@ -1259,7 +1262,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "MIRIX achieves 35% improvement over RAG baselines using 6 specialized memory types and multi-agent coordination. Our 3-agent model (Researcher/Observe",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Multi-Agent Shared Memory with Role-Scoped Views.md",
@@ -1278,7 +1281,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "The 2026 consensus: role-specialized agents should share ONE vault but read/write through role-tagged namespaces. Our vault already does this: `Resear",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Obsidian as AI Infrastructure.md",
@@ -1298,7 +1301,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Obsidian's design (local markdown files, wikilinks, frontmatter, plugins) makes it ideal AI memory infrastructure. The file-first paradigm means AI ag",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/OpenHands - Cost of Session-Bounded Memory.md",
@@ -1317,7 +1320,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "OpenHands (65k stars, formerly OpenDevin) demonstrates what happens when an autonomous coding agent has NO persistent memory: every new conversation s",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Scientific Method Applied to Software Engineering.md",
@@ -1336,7 +1339,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "scientist-cc proves that the scientific method (hypothesize \u2192 validate \u2192 implement \u2192 learn) produces better software outcomes than iterative trial-and",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Spaced Repetition Adapted for AI Agents.md",
@@ -1355,7 +1358,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Spaced repetition for AI agents isn't reviewing flashcards \u2014 it's periodically re-validating knowledge at calibrated intervals per note type. Volatile",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Token Efficiency in Agent Memory Systems.md",
@@ -1374,7 +1377,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "A-MEM achieves 85-93% token reduction (1,200-2,500 tokens vs 16,900) by using structured metadata instead of raw text. Our vault-index.json follows th",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Zettelkasten Method for AI Knowledge Bases.md",
@@ -1394,7 +1397,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "Zettelkasten's core principles (atomic notes, bidirectional links, emergence through connection) apply directly to AI agent knowledge bases. A-MEM imp",
-      "relevance_score": 0.525
+      "relevance_score": 0.521
     },
     {
       "path": "Research/Genius-Level Thinking Protocols for Data Science.md",
@@ -1417,7 +1420,24 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.504
+      "relevance_score": 0.5
+    },
+    {
+      "path": "Hypotheses/Hypothesis 2 - Expanded Error Taxonomy.md",
+      "title": "Hypothesis 2: Module-Based Error Taxonomy Improves Self-Evolution",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "self-evolution"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 5,
+      "typed_links": 3,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.496
     },
     {
       "path": "Research/A-MEM Deep Dive - Agentic Memory.md",
@@ -1436,7 +1456,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "A-MEM does NOT use 4 independent linking strategies. It uses a **two-phase approach**: cheap filter (tags/embeddings) to find candidates, then LLM rea",
-      "relevance_score": 0.5
+      "relevance_score": 0.496
     },
     {
       "path": "Research/AgentDebug Targeted Error Correction.md",
@@ -1455,7 +1475,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "AgentDebug (2025) demonstrates that root-cause-specific corrections achieve 24% higher accuracy than unguided self-reflection. Classifying errors by t",
-      "relevance_score": 0.5
+      "relevance_score": 0.496
     },
     {
       "path": "Research/Dogfooding Methodology for Framework Development.md",
@@ -1474,7 +1494,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Using a framework to improve itself discovers bugs and design flaws that no amount of code review or testing would find. In this R&D effort, 5/5 bugs ",
-      "relevance_score": 0.5
+      "relevance_score": 0.496
     },
     {
       "path": "Research/MemGPT Architecture Mapping.md",
@@ -1493,7 +1513,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "MemGPT's 3-tier prompt structure (system instructions / working context / FIFO queue) maps directly to our architecture: CLAUDE.md / IDENTITY.md+Index",
-      "relevance_score": 0.5
+      "relevance_score": 0.496
     },
     {
       "path": "Research/MetaGPT SOPs as Code for Agent Discipline.md",
@@ -1512,7 +1532,7 @@
       "typed_links": 3,
       "evolved_on": null,
       "summary": "MetaGPT encodes Standard Operating Procedures (SOPs) directly into the agent framework, requiring structured artifacts at each stage. This dramaticall",
-      "relevance_score": 0.5
+      "relevance_score": 0.496
     },
     {
       "path": "Observations/R&D Velocity Analysis.md",
@@ -1531,7 +1551,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "188 commits in approximately 6 hours of continuous operation. That's ~31 commits/hour or one commit every ~2 minutes. Each commit is a meaningful unit",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Aider Auto-Test-Fix Inner Loop.md",
@@ -1551,7 +1571,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Aider's auto-test-and-fix loop (write code \u2192 run tests \u2192 fix failures \u2192 repeat) is a simple but effective self-correction pattern. scientist-cc could ",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Anti-Stopping Patterns for Autonomous Agents.md",
@@ -1570,7 +1590,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "LLM agents stop because the model is trained to produce complete responses. No amount of instructional text can fully override this. The only effectiv",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/BabyAGI Simplicity Principle.md",
@@ -1589,7 +1609,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "BabyAGI's philosophy: \"build the simplest thing that can build itself.\" The core loop must be simple enough to be self-modifiable. If the loop is too ",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Claude Code Auto-Memory vs Scientist Vault.md",
@@ -1608,7 +1628,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Claude Code has TWO memory systems: auto-memory (`~/.claude/projects/*/memory/`) for cross-conversation persistence, and CLAUDE.md for per-project ins",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Cognitive Biases in LLM Agents.md",
@@ -1628,7 +1648,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "LLMs exhibit cognitive biases analogous to human ones: confirmation bias (seeking supporting evidence), sycophancy (agreeing with the user), anchoring",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Constitutional AI - Rules With Reasons.md",
@@ -1648,7 +1668,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Anthropic's 2026 Constitutional AI research confirms: rules that include explanations (WHY the rule exists) generalize to novel situations better than",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Context Engineering for AI Agents.md",
@@ -1666,7 +1686,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Complexity should live in the knowledge store, not the prompt. Keep CLAUDE.md concise with identity rules; let the vault hold the detail. Use markdown",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Experiment Checkpointing via Git.md",
@@ -1685,7 +1705,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Pure git provides sufficient checkpointing for R&D experiments: `git tag` marks checkpoints, `scientist/experiment/<name>` branches isolate experiment",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/GVU Representation Theorem.md",
@@ -1704,7 +1724,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Chojecki (2025) PROVES that any first-order, sample-based self-update can be written as a GVU operator \u2014 meaning STaR, Reflexion, SPIN, GANs, AlphaZer",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Hypothesis-Driven Development for AI Research.md",
@@ -1723,7 +1743,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Forming explicit hypotheses with mechanisms, falsification criteria, and adversarial challenges BEFORE implementing changes produces better outcomes t",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Information Elicitation Best Practices.md",
@@ -1743,7 +1763,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Requirements engineering literature shows: open-ended elicitation captures 40-60% more information than structured questionnaires. When gathering proj",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/LangGraph Checkpoint and Time-Travel Debugging.md",
@@ -1763,7 +1783,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "LangGraph's checkpoint-based persistence enables time-travel debugging: replay any past agent state, branch from it, and compare outcomes. We implemen",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/LLMs-txt Standard for Machine-Readable Documentation.md",
@@ -1782,7 +1802,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "The llms.txt standard (llmstxt.org) provides a format for machine-readable documentation: `- [Title](path): description` per entry. Our vault Index.md",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/Reflexion - Verbal Self-Reflection for Agents.md",
@@ -1801,7 +1821,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "Reflexion uses verbal self-reflection (natural language feedback) instead of gradient updates for agent learning. The agent reflects on failures, gene",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/SWE-agent Agent-Computer Interface Design.md",
@@ -1820,7 +1840,7 @@
       "typed_links": 2,
       "evolved_on": null,
       "summary": "SWE-agent's key finding: interface design affects agent performance as much as model capability. A curated Agent-Computer Interface (ACI) with tailore",
-      "relevance_score": 0.475
+      "relevance_score": 0.471
     },
     {
       "path": "Research/AI Agent Frameworks Landscape.md",
@@ -1839,7 +1859,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "scientist-cc's vault-based persistence solves the **#1 unsolved problem** in the field: session-bounded memory. Most frameworks lose everything betwee",
-      "relevance_score": 0.45
+      "relevance_score": 0.446
     },
     {
       "path": "Observations/Tool Verification - Session 1.md",
@@ -1857,7 +1877,7 @@
       "typed_links": 1,
       "evolved_on": null,
       "summary": "Two of three tool integrations worked. Jupyter MCP was silently broken due to a missing `start` subcommand \u2014 a bug that would have gone unnoticed with",
-      "relevance_score": 0.425
+      "relevance_score": 0.421
     },
     {
       "path": "Research/AI Self-Improvement Frameworks.md",
@@ -1876,7 +1896,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "scientist-cc's 10-step loop is an informal implementation of the **GVU (Generator-Verifier-Updater) operator** \u2014 the universal pattern behind STaR, Re",
-      "relevance_score": 0.425
+      "relevance_score": 0.421
     },
     {
       "path": "Observations/Framework Self-Analysis.md",
@@ -1893,7 +1913,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "The framework has 4 critical structural gaps that would block a user's first session from running smoothly. The biggest theme: **the loop promises mor",
-      "relevance_score": 0.4
+      "relevance_score": 0.396
     },
     {
       "path": "Observations/Handoff - Source Analysis Complete.md",
@@ -1910,7 +1930,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "Cloned and analyzed Claude Code source code. Found 12 exploitable patterns. Implemented thinking triggers (31,999 tokens/turn via UserPromptSubmit hoo",
-      "relevance_score": 0.379
+      "relevance_score": 0.375
     },
     {
       "path": "Observations/Handoff - v1.8.1 Source Optimized.md",
@@ -1927,7 +1947,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "Cloned Claude Code source, found 14 exploitable patterns, implemented all. Framework now has maximum thinking tokens (31,999/turn via hook), default b",
-      "relevance_score": 0.379
+      "relevance_score": 0.375
     },
     {
       "path": "Observations/Handoff - v2.0.2 Source Optimized Final.md",
@@ -1944,7 +1964,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": null,
-      "relevance_score": 0.379
+      "relevance_score": 0.375
     },
     {
       "path": "Observations/Handoff - v2.3.0 Data Science KB.md",
@@ -1961,7 +1981,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "User requested comprehensive data science KB to prevent Claude from making stupid decisions. 3 research agents launched, 1 completed (bibliography), 2",
-      "relevance_score": 0.379
+      "relevance_score": 0.375
     },
     {
       "path": "Observations/Handoff - v2.8.0 Genius Level KB.md",
@@ -1978,7 +1998,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "Built comprehensive genius-level data science KB. 15 reference docs, 8 skills, 4-question gate, Feynman/Munger/Bayesian thinking, mandatory verificati",
-      "relevance_score": 0.379
+      "relevance_score": 0.375
     },
     {
       "path": "Observations/Context Window 1 Handoff - Final.md",
@@ -1995,7 +2015,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "scientist-cc went from v0.1.1 to v0.7.1. 102+ commits, 22+ vault notes, 7 hypotheses, 6 principles, 8 self-evolution rules. Framework is comprehensive",
-      "relevance_score": 0.375
+      "relevance_score": 0.371
     },
     {
       "path": "Observations/Context Window 2 Handoff.md",
@@ -2012,7 +2032,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "161 commits, v1.0.1, Stage 3 Expert. 3 novel findings. 55 vault notes, 95 typed links. Phase 1 COMPLETE. Anti-stop hook deployed. All tools verified.",
-      "relevance_score": 0.375
+      "relevance_score": 0.371
     },
     {
       "path": "Observations/Context Window 3 Handoff.md",
@@ -2029,7 +2049,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "200+ commits, v1.3.0, Stage 3 Expert. 6 novel findings. 75 vault notes, 145+ typed links. Phase 1 COMPLETE. Anti-stop hook deployed. Data science rigo",
-      "relevance_score": 0.375
+      "relevance_score": 0.371
     },
     {
       "path": "Observations/Context Window Final Handoff.md",
@@ -2046,7 +2066,7 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "210 commits, v1.3.2, Stage 3 Expert. 6 novel findings. 78 vault notes, 152+ typed links. +8,507 lines. 124 files. Init fixed (open-ended first). Data ",
-      "relevance_score": 0.375
+      "relevance_score": 0.371
     },
     {
       "path": "Observations/Session 1 Handoff.md",
@@ -2063,18 +2083,18 @@
       "typed_links": 0,
       "evolved_on": null,
       "summary": "scientist-cc went from v0.1.1 to v0.5.1. 5 research domains, 5 hypotheses implemented, 5 principles, 6 self-evolution rules. Framework is substantiall",
-      "relevance_score": 0.375
+      "relevance_score": 0.371
     }
   ],
   "meta_metrics": {
     "link_density": 4.8,
-    "total_links": 527,
+    "total_links": 538,
     "principle_extraction_rate": 0.45,
-    "hypotheses_untested": 6,
-    "hypotheses_implemented": 2,
+    "hypotheses_untested": 5,
+    "hypotheses_implemented": 3,
     "note_breakdown": {
       "research": 56,
-      "observations": 20,
+      "observations": 21,
       "hypotheses": 9,
       "principles": 25
     }
