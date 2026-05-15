@@ -132,13 +132,28 @@ function installMCP(configDir) {
   };
   console.log('  ✓ MCP: Playwright (browser control)');
 
-  // Jupyter MCP — uses public uvx package, no local files needed
+  // Jupyter MCP — uses jupyter-mcp-server via uvx. uvx is part of `uv`,
+  // a fast Python package manager (https://astral.sh/uv). Required for
+  // Jupyter MCP to actually start; silently fails without it.
   settings.mcpServers['scientist-jupyter'] = {
     command: 'uvx',
     args: ['jupyter-mcp-server', 'start'],
-    description: 'Scientist: Jupyter notebook execution'
+    description: 'Scientist: Jupyter notebook execution (requires uvx — install: pipx install uv OR see https://astral.sh/uv)'
   };
-  console.log('  ✓ MCP: Jupyter (notebook execution)');
+  // Detect uvx and warn the user if missing — prevents the silent failure
+  // pattern where the install reports success but the MCP server can never
+  // actually start (Rule 10 audit finding 2026-05-16).
+  let uvxAvailable = false;
+  try {
+    require('child_process').execSync('uvx --version', { stdio: ['ignore', 'pipe', 'ignore'] });
+    uvxAvailable = true;
+  } catch (e) { /* uvx missing */ }
+  if (uvxAvailable) {
+    console.log('  ✓ MCP: Jupyter (notebook execution) — uvx detected');
+  } else {
+    console.log('  ⚠ MCP: Jupyter REGISTERED BUT uvx NOT FOUND — install uv first or Jupyter MCP will silently fail at runtime.');
+    console.log('    Fix: `pipx install uv` (cross-platform), `brew install uv` (macOS), or see https://astral.sh/uv');
+  }
 
   // Register all scientist hooks.
   // The six-hook anti-stop / context-preservation stack:

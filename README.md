@@ -30,6 +30,10 @@ When you type `/scientist`, Claude:
 - Write monitoring scripts and manage files across the system
 - Run Jupyter notebooks for data analysis
 
+**Optional prerequisites for full MCP capability:**
+- **`uv` / `uvx`** — required for the Jupyter MCP server. Install via `pipx install uv`, `brew install uv` (macOS), or see [astral.sh/uv](https://astral.sh/uv). The scientist installer detects uvx and warns if missing; without it the Jupyter MCP registers but silently fails at runtime.
+- **Node.js 18+** — needed for the installer itself and the Playwright MCP (`@playwright/mcp` is launched via `npx`).
+
 ## Installation
 
 ```bash
