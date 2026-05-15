@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-16T00:38:45.167715",
-  "note_count": 114,
+  "generated": "2026-05-16T00:39:41.118924",
+  "note_count": 115,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Resume Beats Continuation.md",
@@ -73,6 +73,25 @@
       "evolved_on": null,
       "summary": null,
       "relevance_score": 0.796
+    },
+    {
+      "path": "Observations/Handoff - v3.4.0 Seamless Resume Pivot.md",
+      "title": "Handoff: v3.4.0 \u2014 Seamless Resume Pivot (the v3.2.0\u2013v3.3.2 force-continuation arc closes here)",
+      "tags": [
+        "observation",
+        "handoff",
+        "pivot",
+        "anti-stopping",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 8,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": "This session began with the user asking to fix the stopping problem, memory degradation, and context rot. Four force-continuation deploys (v3.2.0 \u2192 v3",
+      "relevance_score": 0.775
     },
     {
       "path": "Observations/Novel Finding - Stop Hook decision-block Does Not Force Continuation in Agent SDK Runtime.md",
@@ -2146,14 +2165,14 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 5.0,
-    "total_links": 574,
+    "link_density": 5.1,
+    "total_links": 582,
     "principle_extraction_rate": 0.46,
     "hypotheses_untested": 2,
-    "hypotheses_implemented": 4,
+    "hypotheses_implemented": 5,
     "note_breakdown": {
       "research": 56,
-      "observations": 23,
+      "observations": 24,
       "hypotheses": 9,
       "principles": 26
     }
