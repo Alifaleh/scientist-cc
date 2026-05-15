@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16T00:20:22.811880",
+  "generated": "2026-05-16T00:21:08.978984",
   "note_count": 111,
   "notes": [
     {
@@ -700,23 +700,6 @@
       "evolved_on": null,
       "summary": "This R&D effort produced 186 commits by following a specific pattern: parallel research agents \u2192 synthesize into vault notes \u2192 form hypotheses \u2192 imple",
       "relevance_score": 0.571
-    },
-    {
-      "path": "Hypotheses/Hypothesis 1 - Consolidation Step.md",
-      "title": "Hypothesis 1: Adding a CONSOLIDATE Step Improves Knowledge Quality",
-      "tags": [
-        "hypothesis",
-        "status/untested",
-        "knowledge-management"
-      ],
-      "status": "untested",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 2,
-      "typed_links": 0,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.561
     },
     {
       "path": "Hypotheses/Hypothesis 3 - Adversarial Validation.md",
@@ -1535,6 +1518,23 @@
       "relevance_score": 0.496
     },
     {
+      "path": "Hypotheses/Hypothesis 1 - Consolidation Step.md",
+      "title": "Hypothesis 1: Adding a CONSOLIDATE Step Improves Knowledge Quality",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "knowledge-management"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 4,
+      "typed_links": 0,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.471
+    },
+    {
       "path": "Observations/R&D Velocity Analysis.md",
       "title": "R&D Velocity Analysis: 188 Commits in ~6 Hours",
       "tags": [
@@ -2087,10 +2087,10 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.8,
-    "total_links": 538,
+    "link_density": 4.9,
+    "total_links": 540,
     "principle_extraction_rate": 0.45,
-    "hypotheses_untested": 5,
+    "hypotheses_untested": 4,
     "hypotheses_implemented": 3,
     "note_breakdown": {
       "research": 56,
