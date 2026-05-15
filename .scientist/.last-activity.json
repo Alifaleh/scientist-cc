@@ -1,18 +1,18 @@
 {
-  "ts": "2026-05-15T21:36:23.094Z",
+  "ts": "2026-05-15T21:38:03.692Z",
   "loop_position": "evolve",
   "mastery_stage": 4,
   "vault_notes": 92,
   "last_tools": [
-    "Bash",
-    "Edit"
+    "Write",
+    "Bash"
   ],
   "recent_commits": [
+    "07a440f vault: novel finding — Stop hook decision:block doesn't force continuation in Agent SDK runtime (refutes Discovery 5 from March source analysis)",
+    "35edaef v3.4.0: pivot — seamless resume instead of force-continuation",
     "5b366b7 vault: STAGE 4 (Novel Thinker) achieved — 5 principles evolved, 10/10 evolved notes, milestone note written",
     "a819828 vault: H3 + H4 + H5 untested/implemented → CONFIRMED with 6 weeks of evidence; +3 evolved notes (Stage 4 prereq)",
-    "894ba70 vault: H1 untested → CONFIRMED — CONSOLIDATE step empirically validated (25 principles, 222 typed links, REFLECT references confirmed)",
-    "23722bc vault: H2 untested → CONFIRMED with 6 weeks of empirical evidence (11 rules use the taxonomy, no class recurrence)",
-    "25a2b2e vault: dogfood bug observation for v3.3.2 — v3.2.0 didn't actually block"
+    "894ba70 vault: H1 untested → CONFIRMED — CONSOLIDATE step empirically validated (25 principles, 222 typed links, REFLECT references confirmed)"
   ],
   "resume_hint": "Resume by reading .scientist/.last-activity.json, then loop step \"evolve\". Use `python .scientist/tools/vault_query.py --recent 1 --top 5` to see what was touched."
 }

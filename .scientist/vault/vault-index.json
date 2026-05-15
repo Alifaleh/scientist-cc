@@ -1,7 +1,27 @@
 {
-  "generated": "2026-05-16T00:38:00.378251",
-  "note_count": 113,
+  "generated": "2026-05-16T00:38:45.167715",
+  "note_count": 114,
   "notes": [
+    {
+      "path": "Knowledge Base/Principle - Resume Beats Continuation.md",
+      "title": "Principle: Resume Beats Continuation",
+      "tags": [
+        "principle",
+        "architecture",
+        "anti-stopping",
+        "resume",
+        "autonomy",
+        "status/confirmed"
+      ],
+      "status": "confirmed",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 7,
+      "typed_links": 4,
+      "evolved_on": "2026-05-16",
+      "summary": "When the platform won't let you force-continue, design for cheap resume instead. Four scientist-cc deploys (v3.2.0 \u2192 v3.3.2) tried to use Stop hook `d",
+      "relevance_score": 0.855
+    },
     {
       "path": "Observations/Stage 4 Achieved - Novel Thinker.md",
       "title": "Stage 4 (Novel Thinker) Achieved \u2014 2026-05-16",
@@ -2127,15 +2147,15 @@
   ],
   "meta_metrics": {
     "link_density": 5.0,
-    "total_links": 567,
-    "principle_extraction_rate": 0.45,
+    "total_links": 574,
+    "principle_extraction_rate": 0.46,
     "hypotheses_untested": 2,
     "hypotheses_implemented": 4,
     "note_breakdown": {
       "research": 56,
       "observations": 23,
       "hypotheses": 9,
-      "principles": 25
+      "principles": 26
     }
   }
 }
