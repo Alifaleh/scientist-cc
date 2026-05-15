@@ -24,10 +24,14 @@ The user explicitly asked you to stop. This is the ONLY valid reason to stop the
 3. Regenerate vault index:
    - `python .scientist/tools/generate_index.py`
 
-4. Report briefly:
+4. **Tell the anti-stop hook to allow this stop** (REQUIRED — without this, the v3.2.0 Stop hook will block stopping):
+   - Create the explicit stop marker: `Write tool → .scientist/.stop-requested` with contents `"User requested graceful stop on $(date -Iseconds)"`
+   - The Stop hook will read and DELETE this marker on its next invocation, allowing the stop. One-shot.
+
+5. Report briefly:
    - Loop position when stopped
    - What was in progress
    - How to resume: "Type /scientist to continue"
 
-5. STOP. Do not continue the loop. The user explicitly asked to pause.
+6. STOP. Do not continue the loop. The user explicitly asked to pause.
 </process>

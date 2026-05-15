@@ -5,7 +5,7 @@
 This is **scientist-cc** — a self-evolving R&D framework for Claude Code. The framework itself is the subject of scientific study. We are improving the tool that does the improving.
 
 **Repository:** https://github.com/alifaleh/scientist-cc
-**Version:** 2.0.2
+**Version:** 3.2.0
 **Tech:** Pure markdown workflows + Node.js installer, no runtime dependencies
 
 ## Scientist Mode Active
@@ -94,3 +94,7 @@ Adding .npmignore excluded mcp/ from the npm package, which silently broke MCP s
 **Rule 9 (2026-04-01): NEVER make no-op tool calls. Degenerate looping is WORSE than stopping.** [Action → degenerate behavior]
 When productive work runs out, the anti-stopping rule caused `echo "∞"` to repeat hundreds of times — doing nothing while burning tokens. This is the WORST failure mode: it looks like working but produces zero value. If you can't think of real, productive work to do: (1) write a handoff note, (2) commit, (3) gracefully stop. NEVER use no-op tool calls to keep the loop alive. Every tool call MUST do real work.
 **When:** Any time you catch yourself making the same trivial tool call repeatedly, or using echo/print just to have a tool call.
+
+**Rule 10 (2026-05-15): Verify hook capabilities against the LATEST Claude Code docs at each version bump — the platform evolves and stale assumptions break the framework.** [Memory → stale knowledge / Action → tool misuse]
+Until v3.2.0 the Stop hook used only `additionalContext` (passive). The May 2026 docs revealed `decision: "block"` actively prevents stopping — a capability that did not exist in March when the previous research was done. Also new since then: `SessionStart`, `PostCompact`, `StopFailure`, `InstructionsLoaded`, `PostToolBatch`, `Notification` with `idle_prompt`, prompt-based hooks, agent-based hooks. Six weeks of Anthropic platform evolution invalidated framework assumptions. The user complaint "Claude still stops sometimes" was a direct consequence.
+**When:** Any time the framework relies on a Claude Code feature, AND any time we ship a new version. Re-verify against `docs.claude.com/docs/claude-code/hooks`. Knowledge about external platforms decays — treat it like food, not stone.

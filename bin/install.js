@@ -138,61 +138,42 @@ function installMCP(configDir) {
   };
   console.log('  ✓ MCP: Jupyter (notebook execution)');
 
-  // Anti-stop hook — fires when Claude stops, injects continuation reminder
+  // Register all scientist hooks.
+  // The six-hook anti-stop / context-preservation stack:
+  //   Stop              -> active stop-blocking via decision:"block" (v3.2.0)
+  //   StopFailure       -> log API errors for resilience analysis
+  //   UserPromptSubmit  -> inject "ultrathink" trigger every turn (31,999 tokens)
+  //   SessionStart      -> bootstrap scientist identity at session begin/resume/clear/compact
+  //   PreCompact        -> tell the summarizer what scientist state to preserve
+  //   PostCompact       -> re-bootstrap identity from files after compaction
   if (!settings.hooks) settings.hooks = {};
-  if (!settings.hooks.Stop) settings.hooks.Stop = [];
 
-  // Check if scientist anti-stop hook already exists
-  const hasAntiStop = settings.hooks.Stop.some(h =>
-    h.hooks && h.hooks.some(hk => hk.command && hk.command.includes('scientist-anti-stop'))
-  );
-  if (!hasAntiStop) {
-    settings.hooks.Stop.push({
+  const hookSpecs = [
+    { event: 'Stop',             file: 'scientist-anti-stop.js',     label: 'Anti-stop (decision:block + circuit breakers)' },
+    { event: 'StopFailure',      file: 'scientist-stop-failure.js',  label: 'Stop-failure logger (API error observability)' },
+    { event: 'UserPromptSubmit', file: 'scientist-think-harder.js',  label: 'Think-harder (31,999 thinking tokens per turn)' },
+    { event: 'SessionStart',     file: 'scientist-session-start.js', label: 'Session-start bootstrap (identity restore)' },
+    { event: 'PreCompact',       file: 'scientist-pre-compact.js',   label: 'Pre-compact directive (preserve scientist state)' },
+    { event: 'PostCompact',      file: 'scientist-post-compact.js',  label: 'Post-compact re-bootstrap (re-read state files)' }
+  ];
+
+  for (const spec of hookSpecs) {
+    if (!settings.hooks[spec.event]) settings.hooks[spec.event] = [];
+    const already = settings.hooks[spec.event].some(h =>
+      h.hooks && h.hooks.some(hk => hk.command && hk.command.includes(spec.file))
+    );
+    if (already) {
+      console.log(`  ○ ${spec.event} hook already registered (${spec.file})`);
+      continue;
+    }
+    settings.hooks[spec.event].push({
       hooks: [{
         type: 'command',
-        command: `node "${path.join(configDir, 'hooks', 'scientist-anti-stop.js')}"`,
+        command: `node "${path.join(configDir, 'hooks', spec.file)}"`,
         timeout: 5
       }]
     });
-    console.log('  ✓ Anti-stop hook registered');
-  } else {
-    console.log('  ○ Anti-stop hook already registered');
-  }
-
-  // Think-harder hook (UserPromptSubmit) — injects "ultrathink" on every turn
-  if (!settings.hooks.UserPromptSubmit) settings.hooks.UserPromptSubmit = [];
-  const hasThinkHarder = settings.hooks.UserPromptSubmit.some(h =>
-    h.hooks && h.hooks.some(hk => hk.command && hk.command.includes('scientist-think-harder'))
-  );
-  if (!hasThinkHarder) {
-    settings.hooks.UserPromptSubmit.push({
-      hooks: [{
-        type: 'command',
-        command: `node "${path.join(configDir, 'hooks', 'scientist-think-harder.js')}"`,
-        timeout: 5
-      }]
-    });
-    console.log('  ✓ Think-harder hook registered (31,999 thinking tokens per turn)');
-  } else {
-    console.log('  ○ Think-harder hook already registered');
-  }
-
-  // PreCompact hook — preserves scientist context during compaction
-  if (!settings.hooks.PreCompact) settings.hooks.PreCompact = [];
-  const hasPreCompact = settings.hooks.PreCompact.some(h =>
-    h.hooks && h.hooks.some(hk => hk.command && hk.command.includes('scientist-pre-compact'))
-  );
-  if (!hasPreCompact) {
-    settings.hooks.PreCompact.push({
-      hooks: [{
-        type: 'command',
-        command: `node "${path.join(configDir, 'hooks', 'scientist-pre-compact.js')}"`,
-        timeout: 5
-      }]
-    });
-    console.log('  ✓ Pre-compact hook registered (context preservation)');
-  } else {
-    console.log('  ○ Pre-compact hook already registered');
+    console.log(`  ✓ ${spec.event} hook registered — ${spec.label}`);
   }
 
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
@@ -213,23 +194,23 @@ function installGlobalIdentity() {
     console.log('  ○ Global identity already exists (preserved)');
   }
 
-  // Install anti-stop hook globally
+  // Install all six scientist hook scripts.
   const hooksDir = path.join(configDir, 'hooks');
   ensureDir(hooksDir);
-  const hookSrc = path.join(PACKAGE_ROOT, '.claude', 'hooks', 'scientist-anti-stop.js');
-  if (fs.existsSync(hookSrc)) {
-    fs.copyFileSync(hookSrc, path.join(hooksDir, 'scientist-anti-stop.js'));
-    console.log('  ✓ Anti-stop hook installed');
-  }
-  const thinkSrc = path.join(PACKAGE_ROOT, '.claude', 'hooks', 'scientist-think-harder.js');
-  if (fs.existsSync(thinkSrc)) {
-    fs.copyFileSync(thinkSrc, path.join(hooksDir, 'scientist-think-harder.js'));
-    console.log('  ✓ Think-harder hook installed');
-  }
-  const compactSrc = path.join(PACKAGE_ROOT, '.claude', 'hooks', 'scientist-pre-compact.js');
-  if (fs.existsSync(compactSrc)) {
-    fs.copyFileSync(compactSrc, path.join(hooksDir, 'scientist-pre-compact.js'));
-    console.log('  ✓ Pre-compact hook installed');
+  const hookFiles = [
+    'scientist-anti-stop.js',
+    'scientist-stop-failure.js',
+    'scientist-think-harder.js',
+    'scientist-session-start.js',
+    'scientist-pre-compact.js',
+    'scientist-post-compact.js'
+  ];
+  for (const file of hookFiles) {
+    const src = path.join(PACKAGE_ROOT, '.claude', 'hooks', file);
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, path.join(hooksDir, file));
+      console.log(`  ✓ Hook installed: ${file}`);
+    }
   }
 }
 
@@ -272,25 +253,15 @@ function uninstall(configDir) {
         delete settings.mcpServers['scientist-jupyter'];
         console.log('  ✗ Removed MCP server entries');
       }
-      // Remove hooks
+      // Remove all scientist hook registrations across every event.
       if (settings.hooks) {
-        if (settings.hooks.Stop) {
-          settings.hooks.Stop = settings.hooks.Stop.filter(h =>
+        const events = ['Stop', 'StopFailure', 'UserPromptSubmit', 'SessionStart', 'PreCompact', 'PostCompact'];
+        for (const ev of events) {
+          if (!settings.hooks[ev]) continue;
+          settings.hooks[ev] = settings.hooks[ev].filter(h =>
             !h.hooks?.some(hk => hk.command?.includes('scientist-'))
           );
-          if (!settings.hooks.Stop.length) delete settings.hooks.Stop;
-        }
-        if (settings.hooks.UserPromptSubmit) {
-          settings.hooks.UserPromptSubmit = settings.hooks.UserPromptSubmit.filter(h =>
-            !h.hooks?.some(hk => hk.command?.includes('scientist-'))
-          );
-          if (!settings.hooks.UserPromptSubmit.length) delete settings.hooks.UserPromptSubmit;
-        }
-        if (settings.hooks.PreCompact) {
-          settings.hooks.PreCompact = settings.hooks.PreCompact.filter(h =>
-            !h.hooks?.some(hk => hk.command?.includes('scientist-'))
-          );
-          if (!settings.hooks.PreCompact.length) delete settings.hooks.PreCompact;
+          if (!settings.hooks[ev].length) delete settings.hooks[ev];
         }
         if (!Object.keys(settings.hooks).length) delete settings.hooks;
         console.log('  ✗ Removed scientist hooks');

@@ -6,11 +6,44 @@
   "hypotheses_tested": 7,
   "hypotheses_confirmed": 0,
   "hypotheses_falsified": 0,
-  "skills_built": ["data-science-rigor"],
-  "tools_documented": ["pdf_reader.py", "repo_reader.py", "generate_index.py"],
-  "papers_read": ["A-MEM (NeurIPS 2025)", "MemGPT/Letta", "Reflexion", "MIRIX", "AgentDebug (2025)", "Hyperagents (Meta 2026)", "GVU Operator (Chojecki 2025)", "Constitutional AI (2026)", "SWE-agent ACI", "MetaGPT SOPs", "AutoDream/claude-dream"],
-  "papers_downloaded": ["a-mem-2502.12110.pdf", "memgpt-2310.08560.pdf", "reflexion-2303.11366.pdf"],
-  "frameworks_studied": ["AutoGPT", "CrewAI", "LangGraph", "OpenHands", "Devin", "Claude Code", "Aider", "SWE-agent", "MetaGPT", "BabyAGI"],
+  "skills_built": [
+    "data-science-rigor"
+  ],
+  "tools_documented": [
+    "pdf_reader.py",
+    "repo_reader.py",
+    "generate_index.py"
+  ],
+  "papers_read": [
+    "A-MEM (NeurIPS 2025)",
+    "MemGPT/Letta",
+    "Reflexion",
+    "MIRIX",
+    "AgentDebug (2025)",
+    "Hyperagents (Meta 2026)",
+    "GVU Operator (Chojecki 2025)",
+    "Constitutional AI (2026)",
+    "SWE-agent ACI",
+    "MetaGPT SOPs",
+    "AutoDream/claude-dream"
+  ],
+  "papers_downloaded": [
+    "a-mem-2502.12110.pdf",
+    "memgpt-2310.08560.pdf",
+    "reflexion-2303.11366.pdf"
+  ],
+  "frameworks_studied": [
+    "AutoGPT",
+    "CrewAI",
+    "LangGraph",
+    "OpenHands",
+    "Devin",
+    "Claude Code",
+    "Aider",
+    "SWE-agent",
+    "MetaGPT",
+    "BabyAGI"
+  ],
   "principles_consolidated": 16,
   "novel_findings": 6,
   "literature_gaps": 1,
@@ -31,5 +64,16 @@
     "Stage 4: need 5+ confirmed hypotheses, 10+ evolved notes",
     "Research more MCP tools for data science",
     "Phase 3: structured artifacts at each loop step"
+  ],
+  "stop_attempts": {
+    "count": 1,
+    "last": 1778875993305,
+    "last_progress": 1778875993305
+  },
+  "api_errors": [
+    {
+      "type": "rate_limit",
+      "time": "2026-05-15T20:13:13.386Z"
+    }
   ]
 }

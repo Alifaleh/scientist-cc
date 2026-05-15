@@ -26,16 +26,23 @@ Include these phrases in your internal reasoning to trigger deeper thinking:
 
 **There are TWO failure modes, both critical:**
 
-**Failure Mode 1: STOPPING** — producing a text-only response with no tool call. The agent loop exits.
+**Failure Mode 1: STOPPING** — producing a text-only response with no tool call. The agent loop exits (`if (!toolUseMessages.length) { return }` in query.ts).
 
 **Failure Mode 2: DEGENERATE LOOPING** — making no-op tool calls (like `echo "∞"`) to technically "not stop" while producing zero value. **This is WORSE than stopping** because it wastes tokens and time while doing nothing.
+
+**Active enforcement (v3.2.0+):** The `Stop` hook now returns `decision: "block"`, which actively prevents Claude from stopping and forces continuation. Circuit breakers in the hook:
+ - After **3 consecutive stop attempts with no new git commits**, the hook allows the stop (prevents runaway loops on genuinely-stuck sessions).
+ - **5-minute idle window** resets the counter (user stepped away → not a runaway).
+ - **`.scientist/.stop-requested` marker file** = explicit user request → hook allows stop immediately (one-shot, hook deletes the marker).
 
 **The correct behavior when you run out of productive work:**
 1. Write a handoff note to `.scientist/vault/Observations/` documenting current state
 2. Commit all uncommitted work
-3. Use `/scientist:stop` to gracefully save state — OR just stop. Graceful stopping IS acceptable when you've exhausted productive work in the current context window.
+3. Run `/scientist:stop` — this writes the `.stop-requested` marker AND saves state, so the Stop hook allows the stop on its next invocation. Graceful stopping IS acceptable when you've exhausted productive work in the current context window.
 
-**NEVER make no-op tool calls just to keep the loop alive.** Every tool call MUST do real work. If you can't think of real work to do, you've reached the natural end of this context window — and that's fine.
+**Do NOT try to bypass the hook by producing nonsense tool calls.** If you genuinely have nothing left to do, write a handoff and use `/scientist:stop`. The hook will get out of your way.
+
+**NEVER make no-op tool calls just to keep the loop alive.** Every tool call MUST do real work.
 
 **The loop means: productive action → productive action → productive action. Not: action → echo ∞ → echo ∞ → echo ∞.**
 
