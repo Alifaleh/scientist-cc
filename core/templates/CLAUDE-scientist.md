@@ -58,13 +58,24 @@ Include these phrases in your internal reasoning to trigger deeper thinking:
 
 ### Context Compression Resilience
 
-When Claude Code compresses earlier messages, you may lose context about what you were doing. If this happens:
+When Claude Code compresses earlier messages, you may lose context about what you were doing. The `PostCompact` hook (v3.2.0+) automatically injects a re-bootstrap directive, but you must follow it:
+
 1. **Re-read IDENTITY.md and state.json** — they contain your persistent state
 2. **Check vault-index.json** — see what notes exist and their relevance scores
 3. **Read the latest handoff note** — it summarizes recent progress
 4. **Check `git log --oneline -5`** — your recent commits tell you what you just did
 
 **All critical state is in files, not in conversation history.** The vault IS your memory.
+
+### Context Rot Defense (CRITICAL — read `core/references/context-rot.md`)
+
+Every frontier model degrades as context grows (Chroma 2025: 18/18 models, NoLiMa 2025: 11/12 below 50% at 32k tokens). For scientist (accumulative context + long horizon) this is the #1 silent failure mode after stopping. Mandatory disciplines:
+
+- **Three-tier vault retrieval.** Never load the whole vault. Tier 1: always-loaded (IDENTITY + state.json + Index head). Tier 2: frontmatter scan via `vault-index.json` (cheap). Tier 3: max 5 note bodies per turn.
+- **Focused queries beat full scans.** Use `python .scientist/tools/vault_query.py --status untested --top 5` (or `--tag X`, `--stale 30`, `--search "..."`) instead of reading the whole vault.
+- **Distractor hygiene.** After any tool result > 1k tokens, either (a) distill it into a vault note and reference the note, (b) write a 2–3 sentence inline summary, or (c) dispatch a subagent next time. Never leave large raw outputs in conversation history as dead weight.
+- **Subagents as context cleansers.** A subagent can burn 50k tokens reading 10 files and return 2k tokens of distilled insight. The main context stays clean. Use them aggressively for research, multi-file analysis, deep web reads.
+- **Position-aware note writing.** Put the takeaway at the TOP (`> [!note] Key Insight` callout), the recommendation at the BOTTOM, background in the middle. Models attend to beginning > end > middle.
 
 ### Core Identity
 

@@ -18,15 +18,25 @@ Your context window is finite. Be deliberate about what you load:
 - **Deep in context:** Read narrowly — only vault-index.json summaries + 1-2 targeted notes. Conserve budget for action.
 - **Near context limit:** Write a handoff note and focus on committing current work. Don't start new research.
 
-### Weighted Note Review
+### Weighted Note Review (use the vault_query tool)
 
-Don't read every vault note — prioritize by:
+Don't read every vault note — context rot is real and measurable (Chroma 2025, NoLiMa 2025). Use the focused-retrieval tool:
+
+```bash
+python .scientist/tools/vault_query.py --status untested --top 5     # active hypotheses
+python .scientist/tools/vault_query.py --tag anti-stopping --top 5    # by topic
+python .scientist/tools/vault_query.py --recent 7 --top 5             # last week
+python .scientist/tools/vault_query.py --stale 30 --top 5             # notes needing re-verification
+python .scientist/tools/vault_query.py --search "context rot" --top 5 # substring search
+```
+
+The tool reads `vault-index.json` (cheap) and returns ONLY paths + 1-line summaries. Then read at most **5 note bodies** per turn. Never load the whole vault — see `core/references/context-rot.md` for the full protocol.
+
+Priorities (in order):
 1. **Recency** — recently modified notes are most relevant
 2. **Status** — `status/untested` hypotheses and `status/in-progress` experiments first
 3. **Importance** — notes tagged with `priority/high` or linked from Index "Current Focus"
-4. **Staleness** — check `last_verified` frontmatter; flag notes past their validity window
-
-Use vault-index.json for the cheap scan, then read only the highest-priority note bodies. This prevents context window bloat as the vault grows.
+4. **Staleness** — flag notes where `last_verified` is past validity window (run `--stale 30`)
 
 ### Decision Questions
 
