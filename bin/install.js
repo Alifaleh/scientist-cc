@@ -122,11 +122,13 @@ function installMCP(configDir) {
     settings.mcpServers = {};
   }
 
-  // Playwright MCP — uses public npm package, no local files needed
+  // Playwright MCP — uses Microsoft's official @playwright/mcp package.
+  // Earlier versions registered `@anthropic-ai/mcp-server-playwright` which
+  // does not exist on npm (404). Discovered via Rule 10 audit 2026-05-16.
   settings.mcpServers['scientist-playwright'] = {
     command: 'npx',
-    args: ['-y', '@anthropic-ai/mcp-server-playwright'],
-    description: 'Scientist: Browser control for web research'
+    args: ['-y', '@playwright/mcp@latest'],
+    description: 'Scientist: Browser control for web research (@playwright/mcp by Microsoft)'
   };
   console.log('  ✓ MCP: Playwright (browser control)');
 
