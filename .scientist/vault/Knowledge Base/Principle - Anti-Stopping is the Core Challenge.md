@@ -5,8 +5,12 @@ derived_from:
   - "[[../Observations/Framework Self-Analysis]]"
   - "[[../Research/AI Self-Improvement Frameworks]]"
 date: 2026-03-31
-last_verified: 2026-03-31
+last_verified: 2026-05-16
+evolved_on: 2026-05-16
 ---
+
+> [!success] Confirmed by 6 weeks of evidence (2026-05-16)
+> 11/11 self-evolution rules now in CLAUDE.md, with Rules 3, 5, 6, 9, 10, 11 (6/11) directly related to stopping/loop-discipline. Anti-stopping remains the dominant failure-mode cluster after six weeks of accumulated work. The v3.2.0 → v3.3.2 saga (this session) proved the principle holds even AGAINST structural enforcement: when one structural channel failed, only adding a second structural channel solved it. Instructional rules never came close. New cross-link: [[supports::../Observations/Novel Finding - Stop Hook decision-block Mechanism]].
 
 # Principle: Anti-Stopping is the Core Challenge for Autonomous Agents
 

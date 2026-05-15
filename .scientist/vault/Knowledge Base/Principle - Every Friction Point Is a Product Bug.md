@@ -6,8 +6,12 @@ derived_from:
   - "[[../Observations/User Feedback - Init Phase and Data Science Capabilities]]"
   - "[[../Observations/Tool Verification - Session 1]]"
 date: 2026-03-31
-last_verified: 2026-03-31
+last_verified: 2026-05-16
+evolved_on: 2026-05-16
 ---
+
+> [!success] Validated again this session (2026-05-16)
+> Three more bugs found via dogfooding this session — all became framework fixes within the same session: (1) v3.3.0 shipped `vault_query.py` but pre-existing scientist projects didn't get it (v3.3.1 fixed via resume-time tool sync); (2) `vault_query.py` crashed on Windows console Unicode (v3.3.1 added UTF-8 wrapping); (3) v3.2.0's anti-stop hook didn't actually block in this runtime (v3.3.2 added belt+suspenders + diagnostic log). Friction → diagnosis → product fix → reinstall — all in one continuous loop. New cross-link: [[supports::../Observations/Dogfood Bug - v3.2.0 Stop Hook Didn't Actually Block]].
 
 # Principle: Every Friction Point Is a Product Bug
 

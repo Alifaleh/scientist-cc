@@ -6,8 +6,12 @@ derived_from:
   - "[[../Research/Context Engineering for AI Agents]]"
   - "[[../Research/Reflexion - Verbal Self-Reflection for Agents]]"
 date: 2026-03-31
-last_verified: 2026-03-31
+last_verified: 2026-05-16
+evolved_on: 2026-05-16
 ---
+
+> [!success] Strengthened by v3.2.0 + v3.3.2 (2026-05-16)
+> The v3.2.0 → v3.3.2 iteration is a sharp empirical demonstration of this principle. v3.2.0's first attempt at structural enforcement (single `decision:"block"` signal) was theoretically correct per docs but proved insufficient in the actual runtime — Claude still stopped. The v3.3.2 fix added a SECOND structural channel (exit code 2 + stderr) plus a diagnostic log file. Lesson: structural enforcement isn't binary — at the platform layer, **redundant structural enforcement** is the next refinement. Two independent channels make the failure mode disappear. New cross-link: [[supports::../Observations/Dogfood Bug - v3.2.0 Stop Hook Didn't Actually Block]].
 
 # Principle: Structural Enforcement Beats Instructional Rules
 

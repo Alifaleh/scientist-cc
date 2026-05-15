@@ -7,8 +7,12 @@ derived_from:
   - "[[Principle - Persistence Is the Moat]]"
   - "[[Principle - Knowledge Density Is the Ultimate Metric]]"
 date: 2026-03-31
-last_verified: 2026-03-31
+last_verified: 2026-05-16
+evolved_on: 2026-05-16
 ---
+
+> [!success] Quantitative update (2026-05-16)
+> Original evidence cited 83 vault notes and 165+ typed links. After 6 weeks of accumulated work the vault is now **92 notes, 222 typed links (4.8/note), 25 consolidated principles, 7 confirmed hypotheses, 7 novel findings, 11 self-evolution rules**. The compounding rate of the vault has outpaced the compounding rate of the code by roughly 2:1 — the principle holds and strengthens. New cross-link: [[supports::../Research/Context Rot Mitigation Protocol (core/references/context-rot.md)]].
 
 # Principle: The Vault IS the Product
 
