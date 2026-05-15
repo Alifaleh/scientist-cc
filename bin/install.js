@@ -152,9 +152,10 @@ function installMCP(configDir) {
     { event: 'Stop',             file: 'scientist-anti-stop.js',     label: 'Anti-stop (decision:block + circuit breakers)' },
     { event: 'StopFailure',      file: 'scientist-stop-failure.js',  label: 'Stop-failure logger (API error observability)' },
     { event: 'UserPromptSubmit', file: 'scientist-think-harder.js',  label: 'Think-harder (31,999 thinking tokens per turn)' },
-    { event: 'SessionStart',     file: 'scientist-session-start.js', label: 'Session-start bootstrap (identity restore)' },
+    { event: 'SessionStart',     file: 'scientist-session-start.js', label: 'Session-start bootstrap (identity restore + auto-handoff snapshot)' },
     { event: 'PreCompact',       file: 'scientist-pre-compact.js',   label: 'Pre-compact directive (preserve scientist state)' },
-    { event: 'PostCompact',      file: 'scientist-post-compact.js',  label: 'Post-compact re-bootstrap (re-read state files)' }
+    { event: 'PostCompact',      file: 'scientist-post-compact.js',  label: 'Post-compact re-bootstrap (re-read state files)' },
+    { event: 'PostToolBatch',    file: 'scientist-auto-handoff.js',  label: 'Auto-handoff snapshot (.last-activity.json on every tool batch)' }
   ];
 
   for (const spec of hookSpecs) {
@@ -203,7 +204,8 @@ function installGlobalIdentity() {
     'scientist-think-harder.js',
     'scientist-session-start.js',
     'scientist-pre-compact.js',
-    'scientist-post-compact.js'
+    'scientist-post-compact.js',
+    'scientist-auto-handoff.js'
   ];
   for (const file of hookFiles) {
     const src = path.join(PACKAGE_ROOT, '.claude', 'hooks', file);
@@ -255,7 +257,7 @@ function uninstall(configDir) {
       }
       // Remove all scientist hook registrations across every event.
       if (settings.hooks) {
-        const events = ['Stop', 'StopFailure', 'UserPromptSubmit', 'SessionStart', 'PreCompact', 'PostCompact'];
+        const events = ['Stop', 'StopFailure', 'UserPromptSubmit', 'SessionStart', 'PreCompact', 'PostCompact', 'PostToolBatch'];
         for (const ev of events) {
           if (!settings.hooks[ev]) continue;
           settings.hooks[ev] = settings.hooks[ev].filter(h =>
