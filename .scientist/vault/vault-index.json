@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16T00:21:08.978984",
+  "generated": "2026-05-16T00:22:16.728365",
   "note_count": 111,
   "notes": [
     {
@@ -702,41 +702,6 @@
       "relevance_score": 0.571
     },
     {
-      "path": "Hypotheses/Hypothesis 3 - Adversarial Validation.md",
-      "title": "Hypothesis 3: Adversarial Validation Reduces False Confirmations",
-      "tags": [
-        "hypothesis",
-        "status/untested",
-        "scientific-method"
-      ],
-      "status": "untested",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 2,
-      "typed_links": 0,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.561
-    },
-    {
-      "path": "Hypotheses/Hypothesis 5 - Memory Evolution.md",
-      "title": "Hypothesis 5: Backward Note Evolution Improves Knowledge Quality",
-      "tags": [
-        "hypothesis",
-        "status/untested",
-        "a-mem",
-        "knowledge-management"
-      ],
-      "status": "untested",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 2,
-      "typed_links": 0,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.561
-    },
-    {
       "path": "Hypotheses/Hypothesis 7 - Meta-Metrics.md",
       "title": "Hypothesis 7: Meta-Metrics Enable Objective Progress Tracking",
       "tags": [
@@ -770,6 +735,24 @@
       "evolved_on": null,
       "summary": "When a tool is designed to improve a process, the best test is using the tool on itself. Structural analysis and unit tests catch syntax errors; dogfo",
       "relevance_score": 0.551
+    },
+    {
+      "path": "Hypotheses/Hypothesis 4 - Two-Phase Linking.md",
+      "title": "Hypothesis 4: Two-Phase Linking Improves Vault Knowledge Discovery",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "knowledge-management",
+        "a-mem"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 7,
+      "typed_links": 3,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.546
     },
     {
       "path": "Observations/Literature Gap - Anti-Stopping Not Addressed.md",
@@ -1012,24 +995,6 @@
       "evolved_on": null,
       "summary": "A model trained on 3 months of data captures 3 months of market personality \u2014 not \"how markets work.\" When that personality changes (and it always doe",
       "relevance_score": 0.525
-    },
-    {
-      "path": "Hypotheses/Hypothesis 4 - Two-Phase Linking.md",
-      "title": "Hypothesis 4: Two-Phase Linking Improves Vault Knowledge Discovery",
-      "tags": [
-        "hypothesis",
-        "status/implemented",
-        "knowledge-management",
-        "a-mem"
-      ],
-      "status": "implemented",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 6,
-      "typed_links": 3,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.521
     },
     {
       "path": "Research/AutoDream Consolidation Mechanism.md",
@@ -1535,6 +1500,24 @@
       "relevance_score": 0.471
     },
     {
+      "path": "Hypotheses/Hypothesis 5 - Memory Evolution.md",
+      "title": "Hypothesis 5: Backward Note Evolution Improves Knowledge Quality",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "a-mem",
+        "knowledge-management"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 4,
+      "typed_links": 0,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.471
+    },
+    {
       "path": "Observations/R&D Velocity Analysis.md",
       "title": "R&D Velocity Analysis: 188 Commits in ~6 Hours",
       "tags": [
@@ -1843,6 +1826,23 @@
       "relevance_score": 0.471
     },
     {
+      "path": "Hypotheses/Hypothesis 3 - Adversarial Validation.md",
+      "title": "Hypothesis 3: Adversarial Validation Reduces False Confirmations",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "scientific-method"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 3,
+      "typed_links": 0,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.446
+    },
+    {
       "path": "Research/AI Agent Frameworks Landscape.md",
       "title": "AI Agent Frameworks Landscape (March 2026)",
       "tags": [
@@ -2088,10 +2088,10 @@
   ],
   "meta_metrics": {
     "link_density": 4.9,
-    "total_links": 540,
+    "total_links": 544,
     "principle_extraction_rate": 0.45,
-    "hypotheses_untested": 4,
-    "hypotheses_implemented": 3,
+    "hypotheses_untested": 2,
+    "hypotheses_implemented": 2,
     "note_breakdown": {
       "research": 56,
       "observations": 21,

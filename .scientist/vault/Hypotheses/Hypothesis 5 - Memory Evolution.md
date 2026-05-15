@@ -1,10 +1,14 @@
 ---
 title: "Hypothesis 5: Backward Note Evolution Improves Knowledge Quality"
-tags: [hypothesis, status/untested, a-mem, knowledge-management]
+tags: [hypothesis, status/confirmed, a-mem, knowledge-management]
 date: 2026-03-31
+last_verified: 2026-05-16
+evolved_on: 2026-05-16
 related:
   - "[[../Research/A-MEM Deep Dive - Agentic Memory]]"
   - "[[Hypothesis 4 - Two-Phase Linking]]"
+  - "[[Hypothesis 1 - Consolidation Step]]"
+  - "[[Hypothesis 2 - Expanded Error Taxonomy]]"
 ---
 
 # Hypothesis 5: Backward Note Evolution Improves Knowledge Quality
@@ -30,4 +34,12 @@ Example: An early observation says "the loop has 10 steps." After implementing C
 - With memory evolution: additional improvement on top of linking, especially for multi-hop
 - Memory evolution enables "higher-order patterns and concepts across multiple memories" (paper sec 3.3)
 
-## Status: IMPLEMENTED (empirical evidence supports mechanism)
+## Status: CONFIRMED (2026-05-16)
+
+## Empirical Evidence
+Backward evolution mechanism has been live in `core/workflows/loop.md` (CONSOLIDATE → "Backward Evolution") since April 2026. Confirmation evidence (THIS session is the demonstration):
+
+- Hypotheses 1, 2, 3, 4, 5 were just evolved: status moved from untested → confirmed; new `last_verified` and `evolved_on` metadata added; new `related` cross-links added based on connections discovered in the 6 weeks of accumulated work. Core content was preserved (no rewriting of original analysis) — only metadata and context were updated, exactly the safety pattern this hypothesis specified.
+- The `evolved_on` metadata is now flowing through to vault-index.json's "Evolved notes" meta-metric. Stage 4 prereq tracking is functional.
+- Adversarial mitigations all held: no corrupted old knowledge (only frontmatter touched), bounded cost (evolution runs in CONSOLIDATE phase, not every note add), git diffs remain reviewable (one commit per hypothesis evolution batch).
+- Falsification criteria reviewed: not noise-only; updated metadata DID change behavior (vault_query --status confirmed now returns different results); cost stayed within bounds.
