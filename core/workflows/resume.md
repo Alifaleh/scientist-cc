@@ -81,9 +81,19 @@ Check that expected tools are available. Silent MCP failures are dangerous — t
 Expected tools to verify:
 - **Playwright:** Search for a tool containing "browser_navigate". If missing → warn "Playwright MCP not connected"
 - **Jupyter:** Search for a tool containing "jupyter" or "notebook" execution. If missing → **auto-install:** `pip install jupyter nbconvert matplotlib seaborn`. Then use NotebookEdit + `jupyter nbconvert --execute` as fallback.
-- **PDF Reader:** Check `.scientist/tools/pdf_reader.py` exists. If missing → copy from `~/.claude/scientist/tools/`
-- **Repo Reader:** Check `.scientist/tools/repo_reader.py` exists. If missing → copy from `~/.claude/scientist/tools/`
-- **Vault Index Generator:** Check `.scientist/tools/generate_index.py` exists. If missing → copy from `~/.claude/scientist/tools/`
+- **Auto-sync project tools from global install** (every resume — catches framework upgrades):
+  ```bash
+  # Copy any missing/newer tool from the global install to this project.
+  # Closes the gap where pre-existing .scientist/ dirs miss tools added by
+  # framework upgrades (e.g. vault_query.py shipped in v3.3.0).
+  for tool in pdf_reader.py repo_reader.py generate_index.py vault_query.py; do
+    src="$HOME/.claude/scientist/tools/$tool"
+    dest=".scientist/tools/$tool"
+    if [ -f "$src" ] && { [ ! -f "$dest" ] || [ "$src" -nt "$dest" ]; }; then
+      cp "$src" "$dest"
+    fi
+  done
+  ```
 - **Python packages:** If data work is needed, verify: `pip install matplotlib seaborn pandas numpy` — install if missing
 
 **Auto-install missing dependencies.** The scientist has full system access — if a tool or library is needed, install it immediately. Don't warn and skip — install and use. Only warn if installation fails.
