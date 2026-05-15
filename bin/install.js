@@ -87,10 +87,23 @@ function installCore(configDir) {
     console.log('  ○ Obsidian skills not bundled (install from GitHub for full package)');
   }
 
-  // Copy agents (optional)
+  // Copy agents to ~/.claude/agents/ (Claude Code's actual discovery
+  // directory). Pre-v3.4.3 copied them to scientistDir/agents/ only,
+  // which Claude Code does not scan — making the bundled subagent
+  // types (scientist-researcher, scientist-experimenter,
+  // scientist-observer) invisible to the Task tool. Dead code since v0.
+  // Fixed by Rule 10 audit 2026-05-16.
   if (fs.existsSync(AGENTS_SRC)) {
+    // Keep the scientistDir copy for reference / uninstall tracking.
     copyDir(AGENTS_SRC, path.join(scientistDir, 'agents'));
-    console.log('  ✓ Agent definitions');
+    // ALSO copy to the discoverable location so Task can use them.
+    const claudeAgentsDir = path.join(configDir, 'agents');
+    ensureDir(claudeAgentsDir);
+    const agentFiles = fs.readdirSync(AGENTS_SRC).filter(f => f.endsWith('.md'));
+    for (const f of agentFiles) {
+      fs.copyFileSync(path.join(AGENTS_SRC, f), path.join(claudeAgentsDir, f));
+    }
+    console.log(`  ✓ ${agentFiles.length} agent definitions registered at ${claudeAgentsDir}`);
   }
 
   // Copy tools (pdf_reader, repo_reader)
@@ -260,6 +273,16 @@ function uninstall(configDir) {
   if (fs.existsSync(scientistDir)) {
     fs.rmSync(scientistDir, { recursive: true });
     console.log('  ✗ Removed scientist core');
+  }
+
+  // Remove agents installed at ~/.claude/agents/ (the discoverable location).
+  const claudeAgentsDir = path.join(configDir, 'agents');
+  if (fs.existsSync(claudeAgentsDir)) {
+    const agentFiles = fs.readdirSync(claudeAgentsDir).filter(f => f.startsWith('scientist-') && f.endsWith('.md'));
+    for (const f of agentFiles) {
+      fs.unlinkSync(path.join(claudeAgentsDir, f));
+      console.log(`  ✗ Removed agent ${f}`);
+    }
   }
 
   // Remove MCP entries from settings
