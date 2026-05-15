@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-16T00:25:00.831998",
-  "note_count": 112,
+  "generated": "2026-05-16T00:38:00.378251",
+  "note_count": 113,
   "notes": [
     {
       "path": "Observations/Stage 4 Achieved - Novel Thinker.md",
@@ -53,6 +53,26 @@
       "evolved_on": null,
       "summary": null,
       "relevance_score": 0.796
+    },
+    {
+      "path": "Observations/Novel Finding - Stop Hook decision-block Does Not Force Continuation in Agent SDK Runtime.md",
+      "title": "Novel Finding: Stop Hook `decision:\\\"block\\\"` Does Not Force Continuation in Claude Agent SDK Runtime",
+      "tags": [
+        "observation",
+        "novel-finding",
+        "anti-stopping",
+        "claude-code",
+        "agent-sdk",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 8,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": null,
+      "relevance_score": 0.775
     },
     {
       "path": "Observations/Dogfood Bug - v3.2.0 Stop Hook Didn't Actually Block.md",
@@ -2107,13 +2127,13 @@
   ],
   "meta_metrics": {
     "link_density": 5.0,
-    "total_links": 559,
+    "total_links": 567,
     "principle_extraction_rate": 0.45,
     "hypotheses_untested": 2,
-    "hypotheses_implemented": 3,
+    "hypotheses_implemented": 4,
     "note_breakdown": {
       "research": 56,
-      "observations": 22,
+      "observations": 23,
       "hypotheses": 9,
       "principles": 25
     }
