@@ -19,7 +19,7 @@ When you type `/scientist`, Claude:
 7. **Learns from results.** Studies WHY, not just WHAT. Wins and losses both teach.
 8. **Consolidates knowledge.** Extracts generalizable principles across experiments. Episodic → semantic.
 9. **Evolves permanently.** Classifies errors by module (Memory/Reasoning/Planning/Action), writes targeted rules to CLAUDE.md.
-10. **Never stops.** The R&D loop runs infinitely. There is no "done."
+10. **Never stops (or resumes from nothing).** The R&D loop runs infinitely in CLI Claude Code via active stop-blocking hooks. In Agent SDK runtimes where the runtime doesn't honor block signals, every turn-end is a cheap checkpoint with `.scientist/.last-activity.json` updated continuously — any user input restarts with zero context loss.
 
 ## Requirements
 
@@ -119,10 +119,14 @@ Claude evolves through mastery stages:
 - **PDF Reader** — reads papers in 3-page chunks for systematic study
 - **Repo Reader** — clones and maps documentation structure
 - **Vault Index Generator** — machine-readable JSON index with weighted relevance scoring
-- **3 Claude Code Hooks** (from source code analysis):
-  - **Anti-Stop Hook** (Stop event) — detects when Claude stops and injects continuation reminder
-  - **Think-Harder Hook** (UserPromptSubmit) — injects "ultrathink" trigger giving 31,999 thinking tokens per turn
-  - **Pre-Compact Hook** (PreCompact) — preserves scientist context during compaction
+- **7 Claude Code Hooks** (covering the full agent lifecycle):
+  - **Anti-Stop Hook** (Stop event) — emits `decision:"block"` + exit code 2 with circuit breakers (3-strike unproductive-stop counter, `.scientist/.stop-requested` graceful exit). Honored by CLI Claude Code; the Agent SDK runtime is platform-conditional — see [Resume Beats Continuation](.scientist/vault/Knowledge%20Base/Principle%20-%20Resume%20Beats%20Continuation.md).
+  - **Stop-Failure Hook** (StopFailure) — logs API errors (rate_limit, server_error, etc.) to `state.json` for resilience analysis
+  - **Think-Harder Hook** (UserPromptSubmit) — injects "ultrathink" trigger every turn for 31,999 thinking tokens
+  - **Session-Start Hook** (SessionStart) — bootstraps scientist identity on startup/resume/clear/compact and surfaces the auto-handoff snapshot
+  - **Pre-Compact Hook** (PreCompact) — tells the summarizer what scientist state to preserve through compaction
+  - **Post-Compact Hook** (PostCompact) — re-bootstraps identity from files after compaction completes
+  - **Auto-Handoff Hook** (PostToolBatch) — writes `.scientist/.last-activity.json` on every tool batch, so resume always has fresh state without an explicit `/scientist:stop`
 - **Playwright MCP** — autonomous web browsing for research
 - **Jupyter MCP** — notebook execution for data analysis
 - **Obsidian Skills** — proper vault formatting (from kepano/obsidian-skills)
@@ -146,7 +150,7 @@ We reverse-engineered Claude Code's source to optimize at the deepest level:
 
 - **31,999 thinking tokens per turn** — UserPromptSubmit hook injects "ultrathink" trigger word detected by `getMaxThinkingTokens()` in the runtime
 - **Default behavior overrides** — Claude Code's system prompt says "4 lines max" and "minimize tokens." We explicitly override these for research mode.
-- **Anti-stop mechanism** — Stop hook fires when Claude stops, injects continuation context. Root cause identified: `toolUseMessages.length === 0` exits the agent loop.
+- **Anti-stop mechanism** — `toolUseMessages.length === 0` exits the agent loop (per `query.ts`). The Stop hook returns `decision:"block"` + exit code 2 to actively prevent stopping in supported runtimes (CLI Claude Code). **In the Agent SDK runtime this is platform-conditional** — empirical testing showed the block signal is ignored, so the framework ALSO ships seamless-resume infrastructure (`PostToolBatch` auto-handoff + `SessionStart` snapshot reader). Two layers: prevent the stop when the runtime supports it, make resume instant otherwise.
 - **Context preservation** — PreCompact hook ensures scientist state survives compaction
 - **Parallel exploitation** — `MAX_TOOL_USE_CONCURRENCY=10` from source, used for parallel research agents
 
