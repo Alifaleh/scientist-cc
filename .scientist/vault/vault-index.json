@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-16T00:44:48.216540",
-  "note_count": 115,
+  "generated": "2026-05-16T00:55:20.434964",
+  "note_count": 118,
   "notes": [
     {
       "path": "Knowledge Base/Principle - Resume Beats Continuation.md",
@@ -187,6 +187,25 @@
       "relevance_score": 0.726
     },
     {
+      "path": "Observations/Handoff - v3.4.1 through v3.4.4 Audit Wave.md",
+      "title": "Handoff: v3.4.1\u2013v3.4.4 \u2014 Four Silent Install Failures Found and Fixed",
+      "tags": [
+        "observation",
+        "handoff",
+        "audit",
+        "dogfood",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 6,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": null,
+      "relevance_score": 0.725
+    },
+    {
       "path": "Knowledge Base/Principle - Structural Enforcement Beats Instructional.md",
       "title": "Principle: Structural Enforcement Beats Instructional Rules",
       "tags": [
@@ -203,6 +222,46 @@
       "evolved_on": "2026-05-16",
       "summary": "When you need an LLM to do something that conflicts with its training (like not stopping), structural enforcement (hooks, loops, validators) is always",
       "relevance_score": 0.701
+    },
+    {
+      "path": "Observations/Audit Finding - Bundled Agents Were Invisible to Task Tool.md",
+      "title": "Audit Finding: Bundled Subagents Were Invisible to the Task Tool Since v0",
+      "tags": [
+        "observation",
+        "audit",
+        "dogfood",
+        "bug",
+        "subagents",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 5,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": null,
+      "relevance_score": 0.7
+    },
+    {
+      "path": "Observations/Audit Finding - Playwright MCP package was 404.md",
+      "title": "Audit Finding: Playwright MCP Registered a 404 npm Package Since v0",
+      "tags": [
+        "observation",
+        "audit",
+        "dogfood",
+        "bug",
+        "mcp",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-16",
+      "last_verified": "2026-05-16",
+      "link_count": 5,
+      "typed_links": 3,
+      "evolved_on": null,
+      "summary": null,
+      "relevance_score": 0.7
     },
     {
       "path": "Knowledge Base/Principle - Adversarial Thinking Prevents Cascading Errors.md",
@@ -2166,13 +2225,13 @@
   ],
   "meta_metrics": {
     "link_density": 5.1,
-    "total_links": 584,
+    "total_links": 600,
     "principle_extraction_rate": 0.46,
     "hypotheses_untested": 0,
-    "hypotheses_implemented": 5,
+    "hypotheses_implemented": 8,
     "note_breakdown": {
       "research": 56,
-      "observations": 24,
+      "observations": 27,
       "hypotheses": 9,
       "principles": 26
     }
