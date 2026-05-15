@@ -1,17 +1,18 @@
 {
-  "ts": "2026-05-15T21:42:47.354Z",
+  "ts": "2026-05-15T21:43:22.262Z",
   "loop_position": "evolve",
   "mastery_stage": 4,
   "vault_notes": 92,
   "last_tools": [
+    "Read",
     "Read"
   ],
   "recent_commits": [
+    "643dbac docs: README modernized for v3.4.0 — honest about CLI vs Agent SDK Stop hook gap, document all 7 hooks, frame as two-layer (block + resume) defense",
     "478a326 evolve: Rule 13 — EVERY response must end with a tool call. No exceptions.",
     "d423f4e vault: v3.4.0 closing handoff — full arc documented, ready for resume",
     "76c9e2f vault: new principle — Resume Beats Continuation (the architectural lesson from the v3.2-v3.4 arc)",
-    "07a440f vault: novel finding — Stop hook decision:block doesn't force continuation in Agent SDK runtime (refutes Discovery 5 from March source analysis)",
-    "35edaef v3.4.0: pivot — seamless resume instead of force-continuation"
+    "07a440f vault: novel finding — Stop hook decision:block doesn't force continuation in Agent SDK runtime (refutes Discovery 5 from March source analysis)"
   ],
   "resume_hint": "Resume by reading .scientist/.last-activity.json, then loop step \"evolve\". Use `python .scientist/tools/vault_query.py --recent 1 --top 5` to see what was touched."
 }

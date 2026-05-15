@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16T00:39:41.118924",
+  "generated": "2026-05-16T00:43:59.010657",
   "note_count": 115,
   "notes": [
     {
@@ -588,24 +588,6 @@
       "relevance_score": 0.601
     },
     {
-      "path": "Hypotheses/Hypothesis 6 - Weighted Retrieval.md",
-      "title": "Hypothesis 6: Weighted Retrieval Improves REFLECT Prioritization",
-      "tags": [
-        "hypothesis",
-        "status/untested",
-        "retrieval",
-        "novel-contribution"
-      ],
-      "status": "untested",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 3,
-      "typed_links": 0,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.586
-    },
-    {
       "path": "Knowledge Base/Principle - Know Your Runtime.md",
       "title": "Principle: Know Your Runtime \u2014 Source Code Analysis Unlocks Hidden Capabilities",
       "tags": [
@@ -778,24 +760,6 @@
       "evolved_on": null,
       "summary": "This R&D effort produced 186 commits by following a specific pattern: parallel research agents \u2192 synthesize into vault notes \u2192 form hypotheses \u2192 imple",
       "relevance_score": 0.571
-    },
-    {
-      "path": "Hypotheses/Hypothesis 7 - Meta-Metrics.md",
-      "title": "Hypothesis 7: Meta-Metrics Enable Objective Progress Tracking",
-      "tags": [
-        "hypothesis",
-        "status/untested",
-        "metacognition",
-        "phase-4"
-      ],
-      "status": "untested",
-      "date": "2026-03-31",
-      "last_verified": null,
-      "link_count": 2,
-      "typed_links": 0,
-      "evolved_on": null,
-      "summary": null,
-      "relevance_score": 0.561
     },
     {
       "path": "Knowledge Base/Principle - Dogfooding Is Superior Testing.md",
@@ -1596,6 +1560,24 @@
       "relevance_score": 0.471
     },
     {
+      "path": "Hypotheses/Hypothesis 6 - Weighted Retrieval.md",
+      "title": "Hypothesis 6: Weighted Retrieval Improves REFLECT Prioritization",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "retrieval",
+        "novel-contribution"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 4,
+      "typed_links": 0,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.471
+    },
+    {
       "path": "Observations/R&D Velocity Analysis.md",
       "title": "R&D Velocity Analysis: 188 Commits in ~6 Hours",
       "tags": [
@@ -1921,6 +1903,24 @@
       "relevance_score": 0.446
     },
     {
+      "path": "Hypotheses/Hypothesis 7 - Meta-Metrics.md",
+      "title": "Hypothesis 7: Meta-Metrics Enable Objective Progress Tracking",
+      "tags": [
+        "hypothesis",
+        "status/confirmed",
+        "metacognition",
+        "phase-4"
+      ],
+      "status": "confirmed",
+      "date": "2026-03-31",
+      "last_verified": "2026-05-16",
+      "link_count": 3,
+      "typed_links": 0,
+      "evolved_on": "2026-05-16",
+      "summary": null,
+      "relevance_score": 0.446
+    },
+    {
       "path": "Research/AI Agent Frameworks Landscape.md",
       "title": "AI Agent Frameworks Landscape (March 2026)",
       "tags": [
@@ -2166,9 +2166,9 @@
   ],
   "meta_metrics": {
     "link_density": 5.1,
-    "total_links": 582,
+    "total_links": 584,
     "principle_extraction_rate": 0.46,
-    "hypotheses_untested": 2,
+    "hypotheses_untested": 0,
     "hypotheses_implemented": 5,
     "note_breakdown": {
       "research": 56,
