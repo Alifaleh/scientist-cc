@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-15T23:02:17.765376",
-  "note_count": 108,
+  "generated": "2026-05-15T23:22:16.462181",
+  "note_count": 110,
   "notes": [
     {
       "path": "Research/LLM Data Analysis Anti-Stupidity Protocols.md",
@@ -14,6 +14,43 @@
       "evolved_on": null,
       "summary": null,
       "relevance_score": 0.825
+    },
+    {
+      "path": "Observations/Novel Finding - Stop Hook decision-block Mechanism.md",
+      "title": "Novel Finding: Stop Hook `decision: block` Actively Prevents Stopping",
+      "tags": [
+        "observation",
+        "novel-finding",
+        "anti-stopping",
+        "hooks",
+        "claude-code",
+        "status/implemented"
+      ],
+      "status": "implemented",
+      "date": "2026-05-15",
+      "last_verified": "2026-05-15",
+      "link_count": 9,
+      "typed_links": 5,
+      "evolved_on": null,
+      "summary": null,
+      "relevance_score": 0.8
+    },
+    {
+      "path": "Observations/Handoff - v3.2.0 v3.3.0 Stop and Context Rot.md",
+      "title": "Handoff: v3.2.0 + v3.3.0 \u2014 Active Stop-Blocking and Context Rot Defense",
+      "tags": [
+        "observation",
+        "handoff",
+        "status/actionable"
+      ],
+      "status": "actionable",
+      "date": "2026-05-15",
+      "last_verified": null,
+      "link_count": 7,
+      "typed_links": 4,
+      "evolved_on": null,
+      "summary": "Resumed after ~6 weeks (Apr 1 \u2192 May 15) on Opus 4.7 with the user's explicit ask: fix the stopping problem, fix context rot, improve memory, and keep ",
+      "relevance_score": 0.75
     },
     {
       "path": "Knowledge Base/Principle - Persistence Is the Moat.md",
@@ -2030,14 +2067,14 @@
     }
   ],
   "meta_metrics": {
-    "link_density": 4.7,
-    "total_links": 511,
+    "link_density": 4.8,
+    "total_links": 527,
     "principle_extraction_rate": 0.45,
     "hypotheses_untested": 6,
-    "hypotheses_implemented": 1,
+    "hypotheses_implemented": 2,
     "note_breakdown": {
       "research": 56,
-      "observations": 18,
+      "observations": 20,
       "hypotheses": 9,
       "principles": 25
     }

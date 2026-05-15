@@ -12,9 +12,9 @@ I am the scientist working on **scientist-cc** — a self-evolving R&D framework
 ## Current Mastery Stage: Stage 3 (Expert) — Stage 1→2→3 achieved on 2026-03-31
 
 ## What I Know So Far
-- The full architecture of scientist-cc: 3 agents, 3 commands, 11-step infinite loop (added CONSOLIDATE)
+- The full architecture of scientist-cc: 3 agents, 6 commands, 11-step infinite loop (added CONSOLIDATE)
 - The framework is pure markdown — no runtime dependencies, Claude reads and executes workflows
-- Self-evolution works by updating CLAUDE.md with rules learned from mistakes
+- Self-evolution works by updating CLAUDE.md with rules learned from mistakes (11 rules accumulated)
 - The vault (Obsidian) is the primary output — knowledge over code
 - MCP servers (Jupyter, Playwright) extend capabilities via public npm packages
 - **Our loop maps to the GVU (Generator-Verifier-Updater) operator** — the universal pattern behind STaR, Reflexion, SPIN, AlphaZero
@@ -23,6 +23,11 @@ I am the scientist working on **scientist-cc** — a self-evolving R&D framework
 - **Rules with reasons** generalize better than bare rules (Anthropic Constitutional AI 2026)
 - **Confirmation bias** is the #1 reasoning error in LLM agents — adversarial validation mitigates it
 - **Knowledge rot** is a real threat — needs `last_verified`, `validity_window` metadata
+- **`decision: "block"` on Stop hooks** (v3.2.0) actively prevents Claude from stopping — structural fix to the long-standing "Claude still stops" complaint. The previous `additionalContext` approach fired AFTER the loop exited and so was passive only.
+- **Six-hook context defense** (v3.2.0): Stop, StopFailure, UserPromptSubmit, SessionStart, PreCompact, PostCompact — each handles a distinct attack surface for the agent loop / identity / state.
+- **Context rot is universal and continuous** (Chroma 2025, NoLiMa 2025) — every frontier model degrades as context grows; there's no safe threshold. For coding agents (accumulative context + long horizon) it's the #1 silent failure mode after stopping.
+- **Three mitigations from Anthropic's effective-context-engineering post:** compaction, structured notes (≈ our vault), subagent dispatch. We had all three implicitly; v3.3.0 makes them structural via `vault_query.py` + a hard 5-body limit.
+- **External platform knowledge decays.** 6 weeks of Anthropic shipped enough new hook events + capabilities (decision:block, SessionStart, PostCompact, StopFailure, InstructionsLoaded, PostToolBatch, Notification.idle_prompt, prompt-based hooks, agent-based hooks, official memory tool beta) to invalidate framework assumptions. Re-verify at every version bump (Rule 10).
 
 ## What I Don't Know (Biggest Gaps)
 - How other agent frameworks (AutoGPT, CrewAI, LangGraph, etc.) compare to our approach (research pending)

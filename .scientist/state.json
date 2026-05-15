@@ -1,10 +1,10 @@
 {
   "initialized": "2026-03-31T00:00:00Z",
   "mastery_stage": 3,
-  "loop_position": "research",
-  "total_sessions": 1,
+  "loop_position": "evolve",
+  "total_sessions": 2,
   "hypotheses_tested": 7,
-  "hypotheses_confirmed": 0,
+  "hypotheses_confirmed": 1,
   "hypotheses_falsified": 0,
   "skills_built": [
     "data-science-rigor"
@@ -12,7 +12,8 @@
   "tools_documented": [
     "pdf_reader.py",
     "repo_reader.py",
-    "generate_index.py"
+    "generate_index.py",
+    "vault_query.py"
   ],
   "papers_read": [
     "A-MEM (NeurIPS 2025)",
@@ -25,7 +26,10 @@
     "Constitutional AI (2026)",
     "SWE-agent ACI",
     "MetaGPT SOPs",
-    "AutoDream/claude-dream"
+    "AutoDream/claude-dream",
+    "Anthropic Effective Context Engineering (Oct 2025)",
+    "Chroma Context Rot Research (2025)",
+    "NoLiMa Long-Context Evaluation (Adobe 2025)"
   ],
   "papers_downloaded": [
     "a-mem-2502.12110.pdf",
@@ -44,36 +48,32 @@
     "MetaGPT",
     "BabyAGI"
   ],
-  "principles_consolidated": 16,
-  "novel_findings": 6,
+  "principles_consolidated": 25,
+  "novel_findings": 7,
   "literature_gaps": 1,
-  "bugs_fixed": 6,
-  "self_evolution_rules": 9,
-  "versions_deployed": 23,
-  "total_commits": 205,
-  "vault_notes": 76,
-  "research_notes": 41,
-  "typed_links": 152,
-  "reference_docs": 8,
-  "commands": 5,
-  "last_consolidation": "2026-03-31T00:00:00Z",
-  "last_session": "2026-03-31T00:00:00Z",
+  "bugs_fixed": 7,
+  "self_evolution_rules": 11,
+  "versions_deployed": 25,
+  "total_commits": 207,
+  "vault_notes": 92,
+  "research_notes": 56,
+  "typed_links": 206,
+  "reference_docs": 16,
+  "commands": 6,
+  "hooks": 6,
+  "last_consolidation": "2026-05-15T00:00:00Z",
+  "last_session": "2026-05-15T20:25:00Z",
   "next_priorities": [
-    "Test on a different project",
-    "Run backward evolution on old vault notes",
-    "Stage 4: need 5+ confirmed hypotheses, 10+ evolved notes",
-    "Research more MCP tools for data science",
-    "Phase 3: structured artifacts at each loop step"
+    "Verify the active anti-stop hook empirically in a fresh session — count Stop events that fire without user input",
+    "Audit framework for stale Claude Code assumptions per Rule 10 (skill loading, MCP behavior, parallel concurrency)",
+    "Run backward evolution on the existing 90+ vault notes to qualify for Stage 4 (Novel Thinker)",
+    "Test on a non-scientist-cc project (long-standing priority)",
+    "Consider PostToolBatch enforcement hook to actively remind about vault note distillation"
   ],
   "stop_attempts": {
-    "count": 1,
-    "last": 1778875993305,
-    "last_progress": 1778875993305
+    "count": 0,
+    "last": 0,
+    "last_progress": 0
   },
-  "api_errors": [
-    {
-      "type": "rate_limit",
-      "time": "2026-05-15T20:13:13.386Z"
-    }
-  ]
+  "api_errors": []
 }
