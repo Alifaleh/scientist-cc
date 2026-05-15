@@ -72,9 +72,9 @@
     "Consider PostToolBatch enforcement hook to actively remind about vault note distillation"
   ],
   "stop_attempts": {
-    "count": 2,
-    "last": 1778880582881,
-    "last_progress": 1778880265000
+    "count": 1,
+    "last": 1778881201096,
+    "last_progress": 1778881181000
   },
   "api_errors": []
 }
